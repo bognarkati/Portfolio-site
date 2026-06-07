@@ -1,6 +1,12 @@
 # OS
 .DS_Store
 Thumbs.db
-# Editor / agent
+
+# Editor / agent config (nem publikus)
 .claude/
 .vscode/
+CLAUDE.md
+figma-precise-frontend-setup.md
+
+# Munkalapok (spec-docok, mérések, screenshots)
+.tmp/
