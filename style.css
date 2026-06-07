@@ -1,0 +1,473 @@
+/* =========================================================
+   Bognár Kati — Portfolio · közös stíluslap
+   ---------------------------------------------------------
+   FELÉPÍTÉS:
+   1) Design tokenek (:root)  — színek, betűk, TÍPUS-SKÁLA
+   2) Témák (body.cs-pace / body.cs-square)  — sötét case study témák
+   3) Alap + segéd osztályok
+   4) Navigáció
+   5) Homepage szekciók
+   6) Helykitöltő képek
+   7) Case study komponensek
+   8) Reszponzív
+
+   FONTOS: minden betűméret a TÍPUS-SKÁLA változókból jön (--fs-*).
+   Ha méretet akarsz állítani, ITT írd át egyszer, és mindenhol frissül.
+   ========================================================= */
+
+/* =========================================================
+   1) DESIGN TOKENEK  (alapértelmezett = világos homepage téma)
+   ========================================================= */
+:root {
+  /* --- Színek --- */
+  --bg:        #fffdfa;            /* oldal háttér */
+  --bg-soft:   #e6f0f1;            /* halvány szekció háttér */
+  --surface:   #ffffff;            /* kártya / doboz felület */
+  --accent:    #a04223;            /* kiemelő szín (terrakotta) */
+  --accent-2:  #a04223;            /* másodlagos kiemelő */
+  --ink:       #2b3437;            /* fő szövegszín */
+  --ink-soft:  #4b5560;            /* halványabb szöveg */
+  --line:      #e7e2da;            /* elválasztó vonal */
+  --nav-bg:    rgba(255, 253, 250, 0.85);
+
+  /* --- Betűcsaládok --- */
+  --font-body:    "Manrope", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-head:    "Newsreader", Georgia, "Times New Roman", serif;  /* címsorok */
+  --font-display: "Newsreader", Georgia, serif;                     /* nagy hero cím */
+
+  /* --- TÍPUS-SKÁLA (egy helyen állítható) --- */
+  --fs-eyebrow: 0.78rem;   /* kis nagybetűs felirat */
+  --fs-meta:    0.82rem;   /* meta címkék */
+  --fs-small:   0.95rem;
+  --fs-body:    1.0625rem; /* alap törzsszöveg (~17px) */
+  --fs-lead:    1.5rem;    /* bevezető / nagyobb bekezdés (~24px) */
+  --fs-h4:      1.25rem;
+  --fs-h3:      1.5rem;
+  --fs-h2:      clamp(1.8rem, 3.5vw, 2.4rem);
+  --fs-section: clamp(2rem, 4vw, 3rem);
+  --fs-h1:      clamp(2.2rem, 5vw, 3rem);
+  --fs-display: clamp(2.6rem, 6vw, 4rem);
+
+  --lh-tight: 1.12;
+  --lh-snug:  1.35;
+  --lh-body:  1.65;
+
+  /* --- Egyéb --- */
+  --maxw:   1200px;
+  --readw:  760px;
+  --radius: 16px;
+  --shadow:    0 20px 50px rgba(43, 52, 55, 0.10);
+  --shadow-sm: 0 10px 15px rgba(43, 52, 55, 0.05);
+}
+
+/* =========================================================
+   2) SÖTÉT CASE STUDY TÉMÁK
+   A <body class="cs-pace"> ill. "cs-square" felülírja a tokeneket,
+   így ugyanazok a komponensek a megfelelő színekben/betűkkel jelennek meg.
+   ========================================================= */
+body.cs-pace {
+  --bg:       #0a0f00;
+  --bg-soft:  #11160a;
+  --surface:  #1a1a1a;
+  --accent:   #a8ff00;   /* lime */
+  --accent-2: #006aff;   /* mély kék */
+  --ink:      #fdfffa;   /* törtfehér */
+  --ink-soft: rgba(253, 255, 250, 0.72);
+  --line:     rgba(253, 255, 250, 0.14);
+  --nav-bg:   rgba(10, 15, 0, 0.8);
+
+  --font-body:    "Geologica", system-ui, sans-serif;
+  --font-head:    "Geologica", system-ui, sans-serif;
+  --font-display: "Bebas Neue", "Geologica", sans-serif;
+  --shadow:    0 20px 50px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.cs-square {
+  --bg:       #0d0736;
+  --bg-soft:  #14103f;
+  --surface:  #1a1d3a;
+  --accent:   #99fbff;   /* türkiz */
+  --accent-2: #7373fa;   /* lila */
+  --ink:      #e8fbfc;   /* fehéreskék */
+  --ink-soft: rgba(232, 251, 252, 0.72);
+  --line:     rgba(232, 251, 252, 0.16);
+  --nav-bg:   rgba(13, 7, 54, 0.8);
+
+  --font-body:    "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-head:    "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  --shadow:    0 20px 50px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================================
+   3) ALAP + SEGÉD OSZTÁLYOK
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--accent);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.text-link {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--accent);
+  font-size: var(--fs-body);
+  display: inline-block;
+}
+.text-link:hover { text-decoration: none; opacity: 0.75; }
+
+/* =========================================================
+   4) NAVIGÁCIÓ
+   ========================================================= */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--nav-bg);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-sm);
+}
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.nav__logo {
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.nav__logo:hover { text-decoration: none; }
+.nav__links { display: flex; gap: 28px; align-items: center; }
+.nav__links a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-body);
+  color: var(--ink);
+  padding-bottom: 4px;
+}
+.nav__links a:hover { color: var(--accent); text-decoration: none; }
+.nav__links a.is-active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* =========================================================
+   5) HOMEPAGE SZEKCIÓK
+   ========================================================= */
+/* Hero */
+.hero { padding: 64px 0 72px; }
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  margin: 8px 0 20px;
+}
+.hero__lead {
+  font-size: var(--fs-lead);
+  color: var(--ink);
+  opacity: 0.85;
+  margin: 0 0 28px;
+  max-width: 33ch;
+}
+.hero__photo { position: relative; border-radius: 20px; }
+.hero__photo img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+/* Selected Work */
+.work { background: var(--bg-soft); padding: 80px 0; }
+.section-title {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: var(--fs-section);
+  text-align: center;
+  margin-bottom: 56px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.card__img { aspect-ratio: 500 / 286; width: 100%; object-fit: cover; background: #0d0736; }
+.card__body { padding: 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.card__title { font-size: var(--fs-h4); font-weight: 700; }
+.card__desc { font-size: var(--fs-small); color: var(--ink-soft); margin: 0; }
+.card__tag  { font-size: var(--fs-small); color: var(--ink-soft); margin: 0; }
+.card .text-link { margin-top: auto; }
+
+/* About me */
+.about { padding: 80px 0; }
+.about__inner { max-width: 680px; margin: 0 auto; }
+.about__inner h2 { font-size: var(--fs-section); font-weight: 400; margin-bottom: 24px; }
+.about__inner p { font-size: var(--fs-lead); color: var(--ink); margin: 0 0 20px; }
+
+/* Footer / Contact */
+.footer { border-top: 1px solid var(--line); }
+.footer__inner {
+  display: flex; flex-wrap: wrap; gap: 32px;
+  align-items: center; justify-content: space-between;
+  padding: 48px 24px; max-width: var(--maxw); margin: 0 auto;
+}
+.footer__text { max-width: 480px; }
+.footer__text h2 { font-family: var(--font-head); font-weight: 500; font-size: var(--fs-h3); margin-bottom: 12px; }
+.footer__text p { font-size: var(--fs-lead); margin: 0; color: var(--ink-soft); }
+.footer__links { display: flex; flex-wrap: wrap; gap: 32px; }
+.footer__links a { font-weight: 500; font-size: var(--fs-body); }
+
+/* =========================================================
+   6) HELYKITÖLTŐ KÉPEK (téma-érzékeny)
+   ========================================================= */
+.ph {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  background: rgba(127, 127, 127, 0.10);
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--fs-small);
+  letter-spacing: 0.03em;
+  border: 1px dashed var(--accent);
+  padding: 16px;
+}
+
+/* =========================================================
+   7) CASE STUDY KOMPONENSEK
+   ========================================================= */
+.cs-hero { padding: 56px 0 40px; }
+.cs-hero__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: 0.01em;
+}
+.cs-hero__sub { font-size: var(--fs-lead); color: var(--ink-soft); margin: 14px 0 0; max-width: 42ch; }
+.cs-hero__media { margin-top: 40px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.cs-hero__media img { width: 100%; height: auto; display: block; }
+.cs-hero__media .ph { width: 100%; aspect-ratio: 16 / 9; }
+
+.cs-section { padding: 64px 0; }
+.cs-section--soft { background: var(--bg-soft); }
+
+.cs-read { max-width: var(--readw); margin: 0 auto; }
+.cs-read p { font-size: var(--fs-body); color: var(--ink); margin: 0 0 18px; }
+.cs-read ul { margin: 0 0 18px; padding-left: 22px; }
+.cs-read li { font-size: var(--fs-body); color: var(--ink); margin-bottom: 8px; }
+
+.cs-h2 { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h2); margin-bottom: 24px; line-height: var(--lh-snug); }
+.cs-subh { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h4); margin: 26px 0 8px; color: var(--ink); }
+.cs-label { /* kis kiemelő alcím a folyamatban */
+  font-family: var(--font-body); font-weight: 700; font-size: var(--fs-eyebrow);
+  letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; margin: 24px 0 6px;
+}
+
+/* --- Overview: 2 oszlop (szöveg + infokártya), mint a Figmában --- */
+.cs-overview {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr;
+  gap: 56px;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.cs-overview__text p,
+.cs-overview__text li { font-size: var(--fs-body); color: var(--ink); }
+.cs-overview__text h2 { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h2); margin: 4px 0 18px; }
+
+.infocard {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+.infocard__row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.infocard__row:last-child { border-bottom: none; }
+.infocard__row dt {
+  flex: 0 0 132px;
+  font-family: var(--font-body); font-weight: 600;
+  font-size: var(--fs-small); color: var(--accent);
+}
+.infocard__row dd { margin: 0; font-size: var(--fs-small); color: var(--ink); }
+
+/* --- Folyamat lépések --- */
+.cs-steps { max-width: var(--readw); margin: 0 auto; }
+.cs-step { padding: 30px 0; border-top: 1px solid var(--line); }
+.cs-step:first-child { border-top: none; }
+.cs-step__num {
+  font-family: var(--font-body); font-weight: 700; font-size: var(--fs-eyebrow);
+  letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase;
+}
+.cs-step h3 { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h3); margin: 6px 0 12px; }
+.cs-step p { font-size: var(--fs-body); color: var(--ink); margin: 0 0 14px; }
+
+.cs-callout {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: var(--fs-body);
+  color: var(--ink);
+}
+.cs-callout strong { color: var(--accent); }
+
+/* --- Színpaletta --- */
+.swatches { display: flex; flex-wrap: wrap; gap: 16px; max-width: var(--readw); margin: 24px auto 0; }
+.swatch { flex: 1 1 120px; }
+.swatch__chip { height: 90px; border-radius: 12px; border: 1px solid var(--line); }
+.swatch__code { font-family: var(--font-body); font-size: var(--fs-small); margin-top: 8px; color: var(--ink); font-weight: 500; }
+
+/* --- Tipográfia / elv kártyák --- */
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: var(--readw);
+  margin: 24px auto 0;
+}
+.cs-tile {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px;
+}
+.cs-tile h4 { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h4); margin: 0 0 8px; }
+.cs-tile p { font-size: var(--fs-small); color: var(--ink-soft); margin: 0; }
+
+/* --- Folyamat szekció képek (teljes szélességű kutatási fotók) --- */
+.cs-img-wide {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  margin: 20px 0;
+}
+.cs-img-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+.cs-img-pair img { width: 100%; height: auto; border-radius: var(--radius); }
+
+/* --- Kiemelt képernyők galéria --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.gallery .shot { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); background: var(--surface); }
+.gallery .shot img, .gallery .shot .ph { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
+.gallery .shot--wide img, .gallery .shot--wide .ph { aspect-ratio: 16 / 10; }
+
+/* --- Case study lábléc navigáció --- */
+.cs-nav {
+  display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  padding: 40px 0; border-top: 1px solid var(--line); flex-wrap: wrap;
+}
+.cs-nav__next { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h3); }
+
+/* =========================================================
+   8) RESZPONZÍV (mobil)
+   ========================================================= */
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero__photo { max-width: 420px; }
+  .cards { grid-template-columns: 1fr; gap: 32px; }
+  .cs-overview { grid-template-columns: 1fr; gap: 32px; }
+  .nav__logo { font-size: 1.35rem; }
+  .nav__links { gap: 18px; }
+  .footer__inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 520px) {
+  .container { padding: 0 18px; }
+  .nav__inner { padding: 14px 18px; }
+  .hero { padding: 40px 0; }
+  .footer__links { gap: 20px; }
+  .infocard { padding: 24px; }
+}
+
+/* =========================================================
+   9) CASE STUDY KÉPEK (folyamatábrák, persona, journey, stb.)
+   A .cs-img-wide teljes szélességű kép a szövegfolyamban,
+   a .cs-img-pair két képet tesz egymás mellé.
+   ========================================================= */
+.cs-img-wide {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: var(--shadow-sm);
+}
+.cs-img-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+.cs-img-pair img { width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-sm); }
+
+@media (max-width: 700px) {
+  .cs-img-pair { grid-template-columns: 1fr; }
+}

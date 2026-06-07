@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Square One — Case Study · Bognár Kati</title>
+  <meta name="description" content="Square One: a conceptual fintech app making money management approachable for younger users. UX/UI case study by Bognár Kati." />
+
+  <!-- Case study betűk: Plus Jakarta Sans (törzs) + Space Grotesk (display) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cs-square">
+
+  <!-- ===== Navigáció ===== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="index.html">Bognár Kati</a>
+      <nav class="nav__links">
+        <a href="index.html#work" class="is-active">Case Studies</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="cs-hero">
+    <div class="container">
+      <p class="eyebrow">UI/UX Design • Mobile App</p>
+      <h1 class="cs-hero__title">Square One</h1>
+      <p class="cs-hero__sub">A fintech app designed to make money management approachable for younger users.</p>
+      <div class="cs-hero__media">
+        <img src="images/square-hero.jpg" alt="Square One app mockup" data-ph="images/square-hero.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Overview (2 oszlop: szöveg + infokártya) ===== -->
+  <section class="cs-section">
+    <div class="container">
+      <div class="cs-overview">
+        <div class="cs-overview__text">
+          <p class="eyebrow">Overview</p>
+          <h2>Problem &amp; Context</h2>
+          <p>Square One is a conceptual fintech app for users aged 16–28, designed to make financial management accessible and engaging.</p>
+          <ul>
+            <li>Built as part of the UI Academy program.</li>
+            <li>Focused on a generation navigating money without guidance.</li>
+            <li>Full double-diamond UX process: from user research to a high-fidelity Figma prototype.</li>
+            <li>Every UI decision grounded in UX methodology and validated through research testing.</li>
+          </ul>
+        </div>
+
+        <dl class="infocard">
+          <div class="infocard__row"><dt>Role</dt><dd>UX/UI Designer</dd></div>
+          <div class="infocard__row"><dt>Program</dt><dd>UI Academy</dd></div>
+          <div class="infocard__row"><dt>Tool</dt><dd>Figma (lo-fi wireframes provided)</dd></div>
+          <div class="infocard__row"><dt>Year</dt><dd>2026</dd></div>
+          <div class="infocard__row"><dt>References</dt><dd>OTP, Erste, Revolut, Wise</dd></div>
+          <div class="infocard__row"><dt>Target audience</dt><dd>Urban young adults 16–28 — students &amp; early-career</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Process ===== -->
+  <section class="cs-section cs-section--soft">
+    <div class="container">
+      <div class="cs-read"><h2 class="cs-h2">Process</h2></div>
+      <div class="cs-steps">
+
+        <div class="cs-step">
+          <span class="cs-step__num">01 — Empathize</span>
+          <h3>Listening first</h3>
+          <p>I conducted in-depth interviews with 3 users (aged 18–28), all active mobile banking users managing finances daily.</p>
+          <p><strong>Research goals:</strong></p>
+          <ul>
+            <li>What makes a financial app feel welcoming vs. alienating?</li>
+            <li>What friction points do users encounter?</li>
+            <li>What would an ideal experience look like?</li>
+          </ul>
+          <p>Findings were synthesized into an empathy map, surfacing deeper motivations beyond explicit answers — especially around financial confidence and the fear of being judged for not knowing enough.</p>
+          <img class="cs-img-wide" src="images/square-empathy-map.jpg" alt="Empathy map" data-ph="images/square-empathy-map.jpg" />
+          <div class="cs-callout"><strong>Key insights:</strong>
+            <ul>
+              <li>Visual quality and intuitive usability matter more than feature depth.</li>
+              <li>Users want to feel capable, not talked down to.</li>
+              <li>Loyalty programs and instant rewards drive engagement.</li>
+              <li>Financial literacy gaps are common, but curiosity grows when the app feels like a companion, not a teacher.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <span class="cs-step__num">02 — Define</span>
+          <h3>Structuring the problem</h3>
+          <p>Research findings were synthesized into a structured design framework across three layers.</p>
+          <p class="cs-subh">Personas</p>
+          <p>Two behavioral personas were developed from interview data and the empathy map: a time-poor young professional with financial awareness, and a financially curious but underinformed student. Grounded in observed patterns, not demographic assumptions.</p>
+          <img class="cs-img-wide" src="images/square-persona-dori.jpg" alt="Dóri persona" data-ph="images/square-persona-dori.jpg" />
+          <img class="cs-img-wide" src="images/square-persona-kata.jpg" alt="Kata persona" data-ph="images/square-persona-kata.jpg" />
+          <p class="cs-subh">User Journey</p>
+          <p>Two complementary journey maps grounded decisions in real behavior: an app-use journey across 5 stages (onboarding, daily tasks, communication) mapping actions, thoughts, pain points, and opportunities; and a monthly financial cycle, from payday optimism to end-of-month panic. Together they revealed the core issue — not a broken screen, but a repeating stress pattern the product should help break.</p>
+          <img class="cs-img-wide" src="images/square-journey-map.jpg" alt="User journey map" data-ph="images/square-journey-map.jpg" />
+          <div class="cs-callout"><strong>Job statement:</strong> “When I'm starting to take control of my finances, I want an app that helps me navigate without shaming or overwhelming me, so I can feel genuinely confident about my own money.”</div>
+          <p><strong>How Might We:</strong></p>
+          <ul>
+            <li>Make financial discovery enjoyable without oversimplifying it?</li>
+            <li>Build emotional resonance into a functional product?</li>
+            <li>Reward financial mindfulness in a way that feels earned, not forced?</li>
+          </ul>
+        </div>
+
+        <div class="cs-step">
+          <span class="cs-step__num">03 — Ideate</span>
+          <h3>Giving the app a character</h3>
+          <p>Ideation started with competitive analysis of Revolut, Wise, OTP, and Erste — reviewing UX flows, navigation patterns, and emotional engagement strategies. Mastercard brand guidelines were also integrated.</p>
+          <p><strong>Key decisions:</strong></p>
+          <ul>
+            <li><strong>Kami, the chameleon</strong> — introduced as the app's character, mirroring the dark/light mode behavior and adding personality without forcing emotional connection. Togglable by design.</li>
+            <li><strong>Loyalty program</strong> — coins gather around Kami as users save, making financial progress tangible and rewarding.</li>
+            <li><strong>Lo-fi wireframes</strong> from the program served as structural scaffolding, mapped with UX research decisions.</li>
+          </ul>
+          <img class="cs-img-wide" src="images/square-ideate.jpg" alt="Wireframe and concept exploration" data-ph="images/square-ideate.jpg" />
+        </div>
+
+        <div class="cs-step">
+          <span class="cs-step__num">04 — Prototype</span>
+          <h3>Building in dark &amp; light</h3>
+          <p>The high-fidelity prototype was built in Figma in both dark and light mode. Dark mode is the primary experience, confirmed as preferred by the target demographic. Design system highlights: teal and purple accents drawn from Kami's visual identity, grey card surfaces against a deep blue background, a clean and spacious typography system, and an animated Kami integrated into loyalty flows and onboarding.</p>
+        </div>
+
+        <div class="cs-step">
+          <span class="cs-step__num">05 — Test</span>
+          <h3>Two rounds of feedback</h3>
+          <p><strong>Round 1 — Mentor review (3 mentors):</strong> all three supported Kami as a differentiating element; 2 of 3 preferred the togglable version over mandatory presence. Key validation: Kami belongs to the loyalty layer, not the onboarding gate.</p>
+          <p><strong>Round 2 — Design community feedback:</strong> divided on the character, but aligned on one concern — excessive optionality creates complexity. Result: reduced decision points across the interface, with a tighter hierarchy surfacing the most important actions first.</p>
+          <div class="cs-callout"><strong>Key learning:</strong> the core tension in fintech design is emotional engagement vs. functional simplicity. Kami was resolved as an opt-in warmth layer — present for those who want it, invisible for those who don't. That balance between feeling and function is what Square One is ultimately built around.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Colour palette ===== -->
+  <section class="cs-section">
+    <div class="container">
+      <div class="cs-read">
+        <h2 class="cs-h2">Colour Palette</h2>
+        <p>Colours were derived from the character to create a cohesive, emotionally engaging experience. The palette balances playfulness with trust, avoiding overly “corporate” fintech visuals.</p>
+      </div>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#0D0736"></div><div class="swatch__code">#0D0736</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#E8FBFC"></div><div class="swatch__code">#E8FBFC</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#99FBFF"></div><div class="swatch__code">#99FBFF</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#7373FA"></div><div class="swatch__code">#7373FA</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Typography & principles ===== -->
+  <section class="cs-section cs-section--soft">
+    <div class="container">
+      <div class="cs-read"><h2 class="cs-h2">Typography &amp; Principles</h2></div>
+      <div class="cs-grid">
+        <div class="cs-tile"><h4>Space Grotesk</h4><p>Key numbers &amp; headings — strong visual focus and scannability. “Your money, your way.”</p></div>
+        <div class="cs-tile"><h4>Plus Jakarta Sans</h4><p>Body text — high readability and a clean, accessible feel.</p></div>
+        <div class="cs-tile"><h4>Clarity over complexity</h4><p>Every screen shows only what the user needs right now.</p></div>
+        <div class="cs-tile"><h4>Visual before numerical</h4><p>Charts guide the eye first; numbers are there to confirm.</p></div>
+        <div class="cs-tile"><h4>Trust through transparency</h4><p>Every transaction is traceable, nothing hidden.</p></div>
+      </div>
+      <div class="cs-read">
+        <div class="cs-callout">Revolut informed the visual and structural approach; Wise shaped content hierarchy. After mentor feedback, Kami was recalibrated — present and meaningful, but no longer competing with core functionality. The character enriches the experience; it doesn't define it.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Key screens ===== -->
+  <section class="cs-section">
+    <div class="container">
+      <div class="cs-read">
+        <p class="eyebrow">Key Screens</p>
+        <h2 class="cs-h2">Key Screens &amp; Decisions</h2>
+      </div>
+      <div class="gallery">
+        <div class="shot"><img src="images/square-screen-onboarding.jpg" alt="Onboarding paths" data-ph="images/square-screen-onboarding.jpg" /></div>
+        <div class="shot"><img src="images/square-screen-modes.jpg" alt="Dark and light mode" data-ph="images/square-screen-modes.jpg" /></div>
+        <div class="shot"><img src="images/square-screen-cards.jpg" alt="Card management, savings jar, chat" data-ph="images/square-screen-cards.jpg" /></div>
+      </div>
+      <div class="cs-read" style="margin-top:28px">
+        <p><strong>Onboarding:</strong> two onboarding paths support different user preferences — playful guidance or a more traditional experience.</p>
+        <p><strong>Dark &amp; light:</strong> the two modes offer different visual experiences — playful and character-driven, or clean and minimal.</p>
+        <p><strong>Cards, savings &amp; chat:</strong> card management features Kami as a brand element on the card itself; the savings jar makes goal-based saving tangible and motivating; and the chat assistant — powered by Kami — guides users through banking tasks in a friendly, conversational way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Case study nav ===== -->
+  <div class="container">
+    <nav class="cs-nav">
+      <a class="text-link" href="index.html">← Back to all projects</a>
+      <a class="cs-nav__next" href="case-study-pacemakers.html">Next project: Pacemakers →</a>
+    </nav>
+  </div>
+
+  <!-- ===== Footer / Contact ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <div class="footer__text">
+        <h2>Let's work together</h2>
+        <p>I'm currently open to new opportunities. If something clicked, let's talk.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="mailto:bkatus@gmail.com">bkatus@gmail.com</a>
+        <a href="https://www.linkedin.com/in/katalin-bognar/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://drive.google.com/file/d/1-0T_xnWIMMeBLzmGuHqi0P6wbRCEtJie/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="placeholder.js"></script>
+</body>
+</html>
