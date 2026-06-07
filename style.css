@@ -140,11 +140,19 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   margin: 0 0 12px;
 }
 
+/* Hero eyebrow: Figma — 18px Manrope Bold, title case, opacity 0.8 */
+.hero__text .eyebrow {
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0.8;
+}
+
 .text-link {
   font-family: var(--font-body);
   font-weight: 700;
   color: var(--accent);
-  font-size: var(--fs-body);
+  font-size: 1.125rem;
   display: inline-block;
 }
 .text-link:hover { text-decoration: none; opacity: 0.75; }
@@ -205,14 +213,15 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   font-family: var(--font-display);
   font-weight: 400;
   font-size: var(--fs-h1);
-  line-height: var(--lh-tight);
-  margin: 8px 0 20px;
+  line-height: 1.0;
+  color: #000;
+  margin: 0 0 24px;
 }
 .hero__lead {
   font-size: var(--fs-lead);
-  color: var(--ink);
-  opacity: 0.85;
-  margin: 0 0 28px;
+  line-height: 1.333;
+  color: rgba(1, 1, 1, 0.8);
+  margin: 0 0 32px;
   max-width: 33ch;
 }
 .hero__photo { position: relative; border-radius: 20px; }
