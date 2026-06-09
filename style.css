@@ -318,11 +318,11 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   width: 100%;
   object-fit: cover;
   background: #0d0736;
-  filter: saturate(0.65);
+  filter: saturate(0.7);
   transition: transform 0.3s ease, filter 0.3s ease;
   transform-origin: center;
 }
-.card:hover .card__img { transform: scale(1.062); filter: saturate(1); }
+.card:hover .card__img { transform: scale(1.08); filter: saturate(1.2); }
 .card__body { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .card__title { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--ink); }
 .card__desc { font-size: 1rem; color: var(--ink); margin: 0; }
