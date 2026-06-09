@@ -146,6 +146,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   letter-spacing: 0;
   text-transform: none;
   opacity: 0.8;
+  margin: 0;
 }
 
 .text-link {
@@ -172,25 +173,28 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
-  max-width: var(--maxw);
+  padding: 24px 162px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .nav__logo {
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-family: 'Kreon', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
   color: var(--ink);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.6px;
 }
 .nav__logo:hover { text-decoration: none; }
-.nav__links { display: flex; gap: 28px; align-items: center; }
+.nav__links {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
 .nav__links a {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: var(--fs-body);
+  font-size: 1.125rem;
   color: var(--ink);
-  padding-bottom: 4px;
 }
 .nav__links a:hover { color: var(--accent); text-decoration: none; }
 .nav__links a.is-active {
@@ -202,35 +206,73 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
    5) HOMEPAGE SZEKCIÓK
    ========================================================= */
 /* Hero */
-.hero { padding: 64px 0 72px; }
+.hero { background: var(--bg); }
+
 .hero__grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 162px;
+  display: flex;
+  gap: 214px;
   align-items: center;
 }
+
+.hero__text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero__title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .hero__title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: var(--fs-h1);
+  font-size: 3rem;
   line-height: 1.0;
   color: #000;
-  margin: 0 0 24px;
+  margin: 0;
 }
+
 .hero__lead {
-  font-size: var(--fs-lead);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.4375rem;
   line-height: 1.333;
   color: rgba(1, 1, 1, 0.8);
-  margin: 0 0 32px;
-  max-width: 33ch;
+  margin: 0;
 }
-.hero__photo { position: relative; border-radius: 20px; }
-.hero__photo img {
-  width: 100%;
+
+.hero__photo {
+  flex-shrink: 0;
+  position: relative;
+  width: 356px;
+  height: 426px;
   border-radius: 20px;
-  box-shadow: var(--shadow);
-  object-fit: cover;
-  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px 0 rgba(43, 52, 55, 0.1);
+}
+
+.hero__photo img {
+  position: absolute;
+  width: 203.82%;
+  height: auto;
+  max-width: none;
+  left: -51.91%;
+  top: -2.86%;
+  display: block;
 }
 
 /* Selected Work */
@@ -439,20 +481,27 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 /* =========================================================
    8) RESZPONZÍV (mobil)
    ========================================================= */
+@media (max-width: 1300px) {
+  .nav__inner { padding: 24px 80px; }
+  .hero__grid { padding: 80px 80px; gap: 80px; }
+}
+
 @media (max-width: 900px) {
-  .hero__grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero__photo { max-width: 420px; }
+  .nav__inner { padding: 14px 24px; }
+  .nav__links { gap: 18px; }
+  .hero__grid { flex-direction: column; gap: 40px; padding: 48px 24px; }
+  .hero__text { width: 100%; }
+  .hero__photo { width: 100%; max-width: 420px; height: auto; aspect-ratio: 356 / 426; }
   .cards { grid-template-columns: 1fr; gap: 32px; }
   .cs-overview { grid-template-columns: 1fr; gap: 32px; }
   .nav__logo { font-size: 1.35rem; }
-  .nav__links { gap: 18px; }
   .footer__inner { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 520px) {
   .container { padding: 0 18px; }
   .nav__inner { padding: 14px 18px; }
-  .hero { padding: 40px 0; }
+  .hero__grid { padding: 32px 18px; gap: 32px; }
   .footer__links { gap: 20px; }
   .infocard { padding: 24px; }
 }
