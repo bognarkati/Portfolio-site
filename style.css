@@ -99,6 +99,9 @@ body.cs-square {
   --font-display: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
   --shadow:    0 20px 50px rgba(0, 0, 0, 0.45);
   --shadow-sm: 0 10px 20px rgba(0, 0, 0, 0.35);
+
+  --fs-body:    20px;
+  --fs-eyebrow: 12px;
 }
 
 /* =========================================================
@@ -443,32 +446,60 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; margin: 24px 0 6px;
 }
 
-/* --- Overview: 2 oszlop (szöveg + infokártya), mint a Figmában --- */
+/* 1440px canvas, 138px padding, 40px vertical — Figma grid wrapper */
+.cs-section__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 138px;
+}
+
+/* --- Overview: 526px szöveg + 1fr infocard, 24px gap, 1076px max-width --- */
 .cs-overview {
   display: grid;
-  grid-template-columns: 1.25fr 0.9fr;
-  gap: 56px;
+  grid-template-columns: 526px 1fr;
+  gap: 24px;
   align-items: start;
-  max-width: 1080px;
+  max-width: 1076px;
   margin: 0 auto;
 }
-.cs-overview__text p,
-.cs-overview__text li { font-size: var(--fs-body); color: var(--ink); }
-.cs-overview__text h2 { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h2); margin: 4px 0 18px; }
+
+.cs-overview__text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 526px;
+}
+
+.cs-overview__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cs-overview__heading .eyebrow { font-size: 12px; font-weight: 400; color: #99FBFF; line-height: 24px; letter-spacing: normal; }
+.cs-overview__heading h2 { font-family: var(--font-head); font-weight: 700; font-size: 28px; color: #e8fbfc; margin: 0; line-height: normal; }
+
+.cs-overview__body {
+  opacity: 0.7;
+  letter-spacing: 0.8px;
+}
+.cs-overview__body p,
+.cs-overview__body li { font-size: 20px; font-weight: 400; color: #e8fbfc; line-height: normal; margin: 0; }
 
 .infocard {
   background: var(--surface);
   border-radius: var(--radius);
   padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.infocard__row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
-.infocard__row:last-child { border-bottom: none; }
+.infocard__row { display: flex; gap: 20px; align-items: center; line-height: 24px; }
 .infocard__row dt {
-  flex: 0 0 132px;
+  flex: 0 0 145px;
   font-family: var(--font-body); font-weight: 600;
-  font-size: var(--fs-small); color: var(--accent);
+  font-size: 20px; color: var(--accent); line-height: 24px;
 }
-.infocard__row dd { margin: 0; font-size: var(--fs-small); color: var(--ink); }
+.infocard__row dd { margin: 0; font-size: 20px; font-weight: 400; color: #e8fbfc; line-height: 24px; }
 
 /* --- Folyamat lépések --- */
 .cs-steps { max-width: var(--readw); margin: 0 auto; }
