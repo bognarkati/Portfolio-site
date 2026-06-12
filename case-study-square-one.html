@@ -131,29 +131,237 @@
       <div class="cs-steps">
 
         <div class="cs-step" id="define">
-          <span class="cs-step__num">02 — Define</span>
-          <h3>Structuring the problem</h3>
+          <p class="cs-step-eyebrow">THE CHALLENGE</p>
+          <h2 class="cs-step-heading">Define</h2>
           <p>Research findings were synthesized into a structured design framework across three layers.</p>
           <p class="cs-subh">Personas</p>
           <p>Two behavioral personas were developed from interview data and the empathy map:</p>
           <ul>
-            <li>A time-poor young professional with financial awareness</li>
-            <li>A financially curious but underinformed student</li>
+            <li>A <strong>time-poor young professional</strong> with financial awareness</li>
+            <li>A <strong>financially curious but underinformed student</strong></li>
           </ul>
           <p>Grounded in observed patterns, not demographic assumptions.</p>
-          <img class="cs-img-wide" src="images/square-persona-dori.jpg" alt="Dóri persona" data-ph="images/square-persona-dori.jpg" />
-          <img class="cs-img-wide" src="images/square-persona-kata.jpg" alt="Kata persona" data-ph="images/square-persona-kata.jpg" />
+
+          <!-- Persona: Dori -->
+          <div class="persona-card">
+            <div class="persona-card__header">
+              <div class="persona-card__chip">USER PERSONA</div>
+              <div class="persona-card__name-block">
+                <p class="persona-card__meet">Meet D&oacute;ri</p>
+                <p class="persona-card__role">Financially Inexperienced Young Adult</p>
+              </div>
+            </div>
+            <div class="persona-card__body">
+              <div class="persona-card__left">
+                <div class="persona-photo"><img src="images/square-dori-photo.jpg" alt="Dori" /></div>
+                <div class="persona-card__id-block">
+                  <p class="persona-card__firstname">D&oacute;ri</p>
+                  <div class="persona-card__name-divider"></div>
+                  <p class="persona-card__subtitle">Eager student, worker &amp; re-applicant</p>
+                </div>
+                <div class="persona-card__quote-box">
+                  <p class="persona-card__quote-mark">&#8220;</p>
+                  <p class="persona-card__quote-text">I know I should be saving&#8230;<br>I just don&#8217;t know how.</p>
+                </div>
+                <div class="persona-card__demographics">
+                  <p class="persona-card__section-label">DEMOGRAPHICS</p>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Age</span><span>18</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Location</span><span>Hungary</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Occupation</span><span>Hairdressing student + part-time job</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Education</span><span>Secondary school (in progress)</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Status</span><span>Single, living with parents</span></div>
+                </div>
+              </div>
+              <div class="persona-card__right">
+                <div class="persona-card__box">
+                  <p class="persona-card__section-label">BACKGROUND</p>
+                  <p>D&oacute;ri is 18 years old, a graduating hairdressing student who works part-time and is re-applying to university. She has her own income but very little financial experience.</p>
+                  <p>She uses Revolut as her primary account &mdash; her salary comes in, she transfers and spends. She wants to get better at managing money so she doesn&#8217;t have to constantly worry at the end of the month.</p>
+                </div>
+                <div class="persona-card__box">
+                  <p class="persona-card__section-label">GOALS</p>
+                  <ul class="persona-card__list">
+                    <li>Learn to budget so there&#8217;s always money left for things that matter</li>
+                    <li>Feel calmer and avoid end-of-month panic</li>
+                    <li>Travel, have fun, and afford the things she wants</li>
+                    <li>Prepare for re-admission and grow in her profession</li>
+                  </ul>
+                </div>
+                <div class="persona-card__bottom-row">
+                  <div class="persona-card__box persona-card__box--grow">
+                    <p class="persona-card__section-label">FRUSTRATIONS</p>
+                    <ul class="persona-card__list">
+                      <li>Money disappears so fast she doesn&#8217;t know where it went</li>
+                      <li>She doesn&#8217;t track expenses &mdash; no system in place</li>
+                      <li>No good financial role models around her</li>
+                      <li>Unexpected costs and FOMO easily push her into panic</li>
+                    </ul>
+                  </div>
+                  <div class="persona-card__box persona-card__box--tech">
+                    <p class="persona-card__section-label">TECHNOLOGY</p>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Mobile usage</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Online banking</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Social media</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Finance apps</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Spreadsheets</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span></div></div>
+                  </div>
+                </div>
+                <div class="persona-card__box persona-card__known-apps">
+                  <p class="persona-card__section-label">KNOWN APPS</p>
+                  <div class="persona-card__divider-line"></div>
+                  <div class="persona-card__apps-list">
+                    <span class="persona-card__app-chip">Revolut</span>
+                    <span class="persona-card__app-chip">Instagram</span>
+                    <span class="persona-card__app-chip">Spotify</span>
+                    <span class="persona-card__app-chip">Temu</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Persona: Kata -->
+          <div class="persona-card">
+            <div class="persona-card__header">
+              <div class="persona-card__chip">USER PERSONA</div>
+              <div class="persona-card__name-block">
+                <p class="persona-card__meet">Meet Kata</p>
+                <p class="persona-card__role">The Digital Balance Seeker</p>
+              </div>
+            </div>
+            <div class="persona-card__body">
+              <div class="persona-card__left persona-card__left--alt">
+                <div class="persona-photo"><img src="images/square-kata-photo.jpg" alt="Kata" /></div>
+                <div class="persona-card__id-block">
+                  <p class="persona-card__firstname">Kata</p>
+                  <div class="persona-card__name-divider"></div>
+                  <p class="persona-card__subtitle">Digital Balance Seeker</p>
+                </div>
+                <div class="persona-card__quote-box">
+                  <p class="persona-card__quote-mark">&#8220;</p>
+                  <p class="persona-card__quote-text">I want a simple, clear picture of my finances &mdash; without having to become an accountant.</p>
+                </div>
+                <div class="persona-card__demographics">
+                  <p class="persona-card__section-label">DEMOGRAPHICS</p>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Age</span><span>28&#8211;42</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Location</span><span>Hungary</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Occupation</span><span>Freelancer / small business owner</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Education</span><span>College / university degree</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Status</span><span>Single or in a relationship</span></div>
+                </div>
+              </div>
+              <div class="persona-card__right">
+                <div class="persona-card__box">
+                  <p class="persona-card__section-label">BACKGROUND</p>
+                  <p>Kata is a self-employed freelancer who manages her finances across multiple platforms every day. She&#8217;s had only partial success with fintech apps. Frustrated because her data is scattered and invoicing feels chaotic.</p>
+                  <p>She wants to see everything in one reliable place &mdash; visually and quickly.</p>
+                </div>
+                <div class="persona-card__box">
+                  <p class="persona-card__section-label">GOALS</p>
+                  <ul class="persona-card__list">
+                    <li>All invoices in one place, at a glance</li>
+                    <li>Automated invoice management, more free time</li>
+                    <li>A sense of security in financial decisions</li>
+                    <li>Visual feedback on her financial situation</li>
+                  </ul>
+                </div>
+                <div class="persona-card__bottom-row">
+                  <div class="persona-card__box persona-card__box--grow">
+                    <p class="persona-card__section-label">FRUSTRATIONS</p>
+                    <ul class="persona-card__list">
+                      <li>Doesn&#8217;t feel safe on digital financial platforms</li>
+                      <li>No overall view of her current financial situation</li>
+                      <li>Categorisation is unclear &mdash; she loses track easily</li>
+                      <li>Manual admin takes up too much of her time</li>
+                    </ul>
+                  </div>
+                  <div class="persona-card__box persona-card__box--tech">
+                    <p class="persona-card__section-label">TECHNOLOGY</p>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Mobile usage</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Online banking</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Social media</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Finance apps</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Spreadsheets</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span></div></div>
+                  </div>
+                </div>
+                <div class="persona-card__box persona-card__known-apps">
+                  <p class="persona-card__section-label">KNOWN APPS</p>
+                  <div class="persona-card__divider-line"></div>
+                  <div class="persona-card__apps-list">
+                    <span class="persona-card__app-chip">Revolut</span>
+                    <span class="persona-card__app-chip">Sz&aacute;ml&aacute;zz.hu</span>
+                    <span class="persona-card__app-chip">Google Sheets</span>
+                    <span class="persona-card__app-chip">Instagram</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <p class="cs-subh">User Journey</p>
           <p>Two complementary journey maps were built to ground decisions in real behavior:</p>
           <ul>
-            <li>App use journey: 5 stages (onboarding, daily tasks, communication) mapping actions, thoughts, pain points, and opportunities</li>
-            <li>Monthly financial cycle: from payday optimism to end-of-month panic</li>
+            <li><strong>App use journey</strong>: 5 stages (onboarding, daily tasks, communication) mapping actions, thoughts, pain points, and opportunities</li>
+            <li><strong>Monthly financial cycle</strong>: from payday optimism to end-of-month panic</li>
           </ul>
           <p>Together they revealed the core issue: not a broken screen, but a repeating stress pattern the product should help break.</p>
-          <img class="cs-img-wide" src="images/square-journey-map.jpg" alt="User journey map" data-ph="images/square-journey-map.jpg" />
+          <img class="cs-img-wide" src="images/square-journey-map.jpg" alt="User journey map" />
+          <p class="cs-subh">Job Statement</p>
           <p>Using the Jobs to be Done framework, the core user need was distilled into one statement:</p>
-          <div class=”cs-callout”>”When I'm starting to take control of my finances, I want an app that helps me navigate without shaming or overwhelming me, so I can feel genuinely confident about my own money.”</div>
-          <p class=”cs-subh”>How Might We questions</p>
+          <div class="cs-callout">"When I'm starting to take control of my finances, I want an app that helps me navigate without shaming or overwhelming me, so I can feel genuinely confident about my own money."</div>
+
+          <!-- Job Statement – Kata kártya -->
+          <div class="cs-job-statement">
+            <div class="cs-job-statement__header">JOB STATEMENT</div>
+            <div class="cs-job-statement__columns">
+              <div class="cs-job-statement__col-head">CÉLOK ÉS MOTIVÁCIÓK</div>
+              <div class="cs-job-statement__col-head cs-job-statement__col-head--right">KIHÍVÁSOK</div>
+            </div>
+            <div class="cs-job-statement__flow">
+              <div class="cs-sticky-flow">Amikor én Kata…</div>
+              <span class="cs-job-statement__arrow">→</span>
+              <div class="cs-sticky-flow">azt szeretném, hogy…</div>
+              <span class="cs-job-statement__arrow">→</span>
+              <div class="cs-sticky-flow cs-sticky-flow--fixed">azért, hogy…</div>
+            </div>
+            <div class="cs-job-statement__stickies">
+              <div class="cs-job-statement__sticky-col">
+                <div class="cs-sticky">egyetemista és dolgozó lány</div>
+                <div class="cs-sticky">a pénzügyeimet kezelem</div>
+                <div class="cs-sticky">Hasonlítom az app funkciókat<span class="cs-sticky__author">Mark Csonka</span></div>
+              </div>
+              <div class="cs-job-statement__sticky-col">
+                <div class="cs-sticky">gyorsan és biztonságosan tudom kezelni a pénzügyeimet<span class="cs-sticky__author">Bognár Kinga</span></div>
+                <div class="cs-sticky">egyszerűen, áttekintően tudjam kezelni a pénzügyeimet az appban<span class="cs-sticky__author">Bognár Kinga</span></div>
+                <div class="cs-sticky">egyben látja a napi/havi költéseit<span class="cs-sticky__author">Rácz Nemeszcseghy</span></div>
+                <div class="cs-sticky">egy v több számlaszám könnyű kezelése<span class="cs-sticky__author">Rácz Nemeszcseghy</span></div>
+              </div>
+              <div class="cs-job-statement__sticky-col">
+                <div class="cs-sticky">átlássan könnyen a lehetőségeimet, helyzeteimet</div>
+                <div class="cs-sticky">kézben tudjam tartani a pénzügyömet</div>
+                <div class="cs-sticky">tudatos pénzügyi döntéseket hozhassak<span class="cs-sticky__author">Bognár Kinga</span></div>
+              </div>
+            </div>
+            <div class="cs-job-statement__divider"></div>
+            <div class="cs-job-statement__conclusion">
+              <p class="cs-job-statement__label-sm">Job statement</p>
+              <p class="cs-job-statement__quote">Amikor, én Kata, egyetemista és dolgozó lány, a pénzügyeimet kezelem, azt szeretném, hogy gyorsan és biztonságosan tehessem ezt, egyszerűen átlátva a kapcsolódó funkciókat, azért hogy magabiztosan kézben tudjam tartani a pénzügyeimet és tudatos döntéseket hozhassak.</p>
+            </div>
+          </div>
+
+          <!-- Key Insight kártya -->
+          <div class="cs-insight-card">
+            <p class="cs-insight-card__title">Key insight:</p>
+            <p>Users do not manage their finances continuously; they react to them in cycles. The system should support them proactively, not retrospectively.</p>
+            <p class="cs-insight-card__subhead">OPPORTUNITY POINTS</p>
+            <ul>
+              <li><strong>Beginning of the month</strong>: support for planning and forecasting.</li>
+              <li><strong>Mid-month</strong>: gentle reminders and "you're doing well" encouragement.</li>
+              <li><strong>Before financial stress sets in</strong>: quick overview and highlighting of essential expenses.</li>
+              <li><strong>Fresh start moments</strong>: motivation and learning through simple, gamified experiences.</li>
+            </ul>
+          </div>
+
+          <p class="cs-subh">How Might We questions</p>
           <ul>
             <li>How might we make financial discovery enjoyable without oversimplifying it?</li>
             <li>How might we build emotional resonance into a functional product?</li>
@@ -214,7 +422,7 @@
     <div class="container">
       <div class="cs-read">
         <h2 class="cs-h2">Colour Palette</h2>
-        <p>Colors were derived from the character to create a cohesive and emotionally engaging experience. The palette balances playfulness with trust, avoiding overly “corporate” fintech visuals.</p>
+        <p>Colors were derived from the character to create a cohesive and emotionally engaging experience. The palette balances playfulness with trust, avoiding overly "corporate" fintech visuals.</p>
       </div>
       <div class="swatches">
         <div class="swatch"><div class="swatch__chip" style="background:#0D0736"></div><div class="swatch__code">#0D0736</div></div>
@@ -230,14 +438,14 @@
     <div class="container">
       <div class="cs-read"><h2 class="cs-h2">Typography &amp; Principles</h2></div>
       <div class="cs-grid">
-        <div class=”cs-tile”><h4>Space Grotesk</h4><p>Space Grotesk was used for key numbers and headings to create a strong visual focus and improve scannability. “Your money, your way.”</p></div>
-        <div class=”cs-tile”><h4>Plus Jakarta Sans</h4><p>Plus Jakarta Sans was chosen for body text due to its high readability and clean appearance, supporting a clear and accessible user experience.</p></div>
-        <div class=”cs-tile”><h4>Clarity over complexity</h4><p>Every screen shows only what the user needs right now</p></div>
-        <div class=”cs-tile”><h4>Visual before numerical</h4><p>Charts guide the eye first, numbers are there to confirm</p></div>
-        <div class=”cs-tile”><h4>Trust through transparency</h4><p>Every transaction is traceable, nothing hidden</p></div>
+        <div class="cs-tile"><h4>Space Grotesk</h4><p>Space Grotesk was used for key numbers and headings to create a strong visual focus and improve scannability. "Your money, your way."</p></div>
+        <div class="cs-tile"><h4>Plus Jakarta Sans</h4><p>Plus Jakarta Sans was chosen for body text due to its high readability and clean appearance, supporting a clear and accessible user experience.</p></div>
+        <div class="cs-tile"><h4>Clarity over complexity</h4><p>Every screen shows only what the user needs right now</p></div>
+        <div class="cs-tile"><h4>Visual before numerical</h4><p>Charts guide the eye first, numbers are there to confirm</p></div>
+        <div class="cs-tile"><h4>Trust through transparency</h4><p>Every transaction is traceable, nothing hidden</p></div>
       </div>
-      <div class=”cs-read”>
-        <div class=”cs-callout”>Revolut informed the visual and structural approach. Wise shaped content hierarchy. After mentor feedback, Kami was recalibrated: present and meaningful, but no longer competing with core functionality. The character enriches the experience, it doesn't define it.</div>
+      <div class="cs-read">
+        <div class="cs-callout">Revolut informed the visual and structural approach. Wise shaped content hierarchy. After mentor feedback, Kami was recalibrated: present and meaningful, but no longer competing with core functionality. The character enriches the experience, it doesn't define it.</div>
       </div>
     </div>
   </section>
