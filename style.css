@@ -501,9 +501,37 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 }
 .infocard__row dd { margin: 0; font-size: 20px; font-weight: 400; color: #e8fbfc; line-height: 24px; }
 
+/* --- Process nav sáv --- */
+.cs-process-nav {
+  padding: 80px 0;
+  background: var(--bg);
+}
+.cs-process-nav__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 162px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cs-process-nav__inner a {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 48px;
+  color: #e8fbfc;
+  line-height: 1;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.cs-process-nav__inner a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
 /* --- Folyamat lépések --- */
 .cs-steps { max-width: var(--readw); margin: 0 auto; }
-.cs-step { padding: 30px 0; border-top: 1px solid var(--line); }
+.cs-step { padding: 30px 0; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
 .cs-step:first-child { border-top: none; }
 .cs-step__num {
   font-family: var(--font-body); font-weight: 700; font-size: var(--fs-eyebrow);
