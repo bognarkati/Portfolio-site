@@ -99,6 +99,9 @@ body.cs-square {
   --font-display: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
   --shadow:    0 20px 50px rgba(0, 0, 0, 0.45);
   --shadow-sm: 0 10px 20px rgba(0, 0, 0, 0.35);
+
+  --fs-body:    20px;
+  --fs-eyebrow: 12px;
 }
 
 /* =========================================================
@@ -368,18 +371,65 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 /* =========================================================
    7) CASE STUDY KOMPONENSEK
    ========================================================= */
-.cs-hero { padding: 56px 0 40px; }
+.cs-hero { padding: 0; overflow: hidden; }
+
+.cs-hero__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 162px;
+  display: grid;
+  grid-template-columns: 451px 1fr;
+  align-items: center;
+  gap: 24px;
+  min-height: 680px;
+}
+
+.cs-hero__text {
+  display: flex;
+  flex-direction: column;
+}
+
 .cs-hero__title {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: var(--fs-display);
+  font-weight: 700;
+  font-size: clamp(3rem, 5vw, 4.5rem);
   line-height: var(--lh-tight);
-  letter-spacing: 0.01em;
+  letter-spacing: -0.02em;
+  margin: 0;
 }
-.cs-hero__sub { font-size: var(--fs-lead); color: var(--ink-soft); margin: 14px 0 0; max-width: 42ch; }
-.cs-hero__media { margin-top: 40px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-.cs-hero__media img { width: 100%; height: auto; display: block; }
-.cs-hero__media .ph { width: 100%; aspect-ratio: 16 / 9; }
+
+.cs-hero__sub {
+  font-size: var(--fs-lead);
+  color: var(--ink-soft);
+  margin: 16px 0 0;
+  max-width: 38ch;
+}
+
+.cs-hero__media {
+  position: relative;
+}
+
+.cs-hero__phones {
+  position: relative;
+  height: 640px;
+}
+
+.cs-hero__phone {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  bottom: 0;
+}
+
+.cs-hero__phone--back {
+  left: 0;
+  z-index: 1;
+}
+
+.cs-hero__phone--front {
+  right: 150px;
+  z-index: 2;
+}
 
 .cs-section { padding: 64px 0; }
 .cs-section--soft { background: var(--bg-soft); }
@@ -396,36 +446,92 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; margin: 24px 0 6px;
 }
 
-/* --- Overview: 2 oszlop (szöveg + infokártya), mint a Figmában --- */
+/* 1440px canvas, 138px padding, 40px vertical — Figma grid wrapper */
+.cs-section__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 138px;
+}
+
+/* --- Overview: 526px szöveg + 1fr infocard, 24px gap, 1076px max-width --- */
 .cs-overview {
   display: grid;
-  grid-template-columns: 1.25fr 0.9fr;
-  gap: 56px;
+  grid-template-columns: 526px 1fr;
+  gap: 24px;
   align-items: start;
-  max-width: 1080px;
+  max-width: 1076px;
   margin: 0 auto;
 }
-.cs-overview__text p,
-.cs-overview__text li { font-size: var(--fs-body); color: var(--ink); }
-.cs-overview__text h2 { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h2); margin: 4px 0 18px; }
+
+.cs-overview__text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 526px;
+}
+
+.cs-overview__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cs-overview__heading .eyebrow { font-size: 12px; font-weight: 400; color: #99FBFF; line-height: 24px; letter-spacing: normal; }
+.cs-overview__heading h2 { font-family: var(--font-head); font-weight: 700; font-size: 28px; color: #e8fbfc; margin: 0; line-height: normal; }
+
+.cs-overview__body {
+  opacity: 0.7;
+  letter-spacing: 0.8px;
+}
+.cs-overview__body p,
+.cs-overview__body li { font-size: 20px; font-weight: 400; color: #e8fbfc; line-height: normal; margin: 0; }
 
 .infocard {
   background: var(--surface);
   border-radius: var(--radius);
   padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.infocard__row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
-.infocard__row:last-child { border-bottom: none; }
+.infocard__row { display: flex; gap: 20px; align-items: center; line-height: 24px; }
 .infocard__row dt {
-  flex: 0 0 132px;
+  flex: 0 0 145px;
   font-family: var(--font-body); font-weight: 600;
-  font-size: var(--fs-small); color: var(--accent);
+  font-size: 20px; color: var(--accent); line-height: 24px;
 }
-.infocard__row dd { margin: 0; font-size: var(--fs-small); color: var(--ink); }
+.infocard__row dd { margin: 0; font-size: 20px; font-weight: 400; color: #e8fbfc; line-height: 24px; }
+
+/* --- Process nav sáv --- */
+.cs-process-nav {
+  padding: 80px 0;
+  background: var(--bg);
+}
+.cs-process-nav__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 162px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cs-process-nav__inner a {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 48px;
+  color: #e8fbfc;
+  line-height: 1;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.cs-process-nav__inner a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
 
 /* --- Folyamat lépések --- */
 .cs-steps { max-width: var(--readw); margin: 0 auto; }
-.cs-step { padding: 30px 0; border-top: 1px solid var(--line); }
+.cs-step { padding: 30px 0; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
 .cs-step:first-child { border-top: none; }
 .cs-step__num {
   font-family: var(--font-body); font-weight: 700; font-size: var(--fs-eyebrow);
@@ -506,6 +612,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
    ========================================================= */
 @media (max-width: 1300px) {
   .nav__inner { padding: 24px 80px; }
+  .cs-hero__inner { padding: 80px 80px; }
   .hero__grid { padding: 80px 80px; gap: 80px; }
   .work { padding: 80px 80px; }
   .footer__inner { padding: 40px 80px; gap: 80px; }
@@ -522,6 +629,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   .cs-overview { grid-template-columns: 1fr; gap: 32px; }
   .nav__logo { font-size: 1.35rem; }
   .footer__inner { flex-direction: column; align-items: flex-start; padding: 40px 24px; gap: 32px; }
+  .cs-hero__inner { grid-template-columns: 1fr; padding: 48px 24px; min-height: auto; }
+  .cs-hero__phone--front { right: 0; }
 }
 
 @media (max-width: 520px) {
@@ -554,4 +663,126 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 
 @media (max-width: 700px) {
   .cs-img-pair { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   10) EMPATHIZE SZEKCIÓ
+   ========================================================= */
+.cs-empathize {
+  background: #0D0736;
+  padding: 80px 0;
+  scroll-margin-top: 90px;
+}
+
+.cs-empathize__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 162px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.cs-empathize__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cs-empathize__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cs-empathize__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+  color: #E8FBFC;
+  line-height: 1.1;
+  margin: 0 0 28px;
+}
+
+.cs-empathize__text p,
+.cs-empathize__text li {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  color: rgba(232, 251, 252, 0.7);
+  margin: 0 0 16px;
+}
+
+.cs-empathize__text ul {
+  padding-left: 20px;
+  margin: 0 0 16px;
+}
+
+.cs-empathize__text li {
+  margin-bottom: 8px;
+}
+
+.cs-empathize__kami {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-empathize__kami-img--top {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+
+.cs-empathize__kami-img--bottom {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+
+.cs-empathize__insights {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 40px 48px;
+}
+
+.cs-empathize__insights-head {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  color: #99FBFF;
+  margin: 0 0 24px;
+}
+
+.cs-empathize__insights ul {
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-empathize__insights li {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+@media (max-width: 1300px) {
+  .cs-empathize__inner { padding: 0 80px; }
+}
+
+@media (max-width: 900px) {
+  .cs-empathize__top,
+  .cs-empathize__bottom { grid-template-columns: 1fr; gap: 32px; }
+  .cs-empathize__inner { padding: 0 24px; gap: 40px; }
+  .cs-empathize { padding: 48px 0; }
+  .cs-empathize__bottom .cs-empathize__kami { order: -1; }
 }
