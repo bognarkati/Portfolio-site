@@ -664,3 +664,125 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 @media (max-width: 700px) {
   .cs-img-pair { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   10) EMPATHIZE SZEKCIÓ
+   ========================================================= */
+.cs-empathize {
+  background: #0D0736;
+  padding: 80px 0;
+  scroll-margin-top: 90px;
+}
+
+.cs-empathize__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 162px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.cs-empathize__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cs-empathize__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cs-empathize__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+  color: #E8FBFC;
+  line-height: 1.1;
+  margin: 0 0 28px;
+}
+
+.cs-empathize__text p,
+.cs-empathize__text li {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  color: rgba(232, 251, 252, 0.7);
+  margin: 0 0 16px;
+}
+
+.cs-empathize__text ul {
+  padding-left: 20px;
+  margin: 0 0 16px;
+}
+
+.cs-empathize__text li {
+  margin-bottom: 8px;
+}
+
+.cs-empathize__kami {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-empathize__kami-img--top {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+
+.cs-empathize__kami-img--bottom {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+
+.cs-empathize__insights {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 40px 48px;
+}
+
+.cs-empathize__insights-head {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  color: #99FBFF;
+  margin: 0 0 24px;
+}
+
+.cs-empathize__insights ul {
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-empathize__insights li {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+@media (max-width: 1300px) {
+  .cs-empathize__inner { padding: 0 80px; }
+}
+
+@media (max-width: 900px) {
+  .cs-empathize__top,
+  .cs-empathize__bottom { grid-template-columns: 1fr; gap: 32px; }
+  .cs-empathize__inner { padding: 0 24px; gap: 40px; }
+  .cs-empathize { padding: 48px 0; }
+  .cs-empathize__bottom .cs-empathize__kami { order: -1; }
+}
