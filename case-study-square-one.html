@@ -9,7 +9,7 @@
   <!-- Case study betűk: Plus Jakarta Sans (törzs) + Space Grotesk (display) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kreon:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -131,29 +131,440 @@
       <div class="cs-steps">
 
         <div class="cs-step" id="define">
-          <span class="cs-step__num">02 — Define</span>
-          <h3>Structuring the problem</h3>
+          <p class="cs-step-eyebrow">THE CHALLENGE</p>
+          <h2 class="cs-step-heading">Define</h2>
           <p>Research findings were synthesized into a structured design framework across three layers.</p>
           <p class="cs-subh">Personas</p>
           <p>Two behavioral personas were developed from interview data and the empathy map:</p>
           <ul>
-            <li>A time-poor young professional with financial awareness</li>
-            <li>A financially curious but underinformed student</li>
+            <li>A <strong>time-poor young professional</strong> with financial awareness</li>
+            <li>A <strong>financially curious but underinformed student</strong></li>
           </ul>
           <p>Grounded in observed patterns, not demographic assumptions.</p>
-          <img class="cs-img-wide" src="images/square-persona-dori.jpg" alt="Dóri persona" data-ph="images/square-persona-dori.jpg" />
-          <img class="cs-img-wide" src="images/square-persona-kata.jpg" alt="Kata persona" data-ph="images/square-persona-kata.jpg" />
+
+          <!-- Persona: Dori -->
+          <div class="persona-card">
+            <div class="persona-card__header">
+              <div class="persona-card__header-left">
+                <div class="persona-card__chip">USER PERSONA</div>
+              </div>
+              <div class="persona-card__header-right">
+                <p class="persona-card__meet">Meet D&oacute;ri</p>
+                <p class="persona-card__role">Financially Inexperienced Young Adult</p>
+              </div>
+            </div>
+            <div class="persona-card__body">
+              <div class="persona-card__left">
+                <div class="persona-photo"><img src="images/square-dori-photo.jpg" alt="Dori" /></div>
+                <div class="persona-card__id-block">
+                  <p class="persona-card__firstname">D&oacute;ri</p>
+                  <div class="persona-card__name-divider"></div>
+                  <p class="persona-card__subtitle">Eager student, worker &amp; re-applicant</p>
+                </div>
+                <div class="persona-card__quote-box">
+                  <p class="persona-card__quote-mark">&#8220;</p>
+                  <p class="persona-card__quote-text">I know I should be saving&#8230;<br>I just don&#8217;t know how.</p>
+                </div>
+                <div class="persona-card__demographics">
+                  <p class="persona-card__section-label">DEMOGRAPHICS</p>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Age</span><span>18</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Location</span><span>Hungary</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Occupation</span><span>Hairdressing student + part-time job</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Education</span><span>Secondary school (in progress)</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Status</span><span>Single, living with parents</span></div>
+                </div>
+              </div>
+              <div class="persona-card__right">
+                <div class="persona-card__box">
+                  <p class="persona-card__section-label">BACKGROUND</p>
+                  <p>D&oacute;ri is 18 years old, a graduating hairdressing student who works part-time and is re-applying to university. She has her own income but very little financial experience.</p>
+                  <p>She uses Revolut as her primary account &mdash; her salary comes in, she transfers and spends. She wants to get better at managing money so she doesn&#8217;t have to constantly worry at the end of the month.</p>
+                </div>
+                <div class="persona-card__box">
+                  <p class="persona-card__section-label">GOALS</p>
+                  <ul class="persona-card__list">
+                    <li>Learn to budget so there&#8217;s always money left for things that matter</li>
+                    <li>Feel calmer and avoid end-of-month panic</li>
+                    <li>Travel, have fun, and afford the things she wants</li>
+                    <li>Prepare for re-admission and grow in her profession</li>
+                  </ul>
+                </div>
+                <div class="persona-card__bottom-row">
+                  <div class="persona-card__box persona-card__box--grow">
+                    <p class="persona-card__section-label">FRUSTRATIONS</p>
+                    <ul class="persona-card__list">
+                      <li>Money disappears so fast she doesn&#8217;t know where it went</li>
+                      <li>She doesn&#8217;t track expenses &mdash; no system in place</li>
+                      <li>No good financial role models around her</li>
+                      <li>Unexpected costs and FOMO easily push her into panic</li>
+                    </ul>
+                  </div>
+                  <div class="persona-card__box persona-card__box--tech">
+                    <p class="persona-card__section-label">TECHNOLOGY</p>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Mobile usage</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Online banking</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Social media</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Finance apps</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Spreadsheets</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span></div></div>
+                  </div>
+                </div>
+                <div class="persona-card__box persona-card__known-apps">
+                  <p class="persona-card__section-label">KNOWN APPS</p>
+                  <div class="persona-card__divider-flex"></div>
+                  <span class="persona-card__app-chip">Revolut</span>
+                  <span class="persona-card__app-chip">Instagram</span>
+                  <span class="persona-card__app-chip">Spotify</span>
+                  <span class="persona-card__app-chip">Temu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Persona: Kata -->
+          <div class="persona-card">
+            <div class="persona-card__header">
+              <div class="persona-card__header-left">
+                <div class="persona-card__chip">USER PERSONA</div>
+              </div>
+              <div class="persona-card__header-right">
+                <p class="persona-card__meet">Meet Kata</p>
+                <p class="persona-card__role">The Digital Balance Seeker</p>
+              </div>
+            </div>
+            <div class="persona-card__body">
+              <div class="persona-card__left persona-card__left--alt">
+                <div class="persona-photo"><img src="images/square-kata-photo.jpg" alt="Kata" /></div>
+                <div class="persona-card__id-block">
+                  <p class="persona-card__firstname">Kata</p>
+                  <div class="persona-card__name-divider"></div>
+                  <p class="persona-card__subtitle">Digital Balance Seeker</p>
+                </div>
+                <div class="persona-card__quote-box">
+                  <p class="persona-card__quote-mark">&#8220;</p>
+                  <p class="persona-card__quote-text">I want a simple, clear picture of my finances &mdash; without having to become an accountant.</p>
+                </div>
+                <div class="persona-card__demographics">
+                  <p class="persona-card__section-label">DEMOGRAPHICS</p>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Age</span><span>28&#8211;42</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Location</span><span>Hungary</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Occupation</span><span>Freelancer / small business owner</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Education</span><span>College / university degree</span></div>
+                  <div class="persona-card__demo-row"><span class="persona-card__demo-key">Status</span><span>Single or in a relationship</span></div>
+                </div>
+              </div>
+              <div class="persona-card__right">
+                <div class="persona-card__box">
+                  <p class="persona-card__section-label">BACKGROUND</p>
+                  <p>Kata is a self-employed freelancer who manages her finances across multiple platforms every day. She&#8217;s had only partial success with fintech apps. Frustrated because her data is scattered and invoicing feels chaotic.</p>
+                  <p>She wants to see everything in one reliable place &mdash; visually and quickly.</p>
+                </div>
+                <div class="persona-card__box">
+                  <p class="persona-card__section-label">GOALS</p>
+                  <ul class="persona-card__list">
+                    <li>All invoices in one place, at a glance</li>
+                    <li>Automated invoice management, more free time</li>
+                    <li>A sense of security in financial decisions</li>
+                    <li>Visual feedback on her financial situation</li>
+                  </ul>
+                </div>
+                <div class="persona-card__bottom-row">
+                  <div class="persona-card__box persona-card__box--grow">
+                    <p class="persona-card__section-label">FRUSTRATIONS</p>
+                    <ul class="persona-card__list">
+                      <li>Doesn&#8217;t feel safe on digital financial platforms</li>
+                      <li>No overall view of her current financial situation</li>
+                      <li>Categorisation is unclear &mdash; she loses track easily</li>
+                      <li>Manual admin takes up too much of her time</li>
+                    </ul>
+                  </div>
+                  <div class="persona-card__box persona-card__box--tech">
+                    <p class="persona-card__section-label">TECHNOLOGY</p>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Mobile usage</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Online banking</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Social media</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Finance apps</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span><span class="pd"></span></div></div>
+                    <div class="persona-card__tech-row"><span class="persona-card__tech-label">Spreadsheets</span><div class="persona-dots"><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd pd--on"></span><span class="pd"></span><span class="pd"></span></div></div>
+                  </div>
+                </div>
+                <div class="persona-card__box persona-card__known-apps">
+                  <p class="persona-card__section-label">KNOWN APPS</p>
+                  <div class="persona-card__divider-flex"></div>
+                  <span class="persona-card__app-chip">Revolut</span>
+                  <span class="persona-card__app-chip">Sz&aacute;ml&aacute;zz.hu</span>
+                  <span class="persona-card__app-chip">Google Sheets</span>
+                  <span class="persona-card__app-chip">Instagram</span>
+                </div>
+              </div>
+            </div>
+          </div>
           <p class="cs-subh">User Journey</p>
           <p>Two complementary journey maps were built to ground decisions in real behavior:</p>
           <ul>
-            <li>App use journey: 5 stages (onboarding, daily tasks, communication) mapping actions, thoughts, pain points, and opportunities</li>
-            <li>Monthly financial cycle: from payday optimism to end-of-month panic</li>
+            <li><strong>App use journey</strong>: 5 stages (onboarding, daily tasks, communication) mapping actions, thoughts, pain points, and opportunities</li>
+            <li><strong>Monthly financial cycle</strong>: from payday optimism to end-of-month panic</li>
           </ul>
           <p>Together they revealed the core issue: not a broken screen, but a repeating stress pattern the product should help break.</p>
-          <img class="cs-img-wide" src="images/square-journey-map.jpg" alt="User journey map" data-ph="images/square-journey-map.jpg" />
+          <div class="journey-map-wrap">
+            <div class="journey-map">
+              <!-- Background & grid -->
+              <div style="position:absolute;background:#fff5c4;height:895px;left:0;top:0;width:160px;"></div>
+              <div style="position:absolute;background:#e1d7c0;height:895px;left:160px;top:0;width:1px;"></div>
+              <div style="position:absolute;background:rgba(219,209,186,0.6);height:895px;left:343px;top:0;width:1px;"></div>
+              <div style="position:absolute;background:rgba(219,209,186,0.6);height:895px;left:526px;top:0;width:1px;"></div>
+              <div style="position:absolute;background:rgba(219,209,186,0.6);height:895px;left:709px;top:0;width:1px;"></div>
+              <div style="position:absolute;background:rgba(219,209,186,0.6);height:895px;left:892px;top:0;width:1px;"></div>
+              <div style="position:absolute;background:#e1d7c0;height:1px;left:0;top:80px;width:1076px;"></div>
+              <div style="position:absolute;background:#e1d7c0;height:1px;left:0;top:340px;width:1076px;"></div>
+              <div style="position:absolute;background:#e1d7c0;height:1px;left:0;top:540px;width:1076px;"></div>
+              <div style="position:absolute;background:#e1d7c0;height:1px;left:0;top:740px;width:1076px;"></div>
+              <!-- Left column labels -->
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:700;font-size:13px;color:#1f1405;left:10px;top:10px;width:142px;margin:0;word-break:break-word;">Lép&eacute;sek</p>
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:9px;line-height:1.45;color:#59471f;left:10px;top:30px;width:142px;margin:0;">Mik a f&#337; l&eacute;p&eacute;sei a felhaszn&aacute;l&oacute; &uacute;tj&aacute;nak?</p>
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:700;font-size:13px;color:#1f1405;left:10px;top:90px;width:142px;margin:0;">Mit csin&aacute;l</p>
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:9px;line-height:1.45;color:#59471f;left:10px;top:110px;width:142px;margin:0;">Mit csin&aacute;l a felhaszn&aacute;l&oacute; a k&uuml;l&ouml;nb&ouml;z&#337; szakaszokban?</p>
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:700;font-size:13px;color:#1f1405;left:10px;top:350px;width:142px;margin:0;line-height:normal;">Gondolatok<br>&eacute;s &eacute;rz&eacute;sek</p>
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:9px;line-height:1.45;color:#59471f;left:10px;top:386px;width:142px;margin:0;">&Eacute;rz&eacute;sek &eacute;s gondolatok az egyes f&aacute;zisokban.</p>
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:700;font-size:13px;color:#1f1405;left:10px;top:550px;width:142px;margin:0;">Probl&eacute;m&aacute;k</p>
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:9px;line-height:1.45;color:#59471f;left:10px;top:570px;width:142px;margin:0;">Mi a probl&eacute;ma? Mi okozza? Mennyire komoly?</p>
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:700;font-size:13px;color:#1f1405;left:10px;top:750px;width:142px;margin:0;">Lehet&#337;s&eacute;gek</p>
+              <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:9px;line-height:1.45;color:#59471f;left:10px;top:770px;width:142px;margin:0;">Hogyan tudn&aacute;nk megoldani a probl&eacute;m&aacute;kat?</p>
+              <!-- Phase headers (row 1 - pink) -->
+              <div style="position:absolute;background:#ffb7b7;height:44px;left:168px;border-radius:4px;top:8px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:11px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">El&#337;k&eacute;sz&iacute;t&eacute;s,<br>tervezel&eacute;s</p>
+              </div>
+              <div style="position:absolute;background:#ffb7b7;height:44px;left:351px;border-radius:4px;top:8px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:11px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Onboarding,<br>els&#337; l&eacute;p&eacute;sek</p>
+              </div>
+              <div style="position:absolute;background:#ffb7b7;height:44px;left:534px;border-radius:4px;top:8px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:11px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">&Uuml;gyf&eacute;lk&eacute;p,<br>f&#337;bb feladatok</p>
+              </div>
+              <div style="position:absolute;background:#ffb7b7;height:44px;left:717px;border-radius:4px;top:8px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:11px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Alkalmazott<br>feladatok</p>
+              </div>
+              <div style="position:absolute;background:#ffb7b7;height:44px;left:900px;border-radius:4px;top:8px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:11px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Hat&eacute;konys&aacute;g-<br>n&ouml;vel&eacute;s</p>
+              </div>
+              <!-- Row 2: Mit csinál - col 1 -->
+              <div style="position:absolute;background:#d0bffc;height:27px;left:168px;border-radius:4px;top:88px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Felhaszn&aacute;l&oacute;i ig&eacute;nyeket felm&eacute;ri</p>
+              </div>
+              <div style="position:absolute;background:#d0bffc;height:42px;left:168px;border-radius:4px;top:134px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">&Ouml;sszehasonl&iacute;tja az el&eacute;rhet&#337; appokat</p>
+              </div>
+              <div style="position:absolute;background:#b7d9ff;height:27px;left:168px;border-radius:4px;top:188px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">&Aacute;tn&eacute;zi a Revolut funkci&oacute;it online</p>
+              </div>
+              <!-- Row 2: col 2 -->
+              <div style="position:absolute;background:#d0bffc;height:28px;left:351px;border-radius:4px;top:88px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:11px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Let&ouml;lti az appot</p>
+              </div>
+              <div style="position:absolute;background:#d0bffc;height:28px;left:351px;border-radius:4px;top:136px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:11px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Regisztr&aacute;l</p>
+              </div>
+              <div style="position:absolute;background:#d0bffc;height:27px;left:351px;border-radius:4px;top:184px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Megismeri az app funkci&oacute;it</p>
+              </div>
+              <div style="position:absolute;background:#b7d9ff;height:42px;left:351px;border-radius:4px;top:236px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">&Ouml;sszegy&#369;jti p&eacute;nz&uuml;gyi kapcsolatait</p>
+              </div>
+              <!-- Row 2: col 3 -->
+              <div style="position:absolute;background:#d0bffc;height:31px;left:534px;border-radius:4px;top:88px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:13px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">m&aacute;solja a sz&aacute;ml&aacute;zz mot</p>
+              </div>
+              <div style="position:absolute;background:#ffcd9a;height:27px;left:534px;border-radius:4px;top:162px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Aktiv&aacute;lja a k&aacute;rty&aacute;j&aacute;t</p>
+              </div>
+              <div style="position:absolute;background:#b7d9ff;height:42px;left:534px;border-radius:4px;top:208px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">J&oacute; vibes: az app seg&iacute;t az &aacute;ttekint&eacute;sben</p>
+              </div>
+              <!-- Row 2: col 4 -->
+              <div style="position:absolute;background:#d0bffc;height:42px;left:717px;border-radius:4px;top:88px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Sz&aacute;ml&aacute;z&oacute; rendszert kapcsol &ouml;ssze</p>
+              </div>
+              <div style="position:absolute;background:#d0bffc;height:27px;left:717px;border-radius:4px;top:142px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Riportokat gener&aacute;l</p>
+              </div>
+              <div style="position:absolute;background:#ffcd9a;height:27px;left:717px;border-radius:4px;top:188px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Adatokat t&ouml;lt fel manu&aacute;lisan</p>
+              </div>
+              <div style="position:absolute;background:#b7d9ff;height:27px;left:717px;border-radius:4px;top:236px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">T&ouml;bb platformot kezel egyszerre</p>
+              </div>
+              <!-- Row 2: col 5 -->
+              <div style="position:absolute;background:#d0bffc;height:42px;left:900px;border-radius:4px;top:88px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Automatiz&aacute;l&aacute;si lehet&#337;s&eacute;geket keres</p>
+              </div>
+              <div style="position:absolute;background:#d0bffc;height:27px;left:900px;border-radius:4px;top:142px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">&Uuml;temezi a kifizetéseket</p>
+              </div>
+              <div style="position:absolute;background:#ffcd9a;height:27px;left:900px;border-radius:4px;top:188px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Be&aacute;ll&iacute;tja k&aacute;rtya limitj&eacute;t</p>
+              </div>
+              <div style="position:absolute;background:#d0bffc;height:27px;left:900px;border-radius:4px;top:236px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">&Uacute;jabb fizet&eacute;si m&oacute;dot t&ouml;lt le</p>
+              </div>
+              <!-- Emojis -->
+              <p style="position:absolute;font-size:30px;left:233px;top:352px;white-space:nowrap;margin:0;line-height:1;">&#128528;</p>
+              <p style="position:absolute;font-size:30px;left:416px;top:352px;white-space:nowrap;margin:0;line-height:1;">&#128522;</p>
+              <p style="position:absolute;font-size:30px;left:599px;top:352px;white-space:nowrap;margin:0;line-height:1;">&#128522;</p>
+              <p style="position:absolute;font-size:30px;left:782px;top:352px;white-space:nowrap;margin:0;line-height:1;">&#128542;</p>
+              <p style="position:absolute;font-size:30px;left:965px;top:352px;white-space:nowrap;margin:0;line-height:1;">&#128545;</p>
+              <!-- Row 3: Gondolatok - col 1 -->
+              <div style="position:absolute;background:#b7d9ff;height:27px;left:168px;border-radius:4px;top:410px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Hova ment az &ouml;sszes p&eacute;nzem?</p>
+              </div>
+              <!-- col 2 -->
+              <div style="position:absolute;background:#b7d9ff;height:42px;left:351px;border-radius:4px;top:410px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Az app intuit&iacute;v &mdash; k&ouml;nnyebb mint v&aacute;rtam!</p>
+              </div>
+              <!-- col 3 -->
+              <div style="position:absolute;background:#b7d9ff;height:42px;left:534px;border-radius:4px;top:410px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">A p&eacute;nz&uuml;gy nem is olyan rettent&#337;&hellip;</p>
+              </div>
+              <!-- col 4 -->
+              <div style="position:absolute;background:#b7d9ff;height:42px;left:717px;border-radius:4px;top:410px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">M&aacute;r megint nem tal&aacute;lom, amit keresek.</p>
+              </div>
+              <!-- col 5 -->
+              <div style="position:absolute;background:#b7d9ff;height:42px;left:900px;border-radius:4px;top:410px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">&bdquo;Borzaszt&oacute; &eacute;rtes&iacute;t&eacute;sek minden tranzakci&oacute;r&oacute;l.&rdquo;</p>
+              </div>
+              <!-- Row 4: Problémák - col 1 -->
+              <div style="position:absolute;background:#ffe8a0;height:42px;left:168px;border-radius:4px;top:548px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">T&uacute;l sok id&#337; sz&uuml;ks&eacute;ges a keres&eacute;shez</p>
+              </div>
+              <div style="position:absolute;background:#ffe8a0;height:27px;left:168px;border-radius:4px;top:602px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Unalmas, jobb lehet&#337;s&eacute;geket v&aacute;r</p>
+              </div>
+              <!-- col 2 -->
+              <div style="position:absolute;background:#ffe8a0;height:27px;left:351px;border-radius:4px;top:548px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Nem annyira &eacute;rthe&#337; az app</p>
+              </div>
+              <div style="position:absolute;background:#ffe8a0;height:42px;left:351px;border-radius:4px;top:602px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Nem igaz&aacute;n otthon a digit&aacute;lis bankokban</p>
+              </div>
+              <!-- col 3 -->
+              <div style="position:absolute;background:#ffe8a0;height:42px;left:534px;border-radius:4px;top:548px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Nem &eacute;rti hogyan kell sz&aacute;ml&aacute;t exportálni</p>
+              </div>
+              <div style="position:absolute;background:#ffe8a0;height:27px;left:534px;border-radius:4px;top:602px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">A p&eacute;nznemv&aacute;lt&aacute;s zavaros</p>
+              </div>
+              <!-- col 4 -->
+              <div style="position:absolute;background:#ffe8a0;height:46px;left:717px;border-radius:4px;top:548px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:12px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Nehezen tal&aacute;lja ezeket a funkci&oacute;kat az appban</p>
+              </div>
+              <div style="position:absolute;background:#ffe8a0;height:42px;left:717px;border-radius:4px;top:626px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Elveszetten &eacute;rzi mag&aacute;t a be&aacute;ll&iacute;t&aacute;sokban</p>
+              </div>
+              <!-- col 5 -->
+              <div style="position:absolute;background:#ffe8a0;height:31px;left:900px;border-radius:4px;top:548px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:600;font-size:13px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">nem f&eacute;r a p&eacute;nz&eacute;hez</p>
+              </div>
+              <div style="position:absolute;background:#ffe8a0;height:27px;left:900px;border-radius:4px;top:616px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Lass&uacute; a folyamat</p>
+              </div>
+              <!-- Row 5: Lehetőségek - col 1 -->
+              <div style="position:absolute;background:#b7f2c4;height:42px;left:168px;border-radius:4px;top:748px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Csak a legfontosabb inf&oacute;kat emelj&uuml;k ki az els&#337; megnyit&aacute;sn&aacute;l</p>
+              </div>
+              <!-- col 2 -->
+              <div style="position:absolute;background:#b7f2c4;height:27px;left:351px;border-radius:4px;top:748px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">K&ouml;nny&#369; tranzakci&oacute;s kezel&eacute;s</p>
+              </div>
+              <div style="position:absolute;background:#b7f2c4;height:27px;left:351px;border-radius:4px;top:802px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Gyors &aacute;tv&aacute;lt&aacute;s</p>
+              </div>
+              <!-- col 3 -->
+              <div style="position:absolute;background:#b7f2c4;height:27px;left:534px;border-radius:4px;top:748px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Felt&ouml;lt, ugyanaz</p>
+              </div>
+              <div style="position:absolute;background:#b7f2c4;height:27px;left:534px;border-radius:4px;top:792px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Azonnali grafikon</p>
+              </div>
+              <div style="position:absolute;background:#b7f2c4;height:27px;left:534px;border-radius:4px;top:836px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">&Eacute;rtes&iacute;t&eacute;s az utal&aacute;sr&oacute;l</p>
+              </div>
+              <!-- col 4 -->
+              <div style="position:absolute;background:#b7f2c4;height:42px;left:717px;border-radius:4px;top:748px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Egyszer&#369;s&iacute;tett funkci&oacute;-navig&aacute;ci&oacute;, keres&#337;s&aacute;v</p>
+              </div>
+              <!-- col 5 -->
+              <div style="position:absolute;background:#b7f2c4;height:27px;left:900px;border-radius:4px;top:748px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">k&ouml;nny&#369; k&aacute;rtya let&ouml;lt&eacute;s</p>
+              </div>
+              <div style="position:absolute;background:#b7f2c4;height:27px;left:900px;border-radius:4px;top:796px;width:167px;">
+                <p style="position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:10px;line-height:1.45;left:5px;color:#1a0f05;top:5px;width:157px;margin:0;">Automatikus havi &ouml;sszesit&#337;</p>
+              </div>
+              <!-- Red circle annotation -->
+              <div style="position:absolute;height:460px;left:714px;top:288px;width:173px;overflow:visible;">
+                <svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display:block;" viewBox="0 0 175.5 462.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="87.75" cy="231.25" rx="86.5" ry="230" stroke="#E03526" stroke-width="2.5"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="journey-monthly-wrap">
+            <img src="images/square-journey-monthly.jpg" alt="User Journey – Hónap elejétől hónap végéig" class="journey-monthly-img" />
+          </div>
+          <p class="cs-subh">Job Statement</p>
           <p>Using the Jobs to be Done framework, the core user need was distilled into one statement:</p>
-          <div class=”cs-callout”>”When I'm starting to take control of my finances, I want an app that helps me navigate without shaming or overwhelming me, so I can feel genuinely confident about my own money.”</div>
-          <p class=”cs-subh”>How Might We questions</p>
+          <p>“When I’m starting to take control of my finances, I want an app that helps me navigate without shaming or overwhelming me, so I can feel genuinely confident about my own money.”</p>
+
+          <!-- Job Statement – Kata kártya (423-1154) -->
+          <div class="jsc">
+            <div class="jsc__header">JOB STATEMENT</div>
+            <div class="jsc__col-bar">
+              <div class="jsc__col-label">CÉLOK ÉS MOTIVÁCIÓK</div>
+              <div class="jsc__col-sep"></div>
+              <div class="jsc__col-label jsc__col-label--right">KIHÍVÁSOK</div>
+            </div>
+            <div class="jsc__flow">
+              <div class="jsc__flow-cell"><em>Amikor én Kata…</em></div>
+              <span class="jsc__arrow">→</span>
+              <div class="jsc__flow-cell"><em>azt szeretném, hogy…</em></div>
+              <span class="jsc__arrow">→</span>
+              <div class="jsc__flow-cell jsc__flow-cell--narrow"><em>azért, hogy…</em></div>
+            </div>
+            <div class="jsc__stickies">
+              <div class="jsc__sticky-section">
+                <div class="jsc__sticky">egyetemista és dolgozó lány</div>
+                <div class="jsc__sticky">a pénzügyeimet kezelem</div>
+                <div class="jsc__sticky">Hasonlítom az app funkciókat<span class="jsc__author">Mark Csonka</span></div>
+              </div>
+              <div class="jsc__sticky-section jsc__sticky-section--bordered">
+                <div class="jsc__sticky">gyorsan és biztonságosan tudom kezelni a pénzügyeimet<span class="jsc__author">Bognár Kinga</span></div>
+                <div class="jsc__sticky">egyszerűen, áttekintően tudjam kezelni a pénzügyeimet az appban<span class="jsc__author">Bognár Kinga</span></div>
+                <div class="jsc__sticky">egyben látja a napi/havi költéseit<span class="jsc__author">Rácz Nemeszcseghy</span></div>
+                <div class="jsc__sticky">egy v több számlaszám könnyű kezelése<span class="jsc__author">Rácz Nemeszcseghy</span></div>
+              </div>
+              <div class="jsc__sticky-section jsc__sticky-section--bordered">
+                <div class="jsc__sticky">átlássan könnyen a lehetőségeimet, helyzeteimet</div>
+                <div class="jsc__sticky">kézben tudjam tartani a pénzügyömet</div>
+                <div class="jsc__sticky">tudatos pénzügyi döntéseket hozhassak<span class="jsc__author">Bognár Kinga</span></div>
+              </div>
+            </div>
+            <div class="jsc__hr"></div>
+            <div class="jsc__conclusion">
+              <p class="jsc__label">Job statement</p>
+              <p class="jsc__text">Amikor, én Kata, egyetemista és dolgozó lány, a pénzügyeimet kezelem, azt szeretném, hogy gyorsan és biztonságosan tehessem ezt, egyszerűen átlátva a kapcsolódó funkciókat, azért hogy magabiztosan kézben tudjam tartani a pénzügyeimet és tudatos döntéseket hozhassak.</p>
+            </div>
+          </div>
+
+          <!-- Key Insight kártya -->
+          <div class="cs-insight-card">
+            <p class="cs-insight-card__title">Key insight:</p>
+            <p>Users do not manage their finances continuously; they react to them in cycles. The system should support them proactively, not retrospectively.</p>
+            <p class="cs-insight-card__subhead">OPPORTUNITY POINTS</p>
+            <ul>
+              <li><strong>Beginning of the month</strong>: support for planning and forecasting.</li>
+              <li><strong>Mid-month</strong>: gentle reminders and "you're doing well" encouragement.</li>
+              <li><strong>Before financial stress sets in</strong>: quick overview and highlighting of essential expenses.</li>
+              <li><strong>Fresh start moments</strong>: motivation and learning through simple, gamified experiences.</li>
+            </ul>
+          </div>
+
+          <p class="cs-subh">How Might We questions</p>
           <ul>
             <li>How might we make financial discovery enjoyable without oversimplifying it?</li>
             <li>How might we build emotional resonance into a functional product?</li>
@@ -214,7 +625,7 @@
     <div class="container">
       <div class="cs-read">
         <h2 class="cs-h2">Colour Palette</h2>
-        <p>Colors were derived from the character to create a cohesive and emotionally engaging experience. The palette balances playfulness with trust, avoiding overly “corporate” fintech visuals.</p>
+        <p>Colors were derived from the character to create a cohesive and emotionally engaging experience. The palette balances playfulness with trust, avoiding overly "corporate" fintech visuals.</p>
       </div>
       <div class="swatches">
         <div class="swatch"><div class="swatch__chip" style="background:#0D0736"></div><div class="swatch__code">#0D0736</div></div>
@@ -230,14 +641,14 @@
     <div class="container">
       <div class="cs-read"><h2 class="cs-h2">Typography &amp; Principles</h2></div>
       <div class="cs-grid">
-        <div class=”cs-tile”><h4>Space Grotesk</h4><p>Space Grotesk was used for key numbers and headings to create a strong visual focus and improve scannability. “Your money, your way.”</p></div>
-        <div class=”cs-tile”><h4>Plus Jakarta Sans</h4><p>Plus Jakarta Sans was chosen for body text due to its high readability and clean appearance, supporting a clear and accessible user experience.</p></div>
-        <div class=”cs-tile”><h4>Clarity over complexity</h4><p>Every screen shows only what the user needs right now</p></div>
-        <div class=”cs-tile”><h4>Visual before numerical</h4><p>Charts guide the eye first, numbers are there to confirm</p></div>
-        <div class=”cs-tile”><h4>Trust through transparency</h4><p>Every transaction is traceable, nothing hidden</p></div>
+        <div class="cs-tile"><h4>Space Grotesk</h4><p>Space Grotesk was used for key numbers and headings to create a strong visual focus and improve scannability. "Your money, your way."</p></div>
+        <div class="cs-tile"><h4>Plus Jakarta Sans</h4><p>Plus Jakarta Sans was chosen for body text due to its high readability and clean appearance, supporting a clear and accessible user experience.</p></div>
+        <div class="cs-tile"><h4>Clarity over complexity</h4><p>Every screen shows only what the user needs right now</p></div>
+        <div class="cs-tile"><h4>Visual before numerical</h4><p>Charts guide the eye first, numbers are there to confirm</p></div>
+        <div class="cs-tile"><h4>Trust through transparency</h4><p>Every transaction is traceable, nothing hidden</p></div>
       </div>
-      <div class=”cs-read”>
-        <div class=”cs-callout”>Revolut informed the visual and structural approach. Wise shaped content hierarchy. After mentor feedback, Kami was recalibrated: present and meaningful, but no longer competing with core functionality. The character enriches the experience, it doesn't define it.</div>
+      <div class="cs-read">
+        <div class="cs-callout">Revolut informed the visual and structural approach. Wise shaped content hierarchy. After mentor feedback, Kami was recalibrated: present and meaningful, but no longer competing with core functionality. The character enriches the experience, it doesn't define it.</div>
       </div>
     </div>
   </section>
