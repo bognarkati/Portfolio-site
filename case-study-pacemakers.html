@@ -6,12 +6,62 @@
   <title>Pacemakers — Case Study · Bognár Kati</title>
   <meta name="description" content="Pacemakers: a conceptual landing page for an urban running community. UI design case study by Bognár Kati." />
 
-  <!-- Case study betűk: Geologica (törzs) + Bebas Neue (display) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geologica:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .coming-soon {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .coming-soon__inner {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .coming-soon__eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent, #b8f56a);
+      opacity: 0.8;
+    }
+    .coming-soon__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(64px, 10vw, 120px);
+      line-height: 1;
+      color: var(--ink, #f0f4ee);
+      margin: 0;
+    }
+    .coming-soon__sub {
+      font-family: 'Geologica', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink, #f0f4ee);
+      opacity: 0.5;
+      margin: 0;
+    }
+    .coming-soon__back {
+      margin-top: 8px;
+      font-family: 'Geologica', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent, #b8f56a);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .coming-soon__back:hover { opacity: 1; }
+  </style>
 </head>
 <body class="cs-pace">
 
@@ -27,181 +77,14 @@
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <section class="cs-hero">
-    <div class="container">
-      <p class="eyebrow">UI Design • Web App</p>
-      <h1 class="cs-hero__title">Pacemakers</h1>
-      <p class="cs-hero__sub">Landing page for an urban running community.</p>
-      <div class="cs-hero__media">
-        <img src="images/pace-hero.jpg" alt="Pacemakers landing page mockup" data-ph="images/pace-hero.jpg" />
-      </div>
+  <section class="coming-soon">
+    <div class="coming-soon__inner">
+      <p class="coming-soon__eyebrow">UI Design · Web</p>
+      <h1 class="coming-soon__title">Pacemakers</h1>
+      <p class="coming-soon__sub">A case study is on its way.</p>
+      <a class="coming-soon__back" href="index.html">← Back to work</a>
     </div>
   </section>
 
-  <!-- ===== Overview / Context (2 oszlop: szöveg + infokártya) ===== -->
-  <section class="cs-section">
-    <div class="container">
-      <div class="cs-overview">
-        <div class="cs-overview__text">
-          <p class="eyebrow">Overview</p>
-          <h2>Context</h2>
-          <p>Pacemakers is a conceptual landing page for an urban running community built around shared city runs, performance data, and collective energy. My very first design project, developed as part of the UI Academy program.</p>
-          <p><strong>The challenge:</strong></p>
-          <ul>
-            <li>Two distinct audiences in one visual language: a data-driven experienced runner and a community-seeking beginner.</li>
-            <li>A UI-focused assignment — wireframe and research were provided, so my work concentrated on the visual decisions: typography, colour, imagery, and atmosphere.</li>
-          </ul>
-          <p>Mentor feedback shaped critical decisions at every stage.</p>
-        </div>
-
-        <dl class="infocard">
-          <div class="infocard__row"><dt>Project type</dt><dd>Concept Project</dd></div>
-          <div class="infocard__row"><dt>My Role</dt><dd>UI Designer</dd></div>
-          <div class="infocard__row"><dt>Tool</dt><dd>Figma</dd></div>
-          <div class="infocard__row"><dt>Year</dt><dd>2025</dd></div>
-          <div class="infocard__row"><dt>Type</dt><dd>Concept project</dd></div>
-          <div class="infocard__row"><dt>Platform</dt><dd>Web (Desktop)</dd></div>
-        </dl>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Process ===== -->
-  <section class="cs-section cs-section--soft">
-    <div class="container">
-      <div class="cs-read"><h2 class="cs-h2">Process</h2></div>
-      <div class="cs-steps">
-
-        <div class="cs-step">
-          <span class="cs-step__num">01 — Empathize</span>
-          <h3>Understanding two runners</h3>
-          <p>Research was based on the program brief rather than independent interviews. Two primary personas were provided, each representing a distinct archetype within the running community.</p>
-          <img class="cs-img-wide" src="images/pace-persona-mate.jpg" alt="Máté persona" data-ph="images/pace-persona-mate.jpg" />
-          <img class="cs-img-wide" src="images/pace-persona-flora.jpg" alt="Flóra persona" data-ph="images/pace-persona-flora.jpg" />
-          <div class="cs-callout"><strong>Key tension:</strong> Máté needs performance, data, and speed. Flóra needs warmth, simplicity, and reassurance. Every section had to carry signals for both, without either feeling like an afterthought.</div>
-          <p><em>Reflection:</em> If revisiting this project, I would conduct independent qualitative research with real runners from both archetypes to validate and deepen these assumptions.</p>
-        </div>
-
-        <div class="cs-step">
-          <span class="cs-step__num">02 — Define</span>
-          <h3>Translating the brief into intent</h3>
-          <p>The wireframe and content hierarchy were pre-defined. My role was to translate the brief's strategic direction into clear design intent.</p>
-          <div class="cs-callout"><strong>Core design question:</strong> How do you communicate the energy of urban running to two completely different people — at the same time?</div>
-          <p><strong>Design principles:</strong> Urban energy — the pulse of the city, evening lights, runners in motion; structured, not chaotic. Community strength — every visual reinforces that you're never alone. Inclusive entry, performance-ready depth — beginner and advanced coexist without either feeling like an afterthought. Modern and sporty — athletic and contemporary, no fitness-app clichés.</p>
-          <p><em>Reflection:</em> Next time I would revisit the wireframe with a UX lens, questioning whether section order, content priority, and CTA placement truly serve both personas equally.</p>
-        </div>
-
-        <div class="cs-step">
-          <span class="cs-step__num">03 — Ideate</span>
-          <h3>Finding the atmosphere</h3>
-          <p>With structure fixed, ideation focused entirely on visual atmosphere. The conceptual anchor: evening running as a post-work decompression ritual — after sunset, under streetlights, in the neon-lit pulse of the city.</p>
-          <p><strong>Key decisions:</strong> A lime-on-black palette — high-energy contrast that reads as athletic and urban, differentiating from a category dominated by blues, reds, and muted earth tones. AI-generated imagery (Weavy, Nano Banana, ChatGPT) — custom visuals for each section, keeping the lime-glow atmosphere consistent without relying on generic stock photography.</p>
-        </div>
-
-        <div class="cs-step">
-          <span class="cs-step__num">04 — Prototype</span>
-          <h3>Building the system</h3>
-          <p>Built in Figma as a single-page desktop landing. Design system highlights — Colour: near-black canvas (#0A0F00), lime signal (#A8FF00), off-white text (#FDFFFA), deep blue (#006AFF) for secondary depth. Typography: Bebas Neue for display (modern, athletic, all-caps), Geologica for body and UI (neutral, legible). Principles: glow and depth, card-based layout for scannability, lime on black as a consistent visual signature.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Colour palette ===== -->
-  <section class="cs-section">
-    <div class="container">
-      <div class="cs-read">
-        <h2 class="cs-h2">Colour Palette</h2>
-        <p>Black and lime creates high-contrast energy. Blue adds depth for secondary elements.</p>
-      </div>
-      <div class="swatches">
-        <div class="swatch"><div class="swatch__chip" style="background:#0A0F00"></div><div class="swatch__code">#0A0F00</div></div>
-        <div class="swatch"><div class="swatch__chip" style="background:#FDFFFA"></div><div class="swatch__code">#FDFFFA</div></div>
-        <div class="swatch"><div class="swatch__chip" style="background:#A8FF00"></div><div class="swatch__code">#A8FF00</div></div>
-        <div class="swatch"><div class="swatch__chip" style="background:#006AFF"></div><div class="swatch__code">#006AFF</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Typography & principles ===== -->
-  <section class="cs-section cs-section--soft">
-    <div class="container">
-      <div class="cs-read"><h2 class="cs-h2">Typography &amp; Principles</h2></div>
-      <div class="cs-grid">
-        <div class="cs-tile"><h4>Bebas Neue</h4><p>Display / headlines — modern, athletic, all-caps. “Every run tells a story.”</p></div>
-        <div class="cs-tile"><h4>Geologica</h4><p>Body / UI text — neutral and legible.</p></div>
-        <div class="cs-tile"><h4>Glow &amp; depth</h4><p>Light and shadow build the evening-city atmosphere.</p></div>
-        <div class="cs-tile"><h4>Card-based layout</h4><p>Scannable sections, easy to browse at a glance.</p></div>
-        <div class="cs-tile"><h4>Lime on black</h4><p>A consistent visual signature across the page.</p></div>
-      </div>
-      <div class="cs-read">
-        <div class="cs-callout"><strong>Mentor involvement:</strong> Feedback shaped critical decisions throughout — from validating the lime-on-black direction to balancing atmospheric imagery with interface clarity.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Selected screens ===== -->
-  <section class="cs-section">
-    <div class="container">
-      <div class="cs-read">
-        <p class="eyebrow">Key Screens</p>
-        <h2 class="cs-h2">Selected Screens</h2>
-      </div>
-      <div class="gallery">
-        <div class="shot shot--wide"><img src="images/pace-screen-hero.jpg" alt="Hero section" data-ph="images/pace-screen-hero.jpg" /></div>
-        <div class="shot shot--wide"><img src="images/pace-screen-routes.jpg" alt="Routes section" data-ph="images/pace-screen-routes.jpg" /></div>
-        <div class="shot shot--wide"><img src="images/pace-screen-events.jpg" alt="Challenges / events section" data-ph="images/pace-screen-events.jpg" /></div>
-        <div class="shot shot--wide"><img src="images/pace-screen-strava.jpg" alt="Strava integration closing section" data-ph="images/pace-screen-strava.jpg" /></div>
-      </div>
-      <div class="cs-read" style="margin-top:28px">
-        <p><strong>Hero:</strong> a bold Bebas Neue headline (“Futni jobb együtt”) with a single lime CTA, over an image of two runners lit by glowing route data — reading as both performance and companionship.</p>
-        <p><strong>Routes:</strong> an immersive full-width image of a runner with a lime-glowing route painted along the city street — one of the most atmospheric moments on the page.</p>
-        <p><strong>Challenges:</strong> a card-based layout that makes events scannable and easy to browse at a glance.</p>
-        <p><strong>Closing:</strong> the Strava integration reinforced with a high-energy full-width design — ending the page on a strong community call to action.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Reflection ===== -->
-  <section class="cs-section cs-section--soft">
-    <div class="container">
-      <div class="cs-read">
-        <p class="eyebrow">Reflection</p>
-        <h2 class="cs-h2">What I learned</h2>
-        <p>Pacemakers taught me how to balance two very different user needs within a single visual language: Máté needed speed and data, Flóra needed warmth and belonging. The challenge was making the design feel welcoming without losing its urban edge.</p>
-        <p class="cs-subh">Key learnings</p>
-        <p>Atmosphere is a UI decision — colour, light, and imagery carry as much emotional meaning as copy. Typography carries identity — Bebas Neue and Geologica locked in the sporty direction in a way no other pairing would have. Personal instinct is a valid starting point — lived familiarity makes direction feel natural, not speculative. AI-generated imagery is a legitimate design strategy for maintaining visual consistency without stock photos. And wireframes deserve scrutiny — every section order is itself a design decision worth questioning.</p>
-        <p class="cs-subh">What I'd do differently</p>
-        <p>Return to it with a UX lens first: validate the wireframe against both personas, and conduct independent user research rather than relying solely on the brief. This was my first project — the visual confidence came first; the UX rigor is what I'm building next.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Case study nav ===== -->
-  <div class="container">
-    <nav class="cs-nav">
-      <a class="text-link" href="index.html">← Back to all projects</a>
-      <a class="cs-nav__next" href="case-study-square-one.html">Next project: Square One →</a>
-    </nav>
-  </div>
-
-  <!-- ===== Footer / Contact ===== -->
-  <footer class="footer" id="contact">
-    <div class="footer__inner">
-      <div class="footer__text">
-        <h2>Let's work together</h2>
-        <p>I'm currently open to new opportunities. If something clicked, let's talk.</p>
-      </div>
-      <nav class="footer__links">
-        <a href="mailto:bkatus@gmail.com">bkatus@gmail.com</a>
-        <a href="https://www.linkedin.com/in/katalin-bognar/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://drive.google.com/file/d/1-0T_xnWIMMeBLzmGuHqi0P6wbRCEtJie/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="placeholder.js"></script>
 </body>
 </html>
