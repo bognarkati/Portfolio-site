@@ -813,17 +813,18 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 }
 
 /* =========================================================
-   11) JOB STATEMENT KÁRTYA
+   11) JOB STATEMENT KÁRTYA (423-1154)
    ========================================================= */
-.cs-job-statement {
+.jsc {
   background: #fff;
   border: 1px solid #d6d1c7;
   border-radius: 8px;
   overflow: hidden;
   margin: 24px 0 32px;
+  font-family: 'Inter', sans-serif;
 }
 
-.cs-job-statement__header {
+.jsc__header {
   background: #fff7c4;
   padding: 18px 24px;
   text-align: center;
@@ -833,29 +834,36 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   color: #1f1a14;
 }
 
-.cs-job-statement__columns {
+.jsc__col-bar {
   display: flex;
   border-top: 1px solid #d6d1c7;
   border-bottom: 1px solid #d6d1c7;
 }
 
-.cs-job-statement__col-head {
+.jsc__col-label {
   flex: 1;
   background: #fffae1;
-  padding: 12px 24px;
+  padding: 16px 24px;
+  text-align: center;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.52px;
   color: #1f1a14;
-  text-align: center;
 }
 
-.cs-job-statement__col-head--right {
-  border-left: 1px solid #d6d1c7;
-  flex: 0 0 38%;
+.jsc__col-label--right {
+  flex: none;
+  width: 360px;
 }
 
-.cs-job-statement__flow {
+.jsc__col-sep {
+  width: 1px;
+  background: #d6d1c7;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.jsc__flow {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -864,7 +872,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   border-bottom: 1px solid #d6d1c7;
 }
 
-.cs-sticky-flow {
+.jsc__flow-cell {
   flex: 1;
   background: #fff;
   border: 1px solid #d6d1c7;
@@ -874,85 +882,98 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   font-size: 15px;
   color: #1f1a14;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cs-sticky-flow--fixed {
-  flex: 0 0 35%;
+.jsc__flow-cell--narrow {
+  flex: none;
+  width: 320px;
 }
 
-.cs-job-statement__arrow {
+.jsc__arrow {
   color: #8c857a;
   font-size: 18px;
   flex-shrink: 0;
 }
 
-.cs-job-statement__stickies {
+.jsc__stickies {
   display: flex;
-  padding: 24px;
   background: #fafafa;
-  gap: 0;
-  align-items: flex-start;
+  padding: 24px;
+  overflow: hidden;
 }
 
-.cs-job-statement__sticky-col {
+.jsc__sticky-section {
   flex: 1;
-  padding: 8px 12px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+  padding: 8px 12px;
+  min-width: 0;
+  overflow: hidden;
 }
 
-.cs-job-statement__sticky-col + .cs-job-statement__sticky-col {
+.jsc__sticky-section--bordered {
   border-left: 1px solid #d6d1c7;
 }
 
-.cs-sticky {
+.jsc__sticky {
   background: #a8f0bc;
-  border-radius: 3px;
+  height: 150px;
   padding: 10px;
-  font-size: 12px;
-  color: #1f1a14;
-  line-height: 1.48;
+  border-radius: 3px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.12);
   display: flex;
   flex-direction: column;
   gap: 6px;
+  overflow: hidden;
+  font-size: 12px;
+  color: #1f1a14;
+  line-height: 1.48;
+  word-break: break-word;
 }
 
-.cs-sticky__author {
+.jsc__author {
   font-size: 9px;
   color: #736b61;
+  line-height: normal;
+  white-space: nowrap;
   display: block;
 }
 
-.cs-job-statement__divider {
+.jsc__hr {
   height: 1px;
   background: #d6d1c7;
-  border: none;
-  margin: 0;
 }
 
-.cs-job-statement__conclusion {
-  padding: 28px 32px 36px;
+.jsc__conclusion {
   background: #fff;
+  padding: 28px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  word-break: break-word;
 }
 
-.cs-job-statement p {
-  color: #1f1a14;
-  margin: 0 0 12px;
-}
-
-.cs-job-statement__label-sm {
+p.jsc__label {
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 14px;
+  color: #1f1a14;
+  line-height: normal;
+  margin: 0;
+  opacity: 1;
 }
 
-.cs-job-statement__quote {
+p.jsc__text {
   font-family: 'Lucida Handwriting', 'Bradley Hand ITC', cursive;
-  font-style: italic;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
+  color: #1f1a14;
   margin: 0;
+  opacity: 1;
 }
 
 /* =========================================================
@@ -1001,10 +1022,12 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 }
 
 @media (max-width: 700px) {
-  .cs-job-statement__flow { flex-wrap: wrap; }
-  .cs-sticky-flow--fixed { flex: 1 1 100%; }
-  .cs-job-statement__stickies { flex-direction: column; }
-  .cs-job-statement__sticky-col + .cs-job-statement__sticky-col { border-left: none; border-top: 1px solid #d6d1c7; }
+  .jsc__col-label--right { width: auto; flex: 1; }
+  .jsc__flow { flex-wrap: wrap; }
+  .jsc__flow-cell--narrow { width: auto; flex: 1 1 100%; }
+  .jsc__stickies { flex-direction: column; }
+  .jsc__sticky-section--bordered { border-left: none; border-top: 1px solid #d6d1c7; }
+  .jsc__sticky-section { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* =========================================================
