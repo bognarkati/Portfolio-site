@@ -1009,6 +1009,7 @@ body.cs-square #define > ul {
   font-size: 20px;
   font-weight: 400;
   line-height: 25px;
+  letter-spacing: 0.04em;
 }
 
 body.cs-square #define > .cs-subh {
@@ -1019,7 +1020,7 @@ body.cs-square #define > .cs-subh {
   opacity: 0.6;
   color: var(--ink);
   margin-top: 48px;
-  margin-bottom: 8px;
+  margin-bottom: 28px;
 }
 
 .cs-step-heading {
@@ -1085,19 +1086,24 @@ body.cs-square #define > .cs-subh {
   white-space: nowrap;
 }
 
-.persona-card__meet {
+p.persona-card__meet {
   font-family: var(--font-body);
   font-size: 22px;
   font-weight: 600;
+  line-height: 1;
   color: var(--ink);
-  margin: 0 0 2px;
+  margin: 0;
+  opacity: 1;
 }
 
-.persona-card__role {
+p.persona-card__role {
   font-family: var(--font-body);
   font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
   color: rgba(232, 251, 252, 0.6);
   margin: 0;
+  opacity: 1;
 }
 
 .persona-card__body {
