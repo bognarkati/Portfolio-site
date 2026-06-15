@@ -578,6 +578,27 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 .cs-tile h4 { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h4); margin: 0 0 8px; }
 .cs-tile p { font-size: var(--fs-small); color: var(--ink-soft); margin: 0; }
 
+/* --- Journey Map komponens --- */
+.journey-map-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+.journey-map {
+  position: relative;
+  width: 1076px;
+  height: 895px;
+  background: #fff9ec;
+  overflow: hidden;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+}
+.journey-map p {
+  margin: 0;
+  opacity: 1;
+}
+
 /* --- Folyamat szekció képek (teljes szélességű kutatási fotók) --- */
 .cs-img-wide {
   width: 100%;
