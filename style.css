@@ -1002,10 +1002,13 @@ p.jsc__text {
   background: #1a1d3a;
   border-radius: 16px;
   padding: 40px;
+  width: 618px;
+  min-height: 500px;
   margin: 24px 0 32px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  box-sizing: border-box;
 }
 
 p.cs-insight-card__title {
