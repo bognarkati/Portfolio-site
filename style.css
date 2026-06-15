@@ -599,6 +599,25 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   opacity: 1;
 }
 
+/* --- Monthly Journey Map (308:1602) — Figma image fill crop --- */
+.journey-monthly-wrap {
+  position: relative;
+  width: 100%;
+  /* 1076 × 277px Figma frame → aspect ratio 3.884 */
+  aspect-ratio: 1076 / 277;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 20px 0;
+}
+.journey-monthly-img {
+  position: absolute;
+  width: 129.29%;
+  height: 334.64%;
+  left: -2.02%;
+  top: -226.14%;
+  max-width: none;
+}
+
 /* --- Folyamat szekció képek (teljes szélességű kutatási fotók) --- */
 .cs-img-wide {
   width: 100%;
