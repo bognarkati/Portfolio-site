@@ -996,48 +996,69 @@ p.jsc__text {
 }
 
 /* =========================================================
-   12) KEY INSIGHT KÁRTYA
+   12) KEY INSIGHT KÁRTYA (389-9440)
    ========================================================= */
 .cs-insight-card {
-  background: var(--surface);
-  border-radius: var(--radius);
+  background: #1a1d3a;
+  border-radius: 16px;
   padding: 40px;
   margin: 24px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.cs-insight-card__title {
+p.cs-insight-card__title {
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 28px;
-  color: var(--accent);
+  color: #99fbff;
   letter-spacing: 1.12px;
-  margin: 0 0 20px;
-  line-height: 1.2;
+  line-height: 25px;
+  margin: 0;
+  opacity: 1;
 }
 
-.cs-insight-card__subhead {
+.cs-insight-card p:not(.cs-insight-card__title):not(.cs-insight-card__subhead) {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: #e8fbfc;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  margin: 0;
+  opacity: 1;
+}
+
+p.cs-insight-card__subhead {
+  font-family: var(--font-body);
   font-weight: 800;
-  color: var(--accent);
-  margin: 20px 0 8px;
-  font-size: var(--fs-body);
-  letter-spacing: 0.05em;
-}
-
-.cs-insight-card p,
-.cs-insight-card li {
-  color: var(--ink);
-  font-size: var(--fs-body);
-  line-height: 1.55;
-  margin: 0 0 8px;
+  font-size: 20px;
+  color: #99fbff;
+  letter-spacing: 0.8px;
+  line-height: 25px;
+  margin: 5px 0 0;
+  opacity: 1;
 }
 
 .cs-insight-card ul {
-  padding-left: 24px;
+  padding-left: 30px;
   margin: 0;
 }
 
 .cs-insight-card li {
-  margin-bottom: 10px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: #e8fbfc;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+.cs-insight-card li strong {
+  font-weight: 700;
+  color: #e8fbfc;
 }
 
 @media (max-width: 700px) {
