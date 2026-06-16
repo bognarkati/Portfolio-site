@@ -1245,12 +1245,13 @@ p.cs-insight-card__subhead {
   margin: 0 0 12px;
 }
 .cs-proto-display {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Mono', monospace;
   font-weight: 700;
   font-size: 36px;
   color: #e8fbfc;
   margin: 0 0 12px;
-  line-height: 1.2;
+  line-height: 34px;
+  letter-spacing: -0.025em;
 }
 .cs-proto-tagline {
   font-family: 'Plus Jakarta Sans', sans-serif;
