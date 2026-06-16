@@ -683,6 +683,9 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
 }
 
 @media (max-width: 900px) {
+  body { padding: 0 24px; }
+  .nav { margin: 0 -24px; }
+
   /* Nav */
   .nav__inner { padding: 20px 24px; justify-content: space-between; }
   .nav__logo { font-family: var(--font-head); font-size: 1.75rem; font-weight: 400; letter-spacing: -0.35px; }
@@ -707,7 +710,7 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
   }
 
   /* Hero */
-  .hero__grid { flex-direction: column; gap: 16px; padding: 24px; }
+  .hero__grid { flex-direction: column; gap: 16px; padding: 24px 0; }
   .hero__text { width: 100%; }
   .hero__text .eyebrow { font-size: 0.875rem; line-height: 22px; }
   .hero__title { font-size: 2.25rem; line-height: 40px; }
@@ -715,7 +718,7 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
   .hero__photo { width: 100%; max-width: 100%; height: 400px; aspect-ratio: unset; border-radius: 20px; }
 
   /* Selected Work */
-  .work { background: rgba(188, 215, 220, 0.31); padding: 24px; gap: 16px; }
+  .work { background: rgba(188, 215, 220, 0.31); margin: 0 -24px; padding: 24px; gap: 16px; }
   .section-title { font-size: 2.25rem; line-height: 40px; }
   .cards { flex-direction: column; }
   .card__title { font-size: 1rem; line-height: 22px; }
@@ -731,7 +734,7 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
 
   /* Footer */
   .footer { border-top: none; }
-  .footer__inner { flex-direction: column; align-items: flex-start; padding: 24px; gap: 4px; }
+  .footer__inner { flex-direction: column; align-items: flex-start; padding: 24px 0; gap: 4px; }
   .footer__text h2 { font-size: 1.75rem; font-weight: 500; margin-bottom: 0; }
   .footer__text p { font-size: 1rem; line-height: 26px; margin: 0; color: #2b3437; }
   .footer__links { flex-direction: column; gap: 4px; padding-top: 8px; flex-wrap: nowrap; }
@@ -739,14 +742,14 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
 
   /* Case study */
   .cs-overview { grid-template-columns: 1fr; gap: 32px; }
-  .cs-hero__inner { grid-template-columns: 1fr; padding: 48px 24px; min-height: auto; }
+  .cs-hero__inner { grid-template-columns: 1fr; padding: 48px 0; min-height: auto; }
   .cs-hero__phone--front { right: 0; }
 }
 
 @media (max-width: 520px) {
-  .container { padding: 0 24px; }
+  .container { padding: 0; }
   .nav__inner { padding: 20px 24px; }
-  .hero__grid { padding: 24px; gap: 16px; }
+  .hero__grid { padding: 24px 0; gap: 16px; }
   .footer__links { gap: 4px; }
   .infocard { padding: 24px; }
 }
@@ -947,7 +950,7 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
   .cs-empathize__top,
   .cs-empathize__bottom { grid-template-columns: 1fr; gap: 32px; }
   .cs-empathize__inner { padding: 0 24px; gap: 40px; }
-  .cs-empathize { padding: 48px 0; }
+  .cs-empathize { padding: 48px 0; margin: 0 -24px; }
   .cs-empathize__bottom .cs-empathize__kami { order: -1; }
 }
 
@@ -1893,7 +1896,7 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .cs-hero { padding: 0; }
   body.cs-square .cs-hero__inner {
     grid-template-columns: 1fr;
-    padding: 24px;
+    padding: 24px 0;
     gap: 16px;
     min-height: auto;
   }
@@ -1941,7 +1944,7 @@ body.cs-square .persona-card__mobile { display: none; }
   }
 
   /* --- Overview szekció --- */
-  body.cs-square .cs-section { background: #140e38; padding: 0; }
+  body.cs-square .cs-section { background: #140e38; margin: 0 -24px; padding: 0; }
   body.cs-square .cs-section__inner { padding: 24px; max-width: 100%; }
   body.cs-square .cs-overview {
     grid-template-columns: 1fr;
@@ -1997,7 +2000,7 @@ body.cs-square .persona-card__mobile { display: none; }
   }
 
   /* --- Folyamat nav sáv (workflow bar) --- */
-  body.cs-square .cs-process-nav { padding: 0; background: #0f0a2e; }
+  body.cs-square .cs-process-nav { padding: 0; background: #0f0a2e; margin: 0 -24px; }
   body.cs-square .cs-process-nav__inner {
     max-width: 100%;
     height: 80px;
@@ -2076,7 +2079,7 @@ body.cs-square .persona-card__mobile { display: none; }
     color: #99fbff;
     margin: 0;
   }
-  body.cs-square .persona-card__mobile--alt .pcm-name { color: #7373fa; }
+  body.cs-square .persona-card__mobile--alt .pcm-name { color: #99fbff; }
   body.cs-square .pcm-role {
     font-size: 13px;
     font-weight: 500;
@@ -2091,7 +2094,7 @@ body.cs-square .persona-card__mobile { display: none; }
     border-radius: 1px;
     flex-shrink: 0;
   }
-  body.cs-square .persona-card__mobile--alt .pcm-divider { background: rgba(120, 89, 229, 0.4); }
+  body.cs-square .persona-card__mobile--alt .pcm-divider { background: rgba(153, 251, 255, 0.4); }
   body.cs-square .pcm-bio {
     font-size: 14px;
     font-weight: 400;
@@ -2108,7 +2111,7 @@ body.cs-square .persona-card__mobile { display: none; }
     color: #99fbff;
     margin: 0;
   }
-  body.cs-square .persona-card__mobile--alt .pcm-label { color: #7373fa; }
+  body.cs-square .persona-card__mobile--alt .pcm-label { color: #99fbff; }
   body.cs-square .pcm-value {
     font-size: 13px;
     font-weight: 400;
@@ -2118,21 +2121,94 @@ body.cs-square .persona-card__mobile { display: none; }
   }
 
   /* Journey map + JSC — mobilon elrejtve (vizuálisan tört, Figma sem mutatja) */
+  body.cs-square .journey-desc-wrap { display: none; }
   body.cs-square .journey-map-wrap { display: none; }
   body.cs-square .journey-monthly-wrap { display: none; }
   body.cs-square .jsc { display: none; }
 
-  /* Key insight kártya */
-  body.cs-square .cs-insight-card {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    margin: 16px 0;
+  /* Define szekció — mobil átrendezés (Figma szerint) */
+  body.cs-square .define-desktop-only { display: none !important; }
+  body.cs-square .define-personas-desc { display: none !important; }
+  body.cs-square .define-journey-mobile { display: block !important; }
+  body.cs-square .define-journey-mobile .cs-subh,
+  body.cs-square .define-hmw-mobile .cs-subh {
+    font-family: var(--font-body);
+    font-size: 20px !important;
+    font-weight: 700;
+    line-height: 25px !important;
+    opacity: 0.6;
+    color: var(--ink);
+    margin-top: 24px !important;
+    margin-bottom: 12px !important;
+  }
+  body.cs-square .define-journey-card {
+    background: #140e38;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 8px;
+  }
+  body.cs-square .define-journey-card p,
+  body.cs-square .define-journey-card li {
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(253, 255, 250, 0.8);
+    margin: 0 0 6px;
+  }
+  body.cs-square .define-journey-card ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 6px 0 0;
+  }
+  body.cs-square .define-journey-card li::before {
+    content: '• ';
+    color: #99fbff;
+  }
+  body.cs-square .define-jsc-desktop { display: none !important; }
+  body.cs-square .define-jsc-mobile { display: block !important; }
+  body.cs-square .define-jsc-mobile p {
+    font-size: 15px;
+    line-height: 22px;
+    color: rgba(253, 255, 250, 0.8);
+    margin: 0 0 8px;
+  }
+  body.cs-square .define-jsc-mobile .define-jsc-mobile__quote {
+    color: rgba(253, 255, 250, 1);
+    font-style: italic;
+  }
+  body.cs-square .cs-insight-card { display: none !important; }
+  body.cs-square .define-hmw-desktop { display: none !important; }
+  body.cs-square .define-hmw-mobile { display: block !important; }
+  body.cs-square .hmw-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  body.cs-square .hmw-card {
+    background: #140e38;
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  body.cs-square .hmw-card__q {
+    color: #99fbff;
+    font-size: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 22px;
+  }
+  body.cs-square .hmw-card p {
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(253, 255, 250, 0.85);
+    margin: 0;
   }
 
   /* --- Ideate szekció --- */
   body.cs-square .cs-ideate-section { padding: 0; }
-  body.cs-square .cs-ideate-section > .container { padding: 24px; max-width: 100%; }
+  body.cs-square .cs-ideate-section > .container { padding: 24px 0; max-width: 100%; }
   body.cs-square .cs-ideate__inner { grid-template-columns: 1fr; gap: 16px; }
   body.cs-square .cs-ideate__text .cs-step-heading { font-size: 32px; line-height: 42px; }
   body.cs-square .cs-ideate__text p,
@@ -2140,7 +2216,7 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .cs-ideate__img img { width: 100%; height: auto; }
 
   /* --- Prototype szekció --- */
-  body.cs-square .cs-prototype-section { background: #140e38; padding: 0; }
+  body.cs-square .cs-prototype-section { background: #140e38; margin: 0 -24px; padding: 0; }
   body.cs-square .cs-prototype-section > .container { padding: 24px; max-width: 100%; }
   body.cs-square .cs-prototype-section .cs-step-heading { font-size: 32px; line-height: 42px; margin-bottom: 16px; }
   body.cs-square .cs-prototype-section > .container > p,
@@ -2150,7 +2226,7 @@ body.cs-square .persona-card__mobile { display: none; }
 
   /* --- Key Screens szekció --- */
   body.cs-square .cs-screens-section { padding: 0; }
-  body.cs-square .cs-screens-section > .container { padding: 24px; max-width: 100%; }
+  body.cs-square .cs-screens-section > .container { padding: 24px 0; max-width: 100%; }
   body.cs-square .cs-step-heading--center { font-size: 32px; line-height: 42px; margin-bottom: 24px; }
   body.cs-square .cs-screen-item { margin-bottom: 24px; }
   body.cs-square .cs-screen-caption {
@@ -2162,7 +2238,7 @@ body.cs-square .persona-card__mobile { display: none; }
   }
 
   /* --- Testing szekció --- */
-  body.cs-square .cs-testing-section { background: #140e38; padding: 0; }
+  body.cs-square .cs-testing-section { background: #140e38; margin: 0 -24px; padding: 0; }
   body.cs-square .cs-testing-section > .container { padding: 24px; max-width: 100%; }
   body.cs-square .cs-testing-section .cs-step-heading { font-size: 32px; line-height: 42px; margin-bottom: 16px; }
   body.cs-square .cs-testing-section > .container > p:not(.cs-step-eyebrow):not(.cs-testing-subh),
@@ -2173,7 +2249,7 @@ body.cs-square .persona-card__mobile { display: none; }
   /* --- Case study footer nav --- */
   body.cs-square .cs-nav-wrap { max-width: 100%; padding: 0; }
   body.cs-square .cs-nav {
-    padding: 28px 24px;
+    padding: 28px 0;
     border-top: 1px solid rgba(253, 255, 250, 0.1);
     min-height: 80px;
     box-sizing: border-box;
