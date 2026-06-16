@@ -1314,7 +1314,7 @@ p.cs-insight-card__subhead {
   line-height: 18px;
 }
 .cs-proto-cards .cs-proto-card:nth-child(2) .cs-proto-card__text {
-  color: #99fbff;
+  color: rgba(153, 251, 255, 0.6);
 }
 
 /* =========================================================
