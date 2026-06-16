@@ -439,9 +439,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 .cs-section--soft { background: var(--bg-soft); }
 
 .cs-read { max-width: var(--readw); margin: 0 auto; }
-.cs-read p { font-size: var(--fs-body); color: var(--ink); margin: 0 0 18px; }
+.cs-read p { font-size: var(--fs-body); line-height: 25px; letter-spacing: 0.8px; color: var(--ink); margin: 0 0 18px; }
 .cs-read ul { margin: 0 0 18px; padding-left: 22px; }
-.cs-read li { font-size: var(--fs-body); color: var(--ink); margin-bottom: 8px; }
+.cs-read li { font-size: var(--fs-body); line-height: 25px; letter-spacing: 0.8px; color: var(--ink); margin-bottom: 8px; }
 
 .cs-h2 { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h2); margin-bottom: 24px; line-height: var(--lh-snug); }
 .cs-subh { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h4); margin: 26px 0 8px; color: var(--ink); }
@@ -483,11 +483,11 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 .cs-overview__heading h2 { font-family: var(--font-head); font-weight: 700; font-size: 28px; color: #e8fbfc; margin: 0; line-height: normal; }
 
 .cs-overview__body {
-  opacity: 0.7;
+  opacity: 0.6;
   letter-spacing: 0.8px;
 }
 .cs-overview__body p,
-.cs-overview__body li { font-size: 20px; font-weight: 400; color: #e8fbfc; line-height: normal; margin: 0; }
+.cs-overview__body li { font-size: 20px; font-weight: 400; color: #e8fbfc; line-height: 25px; margin: 0; }
 
 .infocard {
   background: var(--surface);
@@ -503,7 +503,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   font-family: var(--font-body); font-weight: 600;
   font-size: 20px; color: var(--accent); line-height: 24px;
 }
-.infocard__row dd { margin: 0; font-size: 20px; font-weight: 400; color: #e8fbfc; line-height: 24px; }
+.infocard__row dd { margin: 0; font-size: 20px; font-weight: 400; color: rgba(232, 251, 252, 0.6); line-height: 25px; letter-spacing: 0.8px; }
 
 /* --- Process nav sáv --- */
 .cs-process-nav {
@@ -542,7 +542,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase;
 }
 .cs-step h3 { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h3); margin: 6px 0 12px; }
-.cs-step p { font-size: var(--fs-body); color: var(--ink); margin: 0 0 14px; }
+.cs-step p { font-size: var(--fs-body); line-height: 25px; letter-spacing: 0.8px; color: var(--ink); margin: 0 0 14px; }
+.cs-step li { font-size: var(--fs-body); line-height: 25px; letter-spacing: 0.8px; color: var(--ink); }
 
 .cs-callout {
   background: color-mix(in srgb, var(--accent) 10%, transparent);
@@ -662,6 +663,10 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   .hero__grid { padding: 80px 80px; gap: 80px; }
   .work { padding: 80px 80px; }
   .footer__inner { padding: 40px 80px; gap: 80px; }
+  .cs-ideate-section > .container,
+  .cs-prototype-section > .container,
+  .cs-screens-section > .container,
+  .cs-testing-section > .container { padding: 0 80px; }
 }
 
 @media (max-width: 900px) {
@@ -744,11 +749,12 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 }
 
 .cs-empathize__title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 48px;
   color: #E8FBFC;
-  line-height: 1.1;
+  line-height: 60px;
+  letter-spacing: 0;
   margin: 0 0 28px;
 }
 
@@ -758,7 +764,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   font-size: 20px;
   line-height: 25px;
   letter-spacing: 0.04em;
-  color: rgba(232, 251, 252, 0.7);
+  color: rgba(232, 251, 252, 0.6);
   margin: 0 0 16px;
 }
 
@@ -817,8 +823,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   font-size: 20px;
   line-height: 25px;
-  letter-spacing: 0.04em;
-  color: var(--ink);
+  letter-spacing: 0.8px;
+  color: rgba(232, 251, 252, 0.6);
 }
 
 @media (max-width: 1300px) {
@@ -1027,11 +1033,10 @@ p.cs-insight-card__title {
   font-family: var(--font-body);
   font-size: 20px;
   font-weight: 400;
-  color: #e8fbfc;
+  color: rgba(232, 251, 252, 0.6);
   line-height: 25px;
   letter-spacing: 0.8px;
   margin: 0;
-  opacity: 1;
 }
 
 p.cs-insight-card__subhead {
@@ -1053,16 +1058,263 @@ p.cs-insight-card__subhead {
 .cs-insight-card li {
   font-family: var(--font-body);
   font-size: 20px;
-  color: #e8fbfc;
+  color: rgba(232, 251, 252, 0.6);
   line-height: 25px;
   letter-spacing: 0.8px;
   margin-bottom: 0;
-  opacity: 1;
 }
 
 .cs-insight-card li strong {
   font-weight: 700;
   color: #e8fbfc;
+}
+
+/* =========================================================
+   Prototype dark section
+   ========================================================= */
+.cs-prototype-section {
+  background: #0d0736;
+  padding: 80px 0;
+}
+.cs-prototype-section > .container {
+  max-width: 1440px;
+  padding: 0 162px;
+}
+.cs-prototype-section .cs-step-heading {
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+.cs-prototype-section > .container > p,
+.cs-prototype-section > .container > ul li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  color: rgba(232, 251, 252, 0.6);
+  margin: 0 0 14px;
+  text-wrap: pretty;
+}
+.cs-prototype-section > .container > p strong {
+  color: #ffffff;
+}
+
+/* Proto cards grid */
+.cs-proto-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+.cs-proto-card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+.cs-proto-card__title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: rgba(232, 251, 252, 0.9);
+  text-align: center;
+  margin: 0 0 16px;
+}
+.cs-proto-card__title--accent {
+  color: #99fbff;
+  text-align: left;
+}
+.cs-proto-card__text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: rgba(232, 251, 252, 0.6);
+  margin: 0 0 12px;
+}
+.cs-proto-display {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #e8fbfc;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+.cs-proto-tagline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(232, 251, 252, 0.8);
+  margin: 0 0 12px;
+}
+.cs-proto-swatches {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+.cs-proto-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+.cs-proto-swatch__chip {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+}
+.cs-proto-swatch__code {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10px;
+  color: rgba(232, 251, 252, 0.6);
+  text-align: center;
+}
+.cs-proto-principles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-proto-principles li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.cs-proto-principles li strong {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #99fbff;
+}
+.cs-proto-principles li span {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(232, 251, 252, 0.6);
+  line-height: 18px;
+}
+
+/* =========================================================
+   Testing dark section
+   ========================================================= */
+.cs-testing-section {
+  background: #0d0736;
+  padding: 80px 0;
+}
+.cs-testing-section > .container {
+  max-width: 1440px;
+  padding: 0 162px;
+}
+.cs-testing-section .cs-step-heading {
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+.cs-testing-section > .container > p:not(.cs-step-eyebrow):not(.cs-testing-subh) {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  color: rgba(232, 251, 252, 0.6);
+  margin: 0 0 14px;
+  text-wrap: pretty;
+}
+.cs-testing-section > .container > ul {
+  padding-left: 20px;
+  margin: 0 0 24px;
+}
+.cs-testing-section > .container > ul li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  color: rgba(232, 251, 252, 0.6);
+  margin-bottom: 8px;
+  text-wrap: pretty;
+}
+.cs-testing-subh {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 28px 0 12px;
+}
+.cs-testing-kami {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+.cs-testing-kami__circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #99fbff;
+  background: #0d0736;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.cs-testing-kami__circle img {
+  width: 180px;
+  height: auto;
+}
+
+/* =========================================================
+   Key Screens dark section
+   ========================================================= */
+.cs-screens-section {
+  background: #0d0736;
+  padding: 80px 0;
+}
+.cs-screens-section > .container {
+  max-width: 1440px;
+  padding: 0 162px;
+}
+.cs-step-eyebrow--center {
+  text-align: center;
+}
+.cs-step-heading--center {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 56px;
+}
+.cs-screen-item {
+  margin-bottom: 64px;
+}
+.cs-screen-item:last-child {
+  margin-bottom: 0;
+}
+.cs-screen-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+.cs-screen-caption {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  color: rgba(232, 251, 252, 0.6);
+  text-align: center;
+  margin: 24px auto 0;
+  max-width: 760px;
+  text-wrap: pretty;
+}
+.cs-screen-item--wide .cs-screen-caption {
+  max-width: 100%;
 }
 
 @media (max-width: 700px) {
@@ -1115,9 +1367,69 @@ body.cs-square #define > .cs-subh {
   font-family: var(--font-body);
   font-size: 48px;
   font-weight: 600;
-  line-height: normal;
+  line-height: 60px;
+  letter-spacing: 0;
   color: var(--ink);
   margin: 0 0 24px;
+}
+
+/* =========================================================
+   Ideate dark section
+   ========================================================= */
+.cs-ideate-section {
+  background: #0d0736;
+  padding: 80px 0;
+}
+.cs-ideate-section > .container {
+  max-width: 1440px;
+  padding: 0 162px;
+}
+.cs-ideate__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.cs-ideate__text .cs-step-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+.cs-ideate__text p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  color: rgba(232, 251, 252, 0.6);
+  margin: 0 0 12px;
+  text-wrap: pretty;
+}
+.cs-ideate__text ul {
+  padding-left: 20px;
+  margin: 0;
+}
+.cs-ideate__text li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  color: rgba(232, 251, 252, 0.6);
+  margin-bottom: 8px;
+  text-wrap: pretty;
+}
+.cs-ideate__text strong {
+  color: #ffffff;
+}
+.cs-ideate__img img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
 }
 
 /* =========================================================
@@ -1391,7 +1703,7 @@ p.persona-card__section-label {
 .persona-card__tech-label {
   font-family: var(--font-body);
   font-size: 10px;
-  color: rgba(232, 251, 252, 0.7);
+  color: rgba(232, 251, 252, 0.6);
   white-space: nowrap;
 }
 
