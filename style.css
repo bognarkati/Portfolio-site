@@ -209,6 +209,10 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
   color: var(--accent);
   border-bottom: 2px solid var(--accent);
 }
+.nav__hamburger { display: none; }
+body.cs-square .nav__hamburger span { background: #fdfffa; }
+body.cs-square .mobile-menu__close::before,
+body.cs-square .mobile-menu__close::after { background: #fdfffa; }
 
 /* =========================================================
    5) HOMEPAGE SZEKCIÓK
@@ -678,28 +682,124 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; color: var(--ink); }
 }
 
 @media (max-width: 900px) {
-  .nav__inner { padding: 14px 24px; }
-  .nav__links { gap: 18px; }
-  .hero__grid { flex-direction: column; gap: 40px; padding: 48px 24px; }
+  /* Nav */
+  .nav__inner { padding: 20px 24px; justify-content: space-between; }
+  .nav__logo { font-family: var(--font-head); font-size: 1.75rem; font-weight: 400; letter-spacing: -0.35px; }
+  .nav__links { display: none; }
+  .nav__hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .nav__hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #101010;
+    border-radius: 1px;
+  }
+
+  /* Hero */
+  .hero__grid { flex-direction: column; gap: 16px; padding: 24px; }
   .hero__text { width: 100%; }
-  .hero__photo { width: 100%; max-width: 420px; height: auto; aspect-ratio: 356 / 426; }
-  .work { padding: 60px 24px; gap: 48px; }
+  .hero__text .eyebrow { font-size: 0.875rem; line-height: 22px; }
+  .hero__title { font-size: 2.25rem; line-height: 40px; }
+  .hero__lead { font-size: 1rem; line-height: 26px; }
+  .hero__photo { width: 100%; max-width: 100%; height: 400px; aspect-ratio: unset; border-radius: 20px; }
+
+  /* Selected Work */
+  .work { background: rgba(188, 215, 220, 0.31); padding: 24px; gap: 16px; }
+  .section-title { font-size: 2.25rem; line-height: 40px; }
   .cards { flex-direction: column; }
-  .cs-overview { grid-template-columns: 1fr; gap: 32px; }
-  .nav__logo { font-size: 1.35rem; }
-  .footer__inner { flex-direction: column; align-items: flex-start; padding: 40px 24px; gap: 32px; }
+  .card__title { font-size: 1rem; line-height: 22px; }
+  .card__body { padding: 12px; gap: 4px; }
+  .card__desc { font-size: 0.875rem; line-height: 22px; }
+  .card__tag { font-size: 0.8125rem; color: rgba(0, 0, 0, 0.5); line-height: 20px; }
+  .card .text-link { font-size: 0.875rem; line-height: 22px; }
+
+  /* About */
+  .about { padding: 24px 0; }
+  .about__inner h2 { font-size: 2.25rem; font-weight: 400; margin-bottom: 16px; }
+  .about__inner p { font-size: 1rem; line-height: 26px; color: #111; margin: 0 0 16px; }
+
+  /* Footer */
+  .footer__inner { flex-direction: column; align-items: flex-start; padding: 24px; gap: 4px; }
   .footer { border-top: none; }
+  .footer__text h2 { font-size: 1.75rem; font-weight: 500; margin-bottom: 0; }
+  .footer__text p { font-size: 1rem; line-height: 26px; margin: 0; color: #2b3437; }
+  .footer__links { flex-direction: column; gap: 4px; padding-top: 8px; flex-wrap: nowrap; }
+  .footer__links a { font-size: 1.125rem; font-weight: 500; }
+
+  /* Case study */
+  .cs-overview { grid-template-columns: 1fr; gap: 32px; }
   .cs-hero__inner { grid-template-columns: 1fr; padding: 48px 24px; min-height: auto; }
   .cs-hero__phone--front { right: 0; }
 }
 
 @media (max-width: 520px) {
-  .container { padding: 0 18px; }
-  .nav__inner { padding: 14px 18px; }
-  .hero__grid { padding: 32px 18px; gap: 32px; }
-  .footer__links { gap: 20px; }
+  .container { padding: 0 24px; }
+  .nav__inner { padding: 20px 24px; }
+  .hero__grid { padding: 24px; gap: 16px; }
+  .footer__links { gap: 4px; }
   .infocard { padding: 24px; }
 }
+
+/* =========================================================
+   Mobil navigáció overlay
+   ========================================================= */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 55;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  gap: 40px;
+}
+.mobile-menu.is-open { display: flex; }
+.mobile-menu a {
+  font-family: var(--font-head);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.1;
+}
+.mobile-menu a:hover { color: var(--accent); text-decoration: none; }
+.mobile-menu__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+.mobile-menu__close::before,
+.mobile-menu__close::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #101010;
+  border-radius: 1px;
+  position: absolute;
+}
+.mobile-menu__close::before { transform: rotate(45deg); }
+.mobile-menu__close::after  { transform: rotate(-45deg); }
 
 /* =========================================================
    9) CASE STUDY KÉPEK (folyamatábrák, persona, journey, stb.)
@@ -1772,6 +1872,9 @@ p.persona-card__section-label {
   padding: 4px 10px;
 }
 
+/* persona-card__mobile: csak mobilon látható */
+body.cs-square .persona-card__mobile { display: none; }
+
 /* =========================================================
    SQUARE ONE — MOBIL (≤520px)
    Csak body.cs-square-ra scoped, desktop-t nem érinti.
@@ -1939,64 +2042,63 @@ p.persona-card__section-label {
   body.cs-square #define > ul { font-size: 15px; line-height: 22px; }
   body.cs-square #define > .cs-subh { font-size: 20px; margin-top: 24px; margin-bottom: 12px; }
 
-  /* Persona kártyák — mobil kompakt */
-  body.cs-square .persona-card { margin: 16px 0; border-radius: 12px; }
-  body.cs-square .persona-card__header {
+  /* Persona kártyák — teljes mobil újraírás (Figma spec) */
+  body.cs-square .persona-card { margin: 16px 0; border-radius: 12px; background: #0d0736; overflow: hidden; }
+  body.cs-square .persona-card__header { display: none; }
+  body.cs-square .persona-card__body { display: none; }
+  body.cs-square .persona-card__mobile {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-    background: #0d0736;
-    border-bottom: none;
-  }
-  body.cs-square .persona-card__header-left { display: none; }
-  body.cs-square .persona-card__header-right { padding: 16px 20px 0; width: 100%; }
-  body.cs-square p.persona-card__meet { font-size: 18px; color: #99fbff; }
-  body.cs-square p.persona-card__role { font-size: 13px; }
-  body.cs-square .persona-card__body {
-    flex-direction: column;
-    background: #0d0736;
-    padding: 0 20px 16px;
-  }
-  body.cs-square .persona-card__left {
-    width: 100%;
-    background: transparent;
-    border-right: none;
-    border-bottom: 1px solid rgba(153, 251, 255, 0.2);
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 12px 0 12px;
     gap: 12px;
-    align-items: center;
+    padding: 20px;
   }
-  body.cs-square .persona-card__left--alt { border-bottom-color: rgba(115, 115, 250, 0.2); }
-  body.cs-square .persona-photo { width: 48px; height: 48px; border-width: 2px; }
-  body.cs-square .persona-card__id-block { text-align: left; width: auto; flex: 1; }
-  body.cs-square .persona-card__firstname { font-size: 15px; margin-bottom: 2px; }
-  body.cs-square .persona-card__name-divider { margin: 3px 0; }
-  body.cs-square .persona-card__quote-box { display: none; }
-  body.cs-square .persona-card__demographics { display: none; }
-  body.cs-square .persona-card__right {
-    padding: 12px 0 0;
-    width: 100%;
-    gap: 12px;
+  body.cs-square .pcm-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #99fbff;
+    margin: 0;
   }
-  body.cs-square .persona-card__box {
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    border: none;
+  body.cs-square .persona-card__mobile--alt .pcm-name { color: #7373fa; }
+  body.cs-square .pcm-role {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgba(253, 255, 250, 0.7);
+    margin: 0;
   }
-  /* BACKGROUND szövegdoboz elrejtése — Figma mobil kompakt kártyán nem szerepel */
-  body.cs-square .persona-card__right > .persona-card__box:first-child { display: none; }
-  body.cs-square .persona-card__box p { font-size: 13px; line-height: 20px; margin-bottom: 4px; }
-  body.cs-square .persona-card__section-label { font-size: 11px; }
-  body.cs-square .persona-card__list li { font-size: 13px; line-height: 20px; }
-  body.cs-square .persona-card__bottom-row { flex-direction: column; gap: 12px; }
-  body.cs-square .persona-card__box--tech { display: none; }
-  body.cs-square .persona-card__known-apps { display: none; }
-  /* Kata persona neve lila (második persona kártya) */
-  body.cs-square .persona-card + .persona-card p.persona-card__meet { color: #7373fa; }
-  body.cs-square .persona-card + .persona-card .persona-card__name-divider { background: #7373fa; }
+  body.cs-square .pcm-divider {
+    height: 2px;
+    width: 40px;
+    background: rgba(153, 251, 255, 0.4);
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+  body.cs-square .persona-card__mobile--alt .pcm-divider { background: rgba(120, 89, 229, 0.4); }
+  body.cs-square .pcm-bio {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(253, 255, 250, 0.8);
+    margin: 0;
+  }
+  body.cs-square .pcm-field { display: flex; flex-direction: column; gap: 2px; }
+  body.cs-square .pcm-label {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    color: #99fbff;
+    margin: 0;
+  }
+  body.cs-square .persona-card__mobile--alt .pcm-label { color: #7373fa; }
+  body.cs-square .pcm-value {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(253, 255, 250, 0.75);
+    margin: 0;
+  }
 
   /* Journey map + JSC — mobilon elrejtve (vizuálisan tört, Figma sem mutatja) */
   body.cs-square .journey-map-wrap { display: none; }
