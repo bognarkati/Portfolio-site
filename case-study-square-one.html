@@ -695,11 +695,8 @@
       <p>That balance between feeling and function is what Square One is ultimately built around.</p>
 
       <div class="cs-testing-kami">
-        <div class="cs-testing-kami__wrapper">
-          <div class="cs-testing-kami__ring"></div>
-          <div class="cs-testing-kami__thumb-positioner">
-            <img src="images/kami-empath-top.png" alt="" aria-hidden="true" />
-          </div>
+        <div class="cs-testing-kami__ring">
+          <img class="cs-testing-kami__hand" src="images/kami-thumb.png" alt="" aria-hidden="true" />
         </div>
       </div>
     </div>
@@ -716,17 +713,18 @@
   <script src="placeholder.js"></script>
   <script>
     (function () {
-      var wrapper = document.querySelector('.cs-testing-kami__wrapper');
-      if (!wrapper || !window.IntersectionObserver) return;
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.6 });
-      observer.observe(wrapper);
+      var ring = document.querySelector('.cs-testing-kami__ring');
+      if (!ring) return;
+      function trigger() {
+        ring.classList.add('is-visible');
+        window.removeEventListener('scroll', onScroll);
+      }
+      function onScroll() {
+        var rect = ring.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.92) trigger();
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      setTimeout(onScroll, 120);
     }());
   </script>
 </body>
