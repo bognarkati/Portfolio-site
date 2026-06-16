@@ -412,6 +412,7 @@ body.cs-square .mobile-menu__close::after { background: #fdfffa; }
   margin: 16px 0 0;
   max-width: 38ch;
 }
+body.cs-square .cs-hero__sub { color: #99fbff; }
 
 .cs-hero__media {
   position: relative;
@@ -1228,13 +1229,13 @@ p.cs-insight-card__subhead {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
-  color: rgba(232, 251, 252, 0.9);
+  color: #99fbff;
   text-align: center;
   margin: 0 0 16px;
 }
 .cs-proto-card__title--accent {
   color: #99fbff;
-  text-align: left;
+  text-align: center;
 }
 .cs-proto-card__text {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -1246,17 +1247,19 @@ p.cs-insight-card__subhead {
   margin: 0 0 12px;
 }
 .cs-proto-display {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Mono', monospace;
   font-weight: 700;
   font-size: 36px;
   color: #e8fbfc;
   margin: 0 0 12px;
-  line-height: 1.2;
+  line-height: 34px;
+  letter-spacing: -0.025em;
 }
 .cs-proto-tagline {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
-  font-style: italic;
+  font-style: normal;
+  font-weight: 400;
   color: rgba(232, 251, 252, 0.8);
   margin: 0 0 12px;
 }
@@ -1302,13 +1305,16 @@ p.cs-insight-card__subhead {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
-  color: #99fbff;
+  color: #e8fbfc;
 }
 .cs-proto-principles li span {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 13px;
-  color: rgba(232, 251, 252, 0.6);
-  line-height: 18px;
+  font-size: 12px;
+  color: rgba(153, 251, 255, 0.6);
+  line-height: normal;
+}
+.cs-proto-cards .cs-proto-card:nth-child(2) .cs-proto-card__text {
+  color: rgba(153, 251, 255, 0.6);
 }
 
 /* =========================================================
@@ -1893,9 +1899,12 @@ body.cs-square .persona-card__mobile { display: none; }
   }
   body.cs-square .cs-hero__text { flex-direction: column; gap: 16px; }
   body.cs-square .cs-hero__title {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
     font-size: 44px;
     line-height: 50px;
     letter-spacing: 0;
+    color: #fdfffa;
+    opacity: 1;
   }
   body.cs-square .cs-hero__sub {
     font-size: 18px;
@@ -2000,17 +2009,16 @@ body.cs-square .persona-card__mobile { display: none; }
     overflow: hidden;
   }
   body.cs-square .cs-process-nav__inner a {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 700;
     line-height: normal;
-    color: rgba(253, 255, 250, 0.5);
+    color: #fdfffa;
     flex: 1;
     text-align: center;
     white-space: nowrap;
     padding: 0;
     overflow: hidden;
   }
-  body.cs-square .cs-process-nav__inner a:first-child { color: #99fbff; }
 
   /* --- Empathize --- */
   body.cs-square .cs-empathize { padding: 0; }
@@ -2021,19 +2029,26 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .cs-empathize__title {
     font-size: 32px;
     line-height: 40px;
+    color: #fdfffa;
     margin-bottom: 0;
   }
-  body.cs-square .cs-empathize__text p,
-  body.cs-square .cs-empathize__text li { font-size: 15px; line-height: 22px; }
+  body.cs-square .cs-empathize__text { display: flex; flex-direction: column; gap: 16px; }
+  body.cs-square .cs-empathize__text p { font-size: 15px; line-height: 22px; color: rgba(253,255,250,0.8); margin: 0; }
+  body.cs-square .cs-empathize__text p strong { color: #fdfffa; }
+  body.cs-square .cs-empathize__text ul { margin: 0; padding-left: 20px; }
+  body.cs-square .cs-empathize__text li { font-size: 15px; line-height: 22px; color: rgba(253,255,250,0.8); margin-bottom: 4px; }
+  body.cs-square .cs-empathize__text ul li::marker { color: #99fbff; }
   body.cs-square .cs-empathize__insights {
     background: #140e38;
     border-radius: 12px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     gap: 12px;
   }
-  body.cs-square .cs-empathize__insights-head { font-size: 16px; color: #e8fbfc; }
-  body.cs-square .cs-empathize__insights ul { padding-left: 0; list-style: none; }
-  body.cs-square .cs-empathize__insights li { font-size: 14px; line-height: 22px; }
+  body.cs-square .cs-empathize__insights-head { font-size: 16px; line-height: normal; color: #e8fbfc; }
+  body.cs-square .cs-empathize__insights ul { padding-left: 0; list-style: none; gap: 0; }
+  body.cs-square .cs-empathize__insights li { font-size: 14px; line-height: 22px; color: rgba(253,255,250,0.85); margin-bottom: 0; }
 
   /* --- Define szekció --- */
   body.cs-square .cs-section--soft { padding: 0; }
@@ -2141,7 +2156,7 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .cs-screen-caption {
     font-size: 10px;
     line-height: 14px;
-    color: #e8fbfc;
+    color: #fdfffa;
     opacity: 0.8;
     margin-top: 12px;
   }
