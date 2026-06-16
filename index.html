@@ -24,6 +24,11 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="nav__hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
@@ -57,7 +62,6 @@
         </div>
         <div class="card__body">
           <h3 class="card__title">Square One: Banking App for Gen Z</h3>
-          <p class="card__desc">A playful banking experience designed for users aged 16–28, making financial management simple, engaging, and intuitive.</p>
           <p class="card__tag">UI/UX Design • Mobile App</p>
           <span class="text-link">View case studies →</span>
         </div>
@@ -69,8 +73,7 @@
           <img class="card__img" src="images/card-pacemakers.jpg" alt="Pacemakers — landing page for runners" data-ph="images/card-pacemakers.jpg" />
         </div>
         <div class="card__body">
-          <h3 class="card__title">Pacemakers: Landing page for runners</h3>
-          <p class="card__desc">A community-driven running experience connecting urban runners through shared runs and motivation.</p>
+          <h3 class="card__title">Pacemakers: Community Running App</h3>
           <p class="card__tag">UI Design • Web App</p>
           <span class="text-link">View case studies →</span>
         </div>
@@ -95,8 +98,7 @@
     <div class="footer__inner">
       <div class="footer__text">
         <h2>Let's work together</h2>
-        <p>I'm open to new opportunities.</p>
-        <p>If something clicked, let's talk.</p>
+        <p>I'm currently open to new opportunities. If something clicked, let's talk.</p>
       </div>
       <nav class="footer__links">
         <a href="mailto:bkatus@gmail.com">bkatus@gmail.com</a>
@@ -105,6 +107,14 @@
       </nav>
     </div>
   </footer>
+
+  <!-- Mobil navigáció overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Menü bezárása"></button>
+    <a href="#work">Case Studies</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 
   <script src="placeholder.js"></script>
 </body>

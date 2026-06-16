@@ -18,3 +18,31 @@
     }
   });
 })();
+
+/* Hamburger mobil menü */
+(function () {
+  var btn   = document.querySelector('.nav__hamburger');
+  var menu  = document.getElementById('mobile-menu');
+  var close = document.getElementById('mobile-menu-close');
+  if (!btn || !menu) return;
+
+  function openMenu() {
+    menu.classList.add('is-open');
+    menu.setAttribute('aria-hidden', 'false');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    menu.setAttribute('aria-hidden', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', openMenu);
+  if (close) close.addEventListener('click', closeMenu);
+
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+})();
