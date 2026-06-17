@@ -357,7 +357,7 @@ body.cs-square .nav.is-scrolled .nav__inner { padding-top: 8px; padding-bottom: 
   align-items: center; justify-content: space-between;
   padding: 40px 162px;
 }
-.footer__text { max-width: 356px; }
+.footer__text { max-width: 500px; }
 .footer__text h2 { font-family: var(--font-head); font-weight: 500; font-size: 2rem; margin-bottom: 24px; }
 .footer__text p { font-size: var(--fs-lead); margin: 0; color: var(--ink); }
 .footer__links { display: flex; flex-wrap: wrap; gap: 44px; }
@@ -2274,6 +2274,7 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .cs-screens-section > .container { padding: 24px 0; max-width: 100%; }
   body.cs-square .cs-step-heading--center { font-size: 32px; line-height: 42px; margin-bottom: 24px; }
   body.cs-square .cs-screen-item { margin-bottom: 24px; }
+  body.cs-square .cs-screen-item--wide img { content: url('images/key%20screens3%20mobil.png'); width: 100%; }
   body.cs-square .cs-screen-caption {
     font-size: 10px;
     line-height: 14px;
