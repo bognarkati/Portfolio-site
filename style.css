@@ -214,6 +214,9 @@ body.cs-square .nav__hamburger span { background: #fdfffa; }
 body.cs-square .mobile-menu__close::before,
 body.cs-square .mobile-menu__close::after { background: #fdfffa; }
 
+body.cs-square .nav__inner { transition: padding 0.25s ease; }
+body.cs-square .nav.is-scrolled .nav__inner { padding-top: 8px; padding-bottom: 8px; }
+
 /* =========================================================
    5) HOMEPAGE SZEKCIÓK
    ========================================================= */

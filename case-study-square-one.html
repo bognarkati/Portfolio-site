@@ -757,6 +757,16 @@
   <script src="placeholder.js"></script>
   <script>
     (function () {
+      var nav = document.querySelector('.nav');
+      if (nav) {
+        window.addEventListener('scroll', function () {
+          nav.classList.toggle('is-scrolled', window.scrollY > 40);
+        }, { passive: true });
+      }
+    }());
+  </script>
+  <script>
+    (function () {
       var ring = document.querySelector('.cs-testing-kami__ring');
       if (!ring) return;
       function trigger() {
