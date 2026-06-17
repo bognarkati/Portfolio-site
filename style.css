@@ -2270,8 +2270,7 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .cs-screens-section > .container { padding: 24px; max-width: 100%; }
   body.cs-square .cs-step-heading--center { font-size: 32px; line-height: 42px; margin-bottom: 24px; }
   body.cs-square .cs-screen-item { margin-bottom: 24px; }
-  body.cs-square .cs-screen3-desktop { display: none; }
-  body.cs-square .cs-screen3-mobile { display: block; width: 100%; }
+  body.cs-square .cs-screen-item--wide img { content: url('images/key%20screens3%20mobil.png'); width: 100%; }
   body.cs-square .cs-screen-caption {
     font-size: 10px;
     line-height: 14px;
@@ -2310,6 +2309,5 @@ body.cs-square .persona-card__mobile { display: none; }
   .cs-mobile-journey,
   .cs-mobile-jobstatement,
   .cs-mobile-hmw,
-  .cs-mobile-proto-text,
-  .cs-screen3-mobile { display: none; }
+  .cs-mobile-proto-text { display: none; }
 }
