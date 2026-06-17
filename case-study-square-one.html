@@ -544,27 +544,18 @@
           <div class="journey-monthly-wrap">
             <img src="images/square-journey-monthly.jpg" alt="User Journey – Hónap elejétől hónap végéig" class="journey-monthly-img" />
           </div>
-          <!-- Mobile-only User Journey -->
-          <div class="define-journey-mobile" style="display:none">
-            <p class="cs-subh">User Journey</p>
-            <div class="define-journey-card">
-              <p>The user journey map traced D&oacute;ri&rsquo;s experience from discovering the app to completing her first transaction. Key pain points:</p>
-              <ul>
-                <li>Lack of onboarding guidance</li>
-                <li>Intimidating dashboard on first open</li>
-                <li>No feedback on positive actions (saving, paying on time)</li>
-              </ul>
-            </div>
+
+          <!-- Mobile: User Journey kártya (csak mobilon látható) -->
+          <div class="cs-mobile-journey">
+            <p>The user journey map traced D&oacute;ri&rsquo;s experience from discovering the app to completing her first transaction. Key pain points:</p>
+            <p>&bull;&nbsp;Lack of onboarding guidance</p>
+            <p>&bull;&nbsp;Intimidating dashboard on first open</p>
+            <p>&bull;&nbsp;No feedback on positive actions (saving, paying on time)</p>
           </div>
+
           <p class="cs-subh">Job Statement</p>
-          <div class="define-jsc-desktop">
           <p>Using the Jobs to be Done framework, the core user need was distilled into one statement:</p>
           <p>&ldquo;When I&rsquo;m starting to take control of my finances, I want an app that helps me navigate without shaming or overwhelming me, so I can feel genuinely confident about my own money.&rdquo;</p>
-          </div>
-          <div class="define-jsc-mobile" style="display:none">
-          <p>During the &ldquo;Jobs to be Done&rdquo; framework, the core job statement that emerged:</p>
-          <p class="define-jsc-mobile__quote">&ldquo;When I check my finances, I want to feel capable and informed, so I can make good decisions without anxiety.&rdquo;</p>
-          </div>
 
           <!-- Job Statement – Kata kártya (423-1154) -->
           <div class="jsc">
@@ -606,6 +597,12 @@
             </div>
           </div>
 
+          <!-- Mobile: Job Statement (csak mobilon látható) -->
+          <div class="cs-mobile-jobstatement">
+            <p>During the &ldquo;Jobs to be Done&rdquo; framework, the core job statement that emerged:</p>
+            <p>&ldquo;When I check my finances, I want to feel capable and informed, so I can make good decisions without anxiety.&rdquo;</p>
+          </div>
+
           <!-- Key Insight kártya -->
           <div class="cs-insight-card">
             <p class="cs-insight-card__title">Key insight:</p>
@@ -619,21 +616,27 @@
             </ul>
           </div>
 
-          <div class="define-hmw-desktop">
           <p class="cs-subh">How Might We questions</p>
           <ul>
             <li>How might we make financial discovery enjoyable without oversimplifying it?</li>
             <li>How might we build emotional resonance into a functional product?</li>
             <li>How might we reward financial mindfulness in a way that feels earned, not forced?</li>
           </ul>
-          </div>
-          <div class="define-hmw-mobile" style="display:none">
-          <p class="cs-subh">How Might We&hellip;</p>
-          <div class="hmw-cards">
-            <div class="hmw-card"><span class="hmw-card__q">?</span><p>How might we make financial data feel less intimidating?</p></div>
-            <div class="hmw-card"><span class="hmw-card__q">?</span><p>How might we reward users for small wins?</p></div>
-            <div class="hmw-card"><span class="hmw-card__q">?</span><p>How might we build trust without overwhelming users?</p></div>
-          </div>
+
+          <!-- Mobile: How Might We kártyák (csak mobilon látható) -->
+          <div class="cs-mobile-hmw">
+            <div class="cs-mobile-hmw__item">
+              <span class="cs-mobile-hmw__q">?</span>
+              <p>How might we make financial data feel less intimidating?</p>
+            </div>
+            <div class="cs-mobile-hmw__item">
+              <span class="cs-mobile-hmw__q">?</span>
+              <p>How might we reward users for small wins?</p>
+            </div>
+            <div class="cs-mobile-hmw__item">
+              <span class="cs-mobile-hmw__q">?</span>
+              <p>How might we build trust without overwhelming users?</p>
+            </div>
           </div>
         </div>
 
@@ -687,6 +690,12 @@
           </div>
         </div>
 
+        <!-- Mobile: szöveg a két kártya között (csak mobilon látható) -->
+        <div class="cs-mobile-proto-text">
+          <p>Revolut informed the visual and structural approach. Wise shaped content hierarchy. After mentor feedback, Kami was recalibrated: present and meaningful, but no longer competing with core functionality.</p>
+          <p>The character enriches the experience, it doesn&rsquo;t define it.</p>
+        </div>
+
         <div class="cs-proto-card">
           <p class="cs-proto-display">1.457.000 Ft</p>
           <p class="cs-proto-card__text">Space Grotesk was used for key numbers and headings to create a strong visual focus and improve scannability.</p>
@@ -727,7 +736,7 @@
 
       <div class="cs-screen-item cs-screen-item--wide">
         <picture>
-          <source media="(max-width: 520px)" srcset="images/Cards1.png" />
+          <source media="(max-width: 520px)" srcset="images/key%20screens3%20mobil.png" />
           <img src="images/keyscreens3.png" alt="Card management, savings jar, chat" />
         </picture>
         <p class="cs-screen-caption">Card management features Kami as a visual brand element on the card itself. The savings jar makes goal-based saving tangible and motivating. The chat assistant — powered by Kami — guides users through banking tasks in a friendly, conversational way.</p>
@@ -787,6 +796,16 @@
   </div>
 
   <script src="placeholder.js"></script>
+  <script>
+    (function () {
+      var nav = document.querySelector('.nav');
+      if (nav) {
+        window.addEventListener('scroll', function () {
+          nav.classList.toggle('is-scrolled', window.scrollY > 40);
+        }, { passive: true });
+      }
+    }());
+  </script>
   <script>
     (function () {
       var ring = document.querySelector('.cs-testing-kami__ring');

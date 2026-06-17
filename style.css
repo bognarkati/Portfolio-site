@@ -214,6 +214,9 @@ body.cs-square .nav__hamburger span { background: #fdfffa; }
 body.cs-square .mobile-menu__close::before,
 body.cs-square .mobile-menu__close::after { background: #fdfffa; }
 
+body.cs-square .nav__inner { transition: padding 0.25s ease; }
+body.cs-square .nav.is-scrolled .nav__inner { padding-top: 8px; padding-bottom: 8px; }
+
 /* =========================================================
    5) HOMEPAGE SZEKCIÓK
    ========================================================= */
@@ -2058,9 +2061,74 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .cs-section--soft > .container { padding: 24px; max-width: 100%; }
   body.cs-square .cs-step-heading { font-size: 32px; line-height: 42px; margin-bottom: 16px; }
   body.cs-square .cs-subh { font-size: 20px; margin-top: 24px; margin-bottom: 12px; line-height: 30px; }
-  body.cs-square #define > p:not(.cs-step-eyebrow):not(.cs-subh),
-  body.cs-square #define > ul { font-size: 15px; line-height: 22px; }
-  body.cs-square #define > .cs-subh { font-size: 20px; margin-top: 24px; margin-bottom: 12px; }
+  /* Desktop tartalmak elrejtése mobilon */
+  body.cs-square #define > p:not(.cs-subh),
+  body.cs-square #define > ul { display: none; }
+  body.cs-square #define > .cs-subh { font-size: 20px; font-weight: 700; line-height: 30px; color: #fdfffa; margin: 16px 0 12px; }
+  body.cs-square .cs-insight-card { display: none; }
+  /* Mobil: User Journey kártya */
+  body.cs-square .cs-mobile-journey {
+    background: #0d0736;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  body.cs-square .cs-mobile-journey p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(253, 255, 250, 0.8);
+    margin: 0;
+  }
+  /* Mobil: Job Statement szöveg */
+  body.cs-square .cs-mobile-jobstatement {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  body.cs-square .cs-mobile-jobstatement p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(253, 255, 250, 0.8);
+    margin: 0;
+  }
+  /* Mobil: How Might We kártyák */
+  body.cs-square .cs-mobile-hmw {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  body.cs-square .cs-mobile-hmw__item {
+    background: #0d0736;
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  body.cs-square .cs-mobile-hmw__q {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #99fbff;
+    flex-shrink: 0;
+    line-height: 22px;
+  }
+  body.cs-square .cs-mobile-hmw__item p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(253, 255, 250, 0.85);
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+  }
 
   /* Persona kártyák — teljes mobil újraírás (Figma spec) */
   body.cs-square .persona-card { margin: 16px 0; border-radius: 12px; background: #0d0736; overflow: hidden; }
@@ -2126,85 +2194,6 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .journey-monthly-wrap { display: none; }
   body.cs-square .jsc { display: none; }
 
-  /* Define szekció — mobil átrendezés (Figma szerint) */
-  body.cs-square .define-desktop-only { display: none !important; }
-  body.cs-square .define-personas-desc { display: none !important; }
-  body.cs-square .define-journey-mobile { display: block !important; }
-  body.cs-square .define-journey-mobile .cs-subh,
-  body.cs-square .define-hmw-mobile .cs-subh {
-    font-family: var(--font-body);
-    font-size: 20px !important;
-    font-weight: 700;
-    line-height: 25px !important;
-    opacity: 0.6;
-    color: var(--ink);
-    margin-top: 24px !important;
-    margin-bottom: 12px !important;
-  }
-  body.cs-square .define-journey-card {
-    background: #140e38;
-    border-radius: 8px;
-    padding: 16px;
-    margin-top: 8px;
-  }
-  body.cs-square .define-journey-card p,
-  body.cs-square .define-journey-card li {
-    font-size: 14px;
-    line-height: 22px;
-    color: rgba(253, 255, 250, 0.8);
-    margin: 0 0 6px;
-  }
-  body.cs-square .define-journey-card ul {
-    padding-left: 0;
-    list-style: none;
-    margin: 6px 0 0;
-  }
-  body.cs-square .define-journey-card li::before {
-    content: '• ';
-    color: #99fbff;
-  }
-  body.cs-square .define-jsc-desktop { display: none !important; }
-  body.cs-square .define-jsc-mobile { display: block !important; }
-  body.cs-square .define-jsc-mobile p {
-    font-size: 15px;
-    line-height: 22px;
-    color: rgba(253, 255, 250, 0.8);
-    margin: 0 0 8px;
-  }
-  body.cs-square .define-jsc-mobile .define-jsc-mobile__quote {
-    color: rgba(253, 255, 250, 1);
-    font-style: italic;
-  }
-  body.cs-square .cs-insight-card { display: none !important; }
-  body.cs-square .define-hmw-desktop { display: none !important; }
-  body.cs-square .define-hmw-mobile { display: block !important; }
-  body.cs-square .hmw-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 12px;
-  }
-  body.cs-square .hmw-card {
-    background: #140e38;
-    border-radius: 8px;
-    padding: 14px 16px;
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
-  body.cs-square .hmw-card__q {
-    color: #99fbff;
-    font-size: 20px;
-    font-weight: 700;
-    flex-shrink: 0;
-    line-height: 22px;
-  }
-  body.cs-square .hmw-card p {
-    font-size: 14px;
-    line-height: 22px;
-    color: rgba(253, 255, 250, 0.85);
-    margin: 0;
-  }
 
   /* --- Ideate szekció --- */
   body.cs-square .cs-ideate-section { padding: 0; }
@@ -2219,10 +2208,66 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .cs-prototype-section { background: #140e38; margin: 0 -24px; padding: 0; }
   body.cs-square .cs-prototype-section > .container { padding: 24px; max-width: 100%; }
   body.cs-square .cs-prototype-section .cs-step-heading { font-size: 32px; line-height: 42px; margin-bottom: 16px; }
-  body.cs-square .cs-prototype-section > .container > p,
-  body.cs-square .cs-prototype-section > .container > ul li { font-size: 15px; line-height: 22px; }
-  body.cs-square .cs-proto-cards { grid-template-columns: 1fr; gap: 16px; margin: 24px 0; }
+  body.cs-square .cs-prototype-section > .container > p {
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0 0 16px;
+  }
+  /* Bullet lista — teal pontokkal */
+  body.cs-square .cs-prototype-section > .container > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  body.cs-square .cs-prototype-section > .container > ul li {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(253, 255, 250, 0.8);
+    letter-spacing: 0;
+    margin: 0;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  body.cs-square .cs-prototype-section > .container > ul li::before {
+    content: '•';
+    color: #99fbff;
+    flex-shrink: 0;
+    line-height: 24px;
+  }
+  /* Proto kártyák */
+  body.cs-square .cs-proto-cards { grid-template-columns: 1fr; gap: 16px; margin: 0 0 16px; }
+  body.cs-square .cs-proto-card { padding: 16px; }
+  /* Typography kártya elrejtése mobilon */
+  body.cs-square .cs-proto-cards .cs-proto-card:nth-child(3) { display: none; }
+  /* Eredeti záró szöveg elrejtése (mobilon a cs-mobile-proto-text mutatja) */
+  body.cs-square .cs-proto-cards ~ p { display: none; }
+  /* Mobil szöveg a kártyák között */
+  body.cs-square .cs-mobile-proto-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  body.cs-square .cs-mobile-proto-text p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(253, 255, 250, 0.8);
+    margin: 0;
+  }
+  /* Colour Palette swatches */
+  body.cs-square .cs-proto-swatches { gap: 12px; justify-content: center; }
   body.cs-square .cs-proto-swatch__chip { width: 32px; height: 32px; }
+  /* Design Principles elvek */
+  body.cs-square .cs-proto-card__title { font-size: 14px; }
+  body.cs-square .cs-proto-principles li strong { font-size: 13px; line-height: 20px; color: #fdfffa; }
+  body.cs-square .cs-proto-principles li span { font-size: 12px; line-height: 18px; color: rgba(253, 255, 250, 0.55); }
 
   /* --- Key Screens szekció --- */
   body.cs-square .cs-screens-section { padding: 0; }
@@ -2233,7 +2278,7 @@ body.cs-square .persona-card__mobile { display: none; }
     font-size: 10px;
     line-height: 14px;
     color: #fdfffa;
-    opacity: 0.8;
+    opacity: 0.7;
     margin-top: 12px;
   }
 
@@ -2258,4 +2303,14 @@ body.cs-square .persona-card__mobile { display: none; }
   }
   body.cs-square .cs-nav a { font-size: 14px; font-weight: 500; color: rgba(253, 255, 250, 0.7); }
   body.cs-square .cs-nav__next { color: #99fbff; font-size: 14px; }
+}
+
+/* =========================================================
+   Define — mobil-specifikus elemek elrejtése desktopOn
+   ========================================================= */
+@media (min-width: 521px) {
+  .cs-mobile-journey,
+  .cs-mobile-jobstatement,
+  .cs-mobile-hmw,
+  .cs-mobile-proto-text { display: none; }
 }
