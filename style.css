@@ -2064,6 +2064,8 @@ body.cs-square .persona-card__mobile { display: none; }
   /* Desktop tartalmak elrejtése mobilon */
   body.cs-square #define > p:not(.cs-subh),
   body.cs-square #define > ul { display: none; }
+  body.cs-square .define-desktop-only { display: none; }
+  body.cs-square .define-personas-desc { display: none; }
   body.cs-square #define > .cs-subh { font-size: 20px; font-weight: 700; line-height: 30px; color: #fdfffa; margin: 16px 0 12px; }
   body.cs-square .cs-insight-card { display: none; }
   /* Mobil: User Journey kártya */
