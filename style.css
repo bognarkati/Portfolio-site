@@ -675,15 +675,20 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
    ========================================================= */
 
 /* --- Hero --- */
-.cp-hero__inner {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 80px 162px 0;
+.cs-hero.cp-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding-top: 80px;
+  overflow: hidden;
+}
+.cp-hero__text {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 48px;
+  padding: 0 162px;
 }
 .cp-hero__title {
   font-family: var(--font-head);
@@ -698,8 +703,11 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
   color: var(--ink-soft);
   margin: 12px 0 0;
 }
-.cp-hero__text { display: flex; flex-direction: column; align-items: center; }
-.cp-hero__browser { width: 100%; }
+.cp-hero__browser {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0;
+}
 
 /* --- Browser mockup --- */
 .cp-browser {
