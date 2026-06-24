@@ -11,57 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geologica:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    .coming-soon {
-      min-height: calc(100vh - 64px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .coming-soon__inner {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-    }
-    .coming-soon__eyebrow {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent, #b8f56a);
-      opacity: 0.8;
-    }
-    .coming-soon__title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(64px, 10vw, 120px);
-      line-height: 1;
-      color: var(--ink, #f0f4ee);
-      margin: 0;
-    }
-    .coming-soon__sub {
-      font-family: 'Geologica', sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--ink, #f0f4ee);
-      opacity: 0.5;
-      margin: 0;
-    }
-    .coming-soon__back {
-      margin-top: 8px;
-      font-family: 'Geologica', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--accent, #b8f56a);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      opacity: 0.8;
-      transition: opacity 0.2s;
-    }
-    .coming-soon__back:hover { opacity: 1; }
-  </style>
 </head>
 <body class="cs-pace">
 
@@ -74,17 +23,305 @@
         <a href="index.html#about">About</a>
         <a href="index.html#contact">Contact</a>
       </nav>
+      <button class="nav__hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <section class="coming-soon">
-    <div class="coming-soon__inner">
-      <p class="coming-soon__eyebrow">UI Design · Web</p>
-      <h1 class="coming-soon__title">Pacemakers</h1>
-      <p class="coming-soon__sub">A case study is on its way.</p>
-      <a class="coming-soon__back" href="index.html">← Back to work</a>
+  <!-- ===== Hero ===== -->
+  <section class="cs-hero cp-hero">
+    <div class="cp-hero__inner">
+      <div class="cp-hero__text">
+        <h1 class="cp-hero__title">Pacemakers</h1>
+        <p class="cp-hero__sub">Landing page for an urban running community</p>
+      </div>
+      <div class="cp-hero__browser">
+        <div class="cp-browser">
+          <div class="cp-browser__chrome">
+            <span class="cp-browser__dot cp-browser__dot--red"></span>
+            <span class="cp-browser__dot cp-browser__dot--yellow"></span>
+            <span class="cp-browser__dot cp-browser__dot--green"></span>
+            <div class="cp-browser__bar">pacemakers.community</div>
+          </div>
+          <div class="cp-browser__screen">
+            <img src="images/pace-key-main.png" alt="Pacemakers landing page" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- ===== Context / Overview ===== -->
+  <section class="cp-section" id="overview">
+    <div class="cp-section__inner">
+      <div class="cp-overview">
+        <div class="cp-overview__text">
+          <div class="cp-overview__heading">
+            <p class="eyebrow">Overview</p>
+            <h2>Context</h2>
+          </div>
+          <div class="cp-overview__body">
+            <p>Pacemakers is a conceptual landing page for an urban running community built around shared city runs, performance data, and collective energy. My very first design project, developed as part of the UI Academy program.</p>
+            <p><strong>The challenge:</strong></p>
+            <ul>
+              <li>Two distinct audiences in one visual language: a data-driven experienced runner and a community-seeking beginner</li>
+              <li>UI-focused assignment: wireframe and research were provided, my work concentrated on visual decisions: typography, colour, imagery, and atmosphere</li>
+            </ul>
+            <p>Mentor feedback shaped critical decisions at every stage.</p>
+          </div>
+        </div>
+        <dl class="infocard">
+          <div class="infocard__row"><dt>Project type</dt><dd>Concept Project</dd></div>
+          <div class="infocard__row"><dt>My Role</dt><dd>UI Designer</dd></div>
+          <div class="infocard__row"><dt>Tool</dt><dd>Figma</dd></div>
+          <div class="infocard__row"><dt>Year</dt><dd>2025</dd></div>
+          <div class="infocard__row"><dt>Type</dt><dd>Concept project</dd></div>
+          <div class="infocard__row"><dt>Platform</dt><dd>Web (Desktop)</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Process nav ===== -->
+  <nav class="cp-process-nav">
+    <div class="cp-process-nav__inner">
+      <a href="#empathize">Empathize</a>
+      <a href="#define">Define</a>
+      <a href="#ideate">Ideate</a>
+      <a href="#prototype">Prototype</a>
+      <a href="#key-screens">Key Screens</a>
+      <a href="#reflection">Reflection</a>
+    </div>
+  </nav>
+
+  <!-- ===== Empathize ===== -->
+  <section class="cp-section" id="empathize">
+    <div class="cp-section__inner">
+      <div class="cp-empathize">
+        <div class="cp-empathize__head">
+          <h2>Empathize</h2>
+          <p class="cp-section-desc">Research was based on the program brief rather than independent interviews. Two primary personas were provided, each representing a distinct archetype within the running community.</p>
+        </div>
+        <img src="images/pace-persona-mate.png" class="cp-persona-img" alt="Máté persona" />
+        <img src="images/pace-persona-flora.png" class="cp-persona-img" alt="Flóra persona" />
+        <div class="cp-key-tension">
+          <p><strong>Key tension</strong></p>
+          <p>Máté needs performance, data, and speed. Flóra needs warmth, simplicity, and reassurance. Every section had to carry signals for both, without either feeling like an afterthought.</p>
+          <p><strong>Reflection</strong></p>
+          <p>If revisiting this project, I would conduct independent qualitative research with real runners from both archetypes to validate and deepen these assumptions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Define ===== -->
+  <section class="cp-section" id="define">
+    <div class="cp-section__inner">
+      <div class="cp-two-col">
+        <div class="cp-two-col__text">
+          <div class="cp-define-intro">
+            <h2>Define</h2>
+            <p class="cp-section-desc">The wireframe and content hierarchy were pre-defined. My role was to translate the brief's strategic direction into clear design intent.</p>
+          </div>
+          <div class="cp-body-block">
+            <p><strong>Core design question</strong></p>
+            <p>How do you communicate the energy of urban running to two completely different people — at the same time?</p>
+          </div>
+          <div class="cp-body-block">
+            <p><strong>Design principles:</strong></p>
+            <ul>
+              <li><strong>Urban energy</strong> — the pulse of the city, evening lights, runners in motion. Structured, not chaotic</li>
+              <li><strong>Community strength</strong> — every visual reinforces that you're never alone</li>
+              <li><strong>Inclusive entry, performance-ready depth</strong> — beginner and advanced coexist without either feeling like an afterthought</li>
+              <li><strong>Modern and sporty</strong> — athletic and contemporary, no fitness-app clichés</li>
+            </ul>
+          </div>
+          <div class="cp-body-block">
+            <p><strong>Reflection</strong></p>
+            <p>Next time I would revisit the wireframe with a UX lens, questioning whether section order, content priority, and CTA placement truly serve both personas equally.</p>
+          </div>
+        </div>
+        <div class="cp-two-col__card">
+          <div class="cp-app-card">
+            <div class="cp-app-card__img">
+              <img src="images/pace-define-card.png" alt="Nike Alphafly 3 futócipő" />
+            </div>
+            <div class="cp-app-card__meta">
+              <div class="cp-app-card__badge">cipő</div>
+              <span class="cp-app-card__read">5 perc olvasás</span>
+            </div>
+            <p class="cp-app-card__title">Nike Alphafly 3<br>futócipő teszt</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Ideate ===== -->
+  <section class="cp-section" id="ideate">
+    <div class="cp-section__inner">
+      <div class="cp-ideate">
+        <div class="cp-ideate__head">
+          <h2>Ideate</h2>
+          <p class="cp-section-desc">With structure fixed, ideation focused entirely on visual atmosphere. The conceptual anchor: <strong>evening running as a post-work decompression ritual</strong>. After sunset, under streetlights, in the neon-lit pulse of the city.</p>
+          <div class="cp-body-block">
+            <p><strong>Key decisions:</strong></p>
+            <ul>
+              <li><strong>Lime-on-black palette</strong> — high-energy contrast that reads as athletic and urban, differentiating from a category dominated by blues, reds, and muted earth tones</li>
+              <li><strong>AI-generated imagery</strong> (Weavy, Nano Banana, ChatGPT) — custom visuals for each section, keeping the lime-glow atmosphere consistent without relying on generic stock photography</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cp-ideate-grid">
+          <div class="cp-ideate-grid__left">
+            <img src="images/pace-ideate-6.png" alt="" />
+          </div>
+          <div class="cp-ideate-grid__right">
+            <div class="cp-ideate-grid__row">
+              <img src="images/pace-ideate-1.png" alt="" />
+              <img src="images/pace-ideate-7.png" alt="" />
+              <img src="images/pace-ideate-5.png" alt="" />
+            </div>
+            <div class="cp-ideate-grid__row">
+              <img src="images/pace-ideate-2.png" alt="" />
+              <img src="images/pace-ideate-4.png" alt="" />
+              <img src="images/pace-ideate-3.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Prototype ===== -->
+  <section class="cp-section" id="prototype">
+    <div class="cp-section__inner">
+      <div class="cp-prototype">
+        <div class="cp-prototype__head">
+          <h2>Prototype</h2>
+          <div class="cp-body-block">
+            <p>Built in Figma as a single-page desktop landing.</p>
+            <p><strong>Design system highlights:</strong></p>
+            <ul>
+              <li><strong>Colour</strong> — near-black canvas (#0A0F00), lime signal (#A8BF00), off-white text (#FDFFFA), deep blue (#006AFF) for secondary depth</li>
+              <li><strong>Typography</strong> — Bebas Neue for display (modern, athletic, all-caps), Geologica for body and UI (neutral, legible)</li>
+              <li><strong>Principles</strong> — glow and depth, card-based layout for scannability, lime on black as a consistent visual signature</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cp-proto-cards">
+
+          <!-- Colour Palette -->
+          <div class="cp-proto-card">
+            <h3>Colour Palette</h3>
+            <p class="cp-proto-card-desc">Black and lime creates high contrast energy. Blue adds depth for secondary elements</p>
+            <div class="cp-swatches">
+              <div class="cp-swatch cp-swatch--black">
+                <div class="cp-swatch__dot"></div>
+                <span class="cp-swatch__label">#0A0F00</span>
+              </div>
+              <div class="cp-swatch cp-swatch--white">
+                <div class="cp-swatch__dot"></div>
+                <span class="cp-swatch__label">#FDFFFA</span>
+              </div>
+              <div class="cp-swatch cp-swatch--lime">
+                <div class="cp-swatch__dot"></div>
+                <span class="cp-swatch__label">#A8FF00</span>
+              </div>
+              <div class="cp-swatch cp-swatch--blue">
+                <div class="cp-swatch__dot"></div>
+                <span class="cp-swatch__label">#006AFF</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typography -->
+          <div class="cp-proto-card">
+            <p class="cp-typo-display">Pacemakers</p>
+            <p class="cp-typo-display-label">Bebas Neue — Display / Headlines</p>
+            <hr class="cp-typo-divider" />
+            <p class="cp-typo-body">Every run tells a story.</p>
+            <p class="cp-typo-body-label">Geologica — Body / UI Text</p>
+          </div>
+
+          <!-- Design Principles -->
+          <div class="cp-proto-card">
+            <h3>Design Principles</h3>
+            <ul class="cp-principles-list">
+              <li>Glow &amp; depth</li>
+              <li>Card-based layout</li>
+              <li>Lime on black</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="cp-body-block">
+          <p><strong>Mentor involvement</strong></p>
+          <p>Feedback shaped critical decisions throughout, from validating the lime-on-black direction to balancing atmospheric imagery with interface clarity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Key Screens ===== -->
+  <section class="cp-section" id="key-screens">
+    <div class="cp-section__inner">
+      <div class="cp-key-screens">
+        <div class="cp-key-head">
+          <p class="eyebrow">Key Screens</p>
+          <h2>Selected Screens</h2>
+        </div>
+        <div class="cp-browser cp-browser--lg">
+          <div class="cp-browser__chrome">
+            <span class="cp-browser__dot cp-browser__dot--red"></span>
+            <span class="cp-browser__dot cp-browser__dot--yellow"></span>
+            <span class="cp-browser__dot cp-browser__dot--green"></span>
+            <div class="cp-browser__bar">pacemakers.community</div>
+          </div>
+          <div class="cp-browser__screen">
+            <img src="images/pace-key-frame.png" alt="Pacemakers — selected screens" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reflection ===== -->
+  <section class="cp-section" id="reflection">
+    <div class="cp-section__inner">
+      <div class="cp-reflection">
+        <div class="cp-reflection__head">
+          <p class="eyebrow">Reflection</p>
+          <h2>What I learned</h2>
+        </div>
+        <div class="cp-reflection__body">
+          <p>Pacemakers taught me how to balance two very different user needs within a single visual language: Máté needed speed and data, Flóra needed warmth and belonging. The challenge was making the design feel welcoming without losing its urban edge.</p>
+          <p><strong>Key learnings:</strong></p>
+          <ul>
+            <li>Atmosphere is a UI decision: colour, light, and imagery carry as much emotional meaning as copy</li>
+            <li>Typography carries identity: Bebas Neue and Geologica locked in the sporty direction in a way no other pairing would have</li>
+            <li>Personal instinct is a valid starting point: lived familiarity makes direction feel natural, not speculative</li>
+            <li>AI-generated imagery is a legitimate design strategy for maintaining visual consistency without stock photos</li>
+            <li>Wireframes deserve scrutiny: every section order is itself a design decision worth questioning</li>
+          </ul>
+          <p><strong>What I'd do differently</strong></p>
+          <p>Return to it with a UX lens first: validate the wireframe against both personas, conduct independent user research rather than relying solely on the brief.</p>
+          <p><strong>This was my first project. The visual confidence came first. The UX rigor is what I'm building next.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer nav ===== -->
+  <div class="cs-nav-wrap">
+    <nav class="cs-nav">
+      <a href="index.html">← Back to all projects</a>
+      <a href="case-study-square-one.html" class="cs-nav__next">Next project: Square 1 →</a>
+    </nav>
+  </div>
 
 </body>
 </html>

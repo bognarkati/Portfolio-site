@@ -671,6 +671,375 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
 .cs-nav__next { font-family: var(--font-head); font-weight: 700; }
 
 /* =========================================================
+   7b) PACEMAKERS CASE STUDY (cp-)
+   ========================================================= */
+
+/* --- Hero --- */
+.cp-hero__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 162px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 48px;
+}
+.cp-hero__title {
+  font-family: var(--font-head);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.cp-hero__sub {
+  font-size: 20px;
+  color: var(--ink-soft);
+  margin: 12px 0 0;
+}
+.cp-hero__text { display: flex; flex-direction: column; align-items: center; }
+.cp-hero__browser { width: 100%; }
+
+/* --- Browser mockup --- */
+.cp-browser {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.cp-browser--lg { border-radius: 12px; }
+.cp-browser--sm { border-radius: 12px; }
+.cp-browser__chrome {
+  background: #2c2c2c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+}
+.cp-browser__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cp-browser__dot--red    { background: #ff5f57; }
+.cp-browser__dot--yellow { background: #febc2e; }
+.cp-browser__dot--green  { background: #28c840; }
+.cp-browser__bar {
+  flex: 1;
+  background: #3c3c3c;
+  border-radius: 4px;
+  height: 22px;
+  padding: 0 12px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  font-family: var(--font-body);
+}
+.cp-browser__screen { overflow: hidden; }
+.cp-browser__screen img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  max-height: 580px;
+}
+.cp-browser--lg .cp-browser__screen img { max-height: 700px; }
+.cp-browser--sm .cp-browser__screen img { max-height: 340px; }
+
+/* --- Section wrapper --- */
+.cp-section { padding: 0; }
+.cp-section__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 162px;
+}
+
+/* --- Overview (Context) --- */
+.cp-overview {
+  display: grid;
+  grid-template-columns: 1fr 333px;
+  gap: 161px;
+  align-items: center;
+}
+.cp-overview__text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.cp-overview__heading { display: flex; flex-direction: column; gap: 8px; }
+.cp-overview__heading .eyebrow { margin: 0; }
+.cp-overview__heading h2 { font-size: 48px; font-weight: 700; margin: 0; }
+.cp-overview__body { font-size: 16px; line-height: 1.5; opacity: 0.7; }
+.cp-overview__body p  { margin: 0 0 8px; }
+.cp-overview__body ul { padding-left: 24px; margin: 0 0 8px; }
+.cp-overview__body li { margin-bottom: 4px; }
+
+/* Infocard: Pacemakers overrides */
+body.cs-pace .infocard {
+  min-width: 0;
+  padding: 32px;
+}
+body.cs-pace .infocard__row { gap: 6px; }
+body.cs-pace .infocard__row dt {
+  flex: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+body.cs-pace .infocard__row dd {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* --- Process nav --- */
+.cp-process-nav {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.cp-process-nav__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 162px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  height: 56px;
+}
+.cp-process-nav__inner a {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.cp-process-nav__inner a:hover { color: var(--accent); text-decoration: none; }
+
+/* --- Section heading + desc --- */
+.cp-empathize__head,
+.cp-ideate__head,
+.cp-prototype__head {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.cp-empathize__head h2,
+.cp-ideate__head h2,
+.cp-prototype__head h2 { font-size: 48px; font-weight: 700; margin: 0; }
+.cp-section-desc { font-size: 16px; line-height: 1.5; opacity: 0.7; margin: 0; }
+
+/* --- Empathize --- */
+.cp-empathize { display: flex; flex-direction: column; gap: 40px; }
+.cp-persona-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+.cp-key-tension { font-size: 16px; line-height: 1.5; opacity: 0.7; max-width: 713px; }
+.cp-key-tension p { margin: 0 0 16px; }
+.cp-key-tension p:last-child { margin: 0; }
+
+/* --- Body block (reusable) --- */
+.cp-body-block { font-size: 16px; line-height: 1.5; opacity: 0.7; }
+.cp-body-block p  { margin: 0 0 12px; }
+.cp-body-block ul { padding-left: 24px; margin: 0; }
+.cp-body-block li { margin-bottom: 6px; }
+.cp-body-block li:last-child { margin-bottom: 0; }
+.cp-body-block p:last-child  { margin-bottom: 0; }
+
+/* --- Define (two-col) --- */
+.cp-two-col {
+  display: grid;
+  grid-template-columns: 1fr 371px;
+  gap: 50px;
+  align-items: start;
+}
+.cp-two-col__text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 80px 0;
+}
+.cp-define-intro { display: flex; flex-direction: column; gap: 28px; }
+.cp-define-intro h2 { font-size: 48px; font-weight: 700; margin: 0; }
+
+.cp-two-col__card {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+  margin-top: 80px;
+}
+
+/* App card (Pacemakers design element) */
+.cp-app-card {
+  background: rgba(36,38,34,0.6);
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--line);
+}
+.cp-app-card__img { border-radius: 10px; overflow: hidden; }
+.cp-app-card__img img { width: 100%; height: 261px; object-fit: cover; display: block; }
+.cp-app-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.cp-app-card__badge {
+  border: 2px solid var(--accent-2);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.cp-app-card__read {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  opacity: 0.85;
+}
+.cp-app-card__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* --- Ideate --- */
+.cp-ideate { display: flex; flex-direction: column; gap: 40px; }
+.cp-ideate-grid {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  height: 402px;
+  border-radius: 8px;
+  overflow: hidden;
+  gap: 3px;
+}
+.cp-ideate-grid__left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cp-ideate-grid__right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 3px;
+}
+.cp-ideate-grid__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+.cp-ideate-grid__row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Prototype --- */
+.cp-prototype { display: flex; flex-direction: column; gap: 40px; }
+.cp-prototype__head h2 { font-size: 48px; font-weight: 700; margin: 0; }
+
+.cp-proto-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.cp-proto-card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 272px;
+}
+.cp-proto-card h3 { font-size: 32px; font-weight: 700; margin: 0; }
+.cp-proto-card-desc { font-size: 16px; line-height: 1.5; opacity: 0.6; margin: 0; }
+
+.cp-swatches { display: flex; gap: 12px; align-items: flex-start; flex-wrap: wrap; }
+.cp-swatch { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.cp-swatch__dot { width: 58px; height: 58px; border-radius: 50%; flex-shrink: 0; }
+.cp-swatch--black .cp-swatch__dot { background: #0a0f00; border: 1px solid rgba(255,255,255,0.2); }
+.cp-swatch--white .cp-swatch__dot { background: #fdfffa; }
+.cp-swatch--lime  .cp-swatch__dot { background: #a8ff00; }
+.cp-swatch--blue  .cp-swatch__dot { background: #006aff; }
+.cp-swatch__label { font-size: 12px; opacity: 0.7; text-align: center; color: var(--ink); }
+
+.cp-typo-display { font-family: var(--font-display); font-size: 46px; line-height: 1; margin: 0; padding-bottom: 4px; }
+.cp-typo-display-label { font-size: 13px; opacity: 0.6; margin: 0; text-transform: uppercase; letter-spacing: 0.06em; }
+.cp-typo-divider { border: none; border-top: 1px solid var(--line); margin: 4px 0; }
+.cp-typo-body { font-size: 20px; margin: 4px 0 0; }
+.cp-typo-body-label { font-size: 13px; opacity: 0.6; margin: 0; }
+
+.cp-principles-list {
+  padding-left: 24px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* --- Key Screens --- */
+.cp-key-screens { display: flex; flex-direction: column; gap: 28px; }
+.cp-key-head { display: flex; flex-direction: column; gap: 8px; }
+.cp-key-head .eyebrow { margin: 0; }
+.cp-key-head h2 { font-size: 32px; font-weight: 600; margin: 0; }
+.cp-key-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* --- Reflection --- */
+.cp-reflection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+.cp-reflection__head { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.cp-reflection__head .eyebrow { margin: 0; }
+.cp-reflection__head h2 { font-size: 48px; font-weight: 700; margin: 0; line-height: 1.2; }
+.cp-reflection__body {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.6;
+  max-width: 666px;
+  text-align: left;
+}
+.cp-reflection__body p  { margin: 0 0 16px; }
+.cp-reflection__body ul { padding-left: 24px; margin: 0 0 16px; }
+.cp-reflection__body li { margin-bottom: 8px; }
+.cp-reflection__body p:last-child  { margin: 0; }
+.cp-reflection__body ul:last-child { margin: 0; }
+
+/* =========================================================
    8) RESZPONZÍV (mobil)
    ========================================================= */
 @media (max-width: 1300px) {
