@@ -704,9 +704,7 @@ body.cs-square .cs-hero__sub { color: #99fbff; }
   margin: 12px 0 0;
 }
 .cp-hero__browser {
-  width: 100%;
-  max-width: 1440px;
-  padding: 0;
+  width: 894px;
 }
 
 /* --- Browser mockup --- */
