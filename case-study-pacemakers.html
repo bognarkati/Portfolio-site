@@ -321,5 +321,20 @@
     </nav>
   </div>
 
+  <script>
+    (function () {
+      var nav = document.querySelector('.nav');
+      var lastY = 0;
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY;
+        if (y > lastY && y > 60) {
+          nav.classList.add('is-hidden');
+        } else {
+          nav.classList.remove('is-hidden');
+        }
+        lastY = y;
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
