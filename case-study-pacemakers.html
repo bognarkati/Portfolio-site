@@ -38,17 +38,7 @@
       <p class="cp-hero__sub">Landing page for an urban running community</p>
     </div>
     <div class="cp-hero__browser">
-      <div class="cp-browser">
-        <div class="cp-browser__chrome">
-          <span class="cp-browser__dot cp-browser__dot--red"></span>
-          <span class="cp-browser__dot cp-browser__dot--yellow"></span>
-          <span class="cp-browser__dot cp-browser__dot--green"></span>
-          <div class="cp-browser__bar">pacemakers.community</div>
-        </div>
-        <div class="cp-browser__screen">
-          <img src="images/pace-key-main.png" alt="Pacemakers landing page" />
-        </div>
-      </div>
+      <img src="images/pace-hero-browser.png" class="cp-hero-browser-img" alt="Pacemakers landing page in a browser frame" width="894" height="669" />
     </div>
   </section>
 
@@ -103,8 +93,14 @@
           <h2>Empathize</h2>
           <p class="cp-section-desc">Research was based on the program brief rather than independent interviews. Two primary personas were provided, each representing a distinct archetype within the running community.</p>
         </div>
-        <img src="images/pace-persona-mate.png" class="cp-persona-img" alt="Máté persona" />
-        <img src="images/pace-persona-flora.png" class="cp-persona-img" alt="Flóra persona" />
+        <div class="cp-persona-grid">
+          <div class="cp-persona-card cp-persona-card--mate">
+            <img src="images/pace-persona-mate.png" alt="Máté persona" />
+          </div>
+          <div class="cp-persona-card cp-persona-card--flora">
+            <img src="images/pace-persona-flora.png" alt="Flóra persona" />
+          </div>
+        </div>
         <div class="cp-key-tension">
           <p><strong>Key tension</strong></p>
           <p>Máté needs performance, data, and speed. Flóra needs warmth, simplicity, and reassurance. Every section had to carry signals for both, without either feeling like an afterthought.</p>
@@ -169,7 +165,7 @@
         <div class="cp-ideate__head">
           <h2>Ideate</h2>
           <p class="cp-section-desc">With structure fixed, ideation focused entirely on visual atmosphere.</p>
-          <p class="cp-section-desc"><strong>The conceptual anchor: evening running as a post-work decompression ritual.</strong> After sunset, under streetlights, in the neon-lit pulse of the city.</p>
+          <p class="cp-section-desc"><strong class="cp-ideate-anchor">The conceptual anchor: evening running as a post-work decompression ritual.</strong> After sunset, under streetlights, in the neon-lit pulse of the city.</p>
           <div class="cp-body-block">
             <p><strong>Key decisions:</strong></p>
             <ul>
@@ -277,16 +273,25 @@
           <p class="eyebrow">Key Screens</p>
           <h2>Selected Screens</h2>
         </div>
-        <div class="cp-browser cp-browser--lg">
-          <div class="cp-browser__chrome">
-            <span class="cp-browser__dot cp-browser__dot--red"></span>
-            <span class="cp-browser__dot cp-browser__dot--yellow"></span>
-            <span class="cp-browser__dot cp-browser__dot--green"></span>
-            <div class="cp-browser__bar">pacemakers.community</div>
+        <div class="cp-key-frames">
+          <figure class="cp-key-frame cp-key-frame--full">
+            <img src="images/pace-key-frame-1.png" alt="Pacemakers hero screen" />
+            <figcaption>The hero section pairs a bold Bebas Neue headline ("Futni jobb együtt") with a single lime CTA, over an image of two runners lit by glowing route data: a composition that reads as both performance and companionship.</figcaption>
+          </figure>
+          <div class="cp-key-frame-row">
+            <figure class="cp-key-frame">
+              <img src="images/pace-key-frame-2.png" alt="Pacemakers virtual races catalogue screen" />
+              <figcaption>The challenges section uses a card-based layout to make events scannable and easy to browse at a glance.</figcaption>
+            </figure>
+            <figure class="cp-key-frame">
+              <img src="images/pace-key-frame-3.png" alt="Pacemakers routes discovery screen" />
+              <figcaption>The routes section uses an immersive full-width image of a runner with a lime-glowing route painted along the city street. This is one of the most atmospheric moments on the page.</figcaption>
+            </figure>
           </div>
-          <div class="cp-browser__screen">
-            <img src="images/pace-key-frame.png" alt="Pacemakers — selected screens" />
-          </div>
+          <figure class="cp-key-frame cp-key-frame--full">
+            <img src="images/pace-key-frame-4.png" alt="Pacemakers closing join screen" />
+            <figcaption>The closing section reinforces the Strava integration with a high-energy full-width design, ending the page on a strong community call to action.</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -301,17 +306,17 @@
           <h2>What I learned</h2>
         </div>
         <div class="cp-reflection__body">
-          <p>Pacemakers taught me how to balance two very different user needs within a single visual language: Máté needed speed and data, Flóra needed warmth and belonging. The challenge was making the design feel welcoming without losing its urban edge.</p>
+          <p>Pacemakers taught me how to balance <strong>two very different user needs</strong> within a single visual language: Máté needed speed and data, Flóra needed warmth and belonging. The challenge was making the design feel welcoming without losing its urban edge.</p>
           <p><strong>Key learnings:</strong></p>
           <ul>
-            <li>Atmosphere is a UI decision: colour, light, and imagery carry as much emotional meaning as copy</li>
-            <li>Typography carries identity: Bebas Neue and Geologica locked in the sporty direction in a way no other pairing would have</li>
+            <li><strong>Atmosphere</strong> is a UI decision: colour, light, and imagery carry as much emotional meaning as copy</li>
+            <li><strong>Typography</strong> carries identity: Bebas Neue and Geologica locked in the sporty direction in a way no other pairing would have</li>
             <li>Personal instinct is a valid starting point: lived familiarity makes direction feel natural, not speculative</li>
-            <li>AI-generated imagery is a legitimate design strategy for maintaining visual consistency without stock photos</li>
+            <li><strong>AI-generated imagery</strong> is a legitimate design strategy for maintaining visual consistency without stock photos</li>
             <li>Wireframes deserve scrutiny: every section order is itself a design decision worth questioning</li>
           </ul>
           <p><strong>What I'd do differently</strong></p>
-          <p>Return to it with a UX lens first: validate the wireframe against both personas, conduct independent user research rather than relying solely on the brief.</p>
+          <p>Return to it with a <strong>UX lens first</strong>: validate the wireframe against both personas, conduct independent user research rather than relying solely on the brief.</p>
           <p><strong>This was my first project. The visual confidence came first. The UX rigor is what I'm building next.</strong></p>
         </div>
       </div>

@@ -718,6 +718,13 @@ body.cs-pace .nav.is-hidden {
 .cp-hero__browser {
   width: 894px;
 }
+.cp-hero-browser-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
 
 /* --- Browser mockup --- */
 .cp-browser {
@@ -756,7 +763,7 @@ body.cs-pace .nav.is-hidden {
   align-items: center;
   font-family: var(--font-body);
 }
-.cp-browser__screen { overflow: hidden; }
+.cp-browser__screen { position: relative; overflow: hidden; }
 .cp-browser__screen img {
   width: 100%;
   display: block;
@@ -859,15 +866,40 @@ body.cs-pace .infocard__row dd {
 .cp-ideate__head h2,
 .cp-prototype__head h2 { font-size: 48px; font-weight: 700; margin: 0; }
 .cp-section-desc { font-size: 16px; line-height: 1.5; color: rgba(253,255,250,0.7); margin: 0; }
+.cp-ideate-anchor { font-size: 18px; }
 .cp-section-desc strong { color: var(--ink); }
 
 /* --- Empathize --- */
 .cp-empathize { display: flex; flex-direction: column; gap: 40px; }
-.cp-persona-img {
+.cp-persona-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+.cp-persona-card {
+  position: relative;
   width: 100%;
-  height: auto;
   border-radius: 16px;
+  overflow: hidden;
+}
+.cp-persona-card--mate { aspect-ratio: 1054 / 713; }
+.cp-persona-card--flora { aspect-ratio: 1088 / 730; }
+.cp-persona-card img {
+  position: absolute;
+  max-width: none;
   display: block;
+}
+.cp-persona-card--mate img {
+  width: 106.66%;
+  height: 112.34%;
+  left: -3.33%;
+  top: -4.91%;
+}
+.cp-persona-card--flora img {
+  width: 106.67%;
+  height: 112.53%;
+  left: -3.34%;
+  top: -4.93%;
 }
 .cp-key-tension { font-size: 16px; line-height: 1.5; opacity: 0.7; max-width: 713px; }
 .cp-key-tension p { margin: 0 0 16px; }
@@ -875,10 +907,10 @@ body.cs-pace .infocard__row dd {
 
 /* --- Body block (reusable) --- */
 .cp-body-block { font-size: 16px; line-height: 1.5; opacity: 0.7; }
-.cp-body-block p  { margin: 0 0 12px; }
-.cp-body-block ul { padding-left: 24px; margin: 0; }
-.cp-body-block li { margin-bottom: 6px; }
-.cp-body-block li:last-child { margin-bottom: 0; }
+.cp-body-block p  { margin: 0 0 24px; }
+.cp-body-block ul { padding-left: 24px; margin: 0 0 24px; }
+.cp-body-block li { margin-bottom: 0; }
+.cp-body-block ul:last-child { margin-bottom: 0; }
 .cp-body-block p:last-child  { margin-bottom: 0; }
 
 /* --- Define (two-col) --- */
@@ -1092,10 +1124,20 @@ body.cs-pace .infocard__row dd {
 .cp-key-head { display: flex; flex-direction: column; gap: 8px; }
 .cp-key-head .eyebrow { margin: 0; }
 .cp-key-head h2 { font-size: 32px; font-weight: 600; margin: 0; }
-.cp-key-row {
+.cp-key-frames { display: flex; flex-direction: column; gap: 45px; }
+.cp-key-frame { margin: 0; }
+.cp-key-frame img { width: 100%; display: block; border-radius: 12px; box-shadow: 0 4px 16px 4px rgba(249, 255, 237, 0.54); }
+.cp-key-frame figcaption {
+  margin-top: 28px;
+  font-size: 16px;
+  line-height: 1.458;
+  color: #fdfffa;
+  opacity: 0.6;
+}
+.cp-key-frame-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 22px;
 }
 
 /* --- Reflection --- */
