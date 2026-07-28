@@ -3035,4 +3035,21 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-pace #reflection .cp-reflection__body p,
   body.cs-pace #reflection .cp-reflection__body li { color: rgba(253, 255, 250, 0.7); }
   body.cs-pace #reflection .cp-reflection__body strong { color: var(--ink); font-weight: 700; }
+
+  /* --- Case study lábléc navigáció --- */
+  body.cs-pace .cs-nav-wrap { max-width: 100%; padding: 0; }
+  body.cs-pace .cs-nav {
+    padding: 24px;
+    border-top: 1px solid rgba(253, 255, 250, 0.1);
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+  body.cs-pace .cs-nav a {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--ink);
+    transition: color 0.2s ease;
+  }
+  body.cs-pace .cs-nav__next { font-weight: 400; }
+  body.cs-pace .cs-nav a:hover { color: var(--accent); }
 }
