@@ -876,30 +876,11 @@ body.cs-pace .infocard__row dd {
   grid-template-columns: 1fr;
   gap: 40px;
 }
-.cp-persona-card {
-  position: relative;
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-}
-.cp-persona-card--mate { aspect-ratio: 1054 / 713; }
-.cp-persona-card--flora { aspect-ratio: 1088 / 730; }
 .cp-persona-card img {
-  position: absolute;
-  max-width: none;
+  width: 100%;
+  height: auto;
   display: block;
-}
-.cp-persona-card--mate img {
-  width: 106.66%;
-  height: 112.34%;
-  left: -3.33%;
-  top: -4.91%;
-}
-.cp-persona-card--flora img {
-  width: 106.67%;
-  height: 112.53%;
-  left: -3.34%;
-  top: -4.93%;
+  border-radius: 16px;
 }
 .cp-key-tension { font-size: 16px; line-height: 1.5; opacity: 0.7; max-width: 713px; }
 .cp-key-tension p { margin: 0 0 16px; }
