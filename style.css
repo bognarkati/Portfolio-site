@@ -1843,6 +1843,12 @@ p.cs-insight-card__subhead {
   color: #ffffff;
   margin: 28px 0 12px;
 }
+#test .cs-subh {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 32px 0 12px;
+}
 .cs-testing-kami {
   display: flex;
   justify-content: center;
@@ -2763,6 +2769,7 @@ body.cs-square .persona-card__mobile { display: none; }
   body.cs-square .cs-testing-section > .container > p:not(.cs-step-eyebrow):not(.cs-testing-subh),
   body.cs-square .cs-testing-section > .container > ul li { font-size: 15px; line-height: 22px; }
   body.cs-square .cs-testing-subh { font-size: 15px; font-weight: 700; }
+  body.cs-square #test .cs-subh { font-size: 20px; font-weight: 700; line-height: 30px; margin: 16px 0 12px; }
   body.cs-square .cs-testing-kami { margin-top: 32px; }
 
   /* --- Case study footer nav --- */
